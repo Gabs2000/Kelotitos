@@ -1,4 +1,4 @@
-﻿namespace Proyecto_OASIS
+﻿namespace Kelotitos
 {
     partial class RegistrarProveedor
     {
@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Proyecto_OASIS.Properties.Resources.Fondo;
+            this.BackgroundImage = global::Kelotitos.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.labelx);
             this.Controls.Add(this.lbhora);
