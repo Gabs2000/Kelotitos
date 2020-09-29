@@ -39,7 +39,6 @@
             this.tel_textbox = new System.Windows.Forms.TextBox();
             this.email_textbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbhora
@@ -47,11 +46,11 @@
             this.lbhora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbhora.AutoSize = true;
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
-            this.lbhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
-            this.lbhora.Location = new System.Drawing.Point(825, 9);
+            this.lbhora.Location = new System.Drawing.Point(12, 9);
             this.lbhora.Name = "lbhora";
-            this.lbhora.Size = new System.Drawing.Size(217, 73);
+            this.lbhora.Size = new System.Drawing.Size(93, 31);
             this.lbhora.TabIndex = 27;
             this.lbhora.Text = "HORA";
             this.lbhora.Click += new System.EventHandler(this.Lbhora_Click);
@@ -64,12 +63,12 @@
             // register_button
             // 
             this.register_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.register_button.BackColor = System.Drawing.Color.Yellow;
-            this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.register_button.Location = new System.Drawing.Point(741, 639);
+            this.register_button.Location = new System.Drawing.Point(331, 258);
             this.register_button.Name = "register_button";
-            this.register_button.Size = new System.Drawing.Size(397, 111);
+            this.register_button.Size = new System.Drawing.Size(177, 54);
             this.register_button.TabIndex = 35;
             this.register_button.Text = "Registrar";
             this.register_button.UseVisualStyleBackColor = false;
@@ -78,12 +77,12 @@
             // back_button
             // 
             this.back_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.back_button.BackColor = System.Drawing.Color.Yellow;
-            this.back_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back_button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.back_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.back_button.Location = new System.Drawing.Point(253, 639);
+            this.back_button.Location = new System.Drawing.Point(110, 258);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(364, 111);
+            this.back_button.Size = new System.Drawing.Size(189, 54);
             this.back_button.TabIndex = 34;
             this.back_button.Text = "REGRESAR";
             this.back_button.UseVisualStyleBackColor = false;
@@ -94,11 +93,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(109, 474);
+            this.label2.Location = new System.Drawing.Point(15, 191);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(590, 108);
+            this.label2.Size = new System.Drawing.Size(169, 31);
             this.label2.TabIndex = 33;
             this.label2.Text = "TELEFONO:";
             // 
@@ -107,38 +106,38 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(187, 320);
+            this.label1.Location = new System.Drawing.Point(72, 145);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 108);
+            this.label1.Size = new System.Drawing.Size(112, 31);
             this.label1.TabIndex = 32;
             this.label1.Text = "E-MAIL:";
             // 
             // client_textbox
             // 
             this.client_textbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.client_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(0)))));
+            this.client_textbox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.client_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.client_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.client_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.client_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.client_textbox.Location = new System.Drawing.Point(633, 182);
+            this.client_textbox.Location = new System.Drawing.Point(190, 96);
             this.client_textbox.Multiline = true;
             this.client_textbox.Name = "client_textbox";
-            this.client_textbox.Size = new System.Drawing.Size(703, 110);
+            this.client_textbox.Size = new System.Drawing.Size(461, 31);
             this.client_textbox.TabIndex = 31;
             // 
             // tel_textbox
             // 
             this.tel_textbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tel_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(0)))));
+            this.tel_textbox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tel_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tel_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tel_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tel_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.tel_textbox.Location = new System.Drawing.Point(705, 474);
+            this.tel_textbox.Location = new System.Drawing.Point(190, 191);
             this.tel_textbox.Multiline = true;
             this.tel_textbox.Name = "tel_textbox";
-            this.tel_textbox.Size = new System.Drawing.Size(621, 104);
+            this.tel_textbox.Size = new System.Drawing.Size(461, 31);
             this.tel_textbox.TabIndex = 30;
             this.tel_textbox.TextChanged += new System.EventHandler(this.tel_textbox_TextChanged);
             this.tel_textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tel_textbox_KeyPress);
@@ -146,14 +145,14 @@
             // email_textbox
             // 
             this.email_textbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.email_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(0)))));
+            this.email_textbox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.email_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.email_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.email_textbox.Location = new System.Drawing.Point(585, 320);
+            this.email_textbox.Location = new System.Drawing.Point(190, 145);
             this.email_textbox.Multiline = true;
             this.email_textbox.Name = "email_textbox";
-            this.email_textbox.Size = new System.Drawing.Size(722, 110);
+            this.email_textbox.Size = new System.Drawing.Size(461, 31);
             this.email_textbox.TabIndex = 29;
             // 
             // label3
@@ -161,33 +160,20 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label3.Location = new System.Drawing.Point(163, 183);
+            this.label3.Location = new System.Drawing.Point(46, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(477, 108);
+            this.label3.Size = new System.Drawing.Size(138, 31);
             this.label3.TabIndex = 28;
             this.label3.Text = "CLIENTE:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
-            this.label4.Location = new System.Drawing.Point(-3, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(467, 73);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "SNACK OASIS";
             // 
             // Registrar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1443, 861);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(675, 359);
             this.Controls.Add(this.register_button);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.label2);
@@ -218,6 +204,5 @@
         private System.Windows.Forms.TextBox tel_textbox;
         private System.Windows.Forms.TextBox email_textbox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         }
     }
