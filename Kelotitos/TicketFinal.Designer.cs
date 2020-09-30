@@ -50,7 +50,6 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "JUEGOS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label1
             // 

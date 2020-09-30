@@ -52,13 +52,6 @@ namespace Kelotitos
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
 
-        private void Label3_Click(object sender, EventArgs e)
-        {
-            Juego ToElegir = new Juego();
-            this.Hide();
-            ToElegir.Show();
-        }
-
         private void Label1_Click(object sender, EventArgs e)
         {
 

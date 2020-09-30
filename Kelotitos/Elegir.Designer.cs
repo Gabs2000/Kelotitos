@@ -65,7 +65,6 @@
             this.label1.Size = new System.Drawing.Size(432, 46);
             this.label1.TabIndex = 18;
             this.label1.Text = "REGISTRAR CLIENTE";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // lbhora
             // 

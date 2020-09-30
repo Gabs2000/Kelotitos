@@ -39,13 +39,6 @@ namespace Kelotitos
             ToRegistrarProductos.Show();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            Registrar_Cliente ToRegistrar_Cliente = new Registrar_Cliente();
-            this.Hide();
-            ToRegistrar_Cliente.Show();
-        }
-
         private void Button1_Click(object sender, EventArgs e)
         {
             Login ToLogin = new Login();
