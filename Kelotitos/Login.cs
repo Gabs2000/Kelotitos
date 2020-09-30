@@ -23,7 +23,7 @@ namespace Kelotitos
             MySqlConnection conexion = Connection.GetConnection();
 
             MySqlCommand login = new MySqlCommand();
-            login.CommandText = "SELECT * FROM user WHERE account_user = @user AND password_user = @password";
+            login.CommandText = "SELECT * FROM usuarios WHERE usuario = @user AND contrasena = @password";
             login.Parameters.AddWithValue("@user", user);
             login.Parameters.AddWithValue("@password", password);
             login.Connection = conexion;
@@ -70,26 +70,6 @@ namespace Kelotitos
             {
                 MessageBox.Show("Contraseña de administrador incorrecta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void Lbhora_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
-        }
-
-        private void Lbhora_Click_2(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Hora_Tick(object sender, EventArgs e)

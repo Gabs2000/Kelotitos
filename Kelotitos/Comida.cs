@@ -13,48 +13,33 @@ namespace Kelotitos
     public partial class Comida : Form
     {
         MySqlConnection conexion;
-        clientAccount cliente;
         List<ProductAccount> listaProductos;
         List<ProductAccount> carrito;
         int n;
 
         public Comida()
         {
-            cliente = new clientAccount();
-            cliente.name_client = "XXXX";
             InitializeComponent();
         }
         public Comida(clientAccount cliente)
         {
-            this.cliente = cliente;
             InitializeComponent();
-        }
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox1_Enter_1(object sender, EventArgs e)
-        {
-
         }
 
         private void Comida_Load(object sender, EventArgs e)
         {
             carrito = new List<ProductAccount>();
             listaProductos = new List<ProductAccount>();
-            label1.Text = cliente.name_client;
             comboBox1.Items.Add("Alitas");
             comboBox1.Items.Add("Hamburguesa");
             comboBox1.Items.Add("Papas");
             comboBox1.Items.Add("Bebida");
             comboBox1.Items.Add("Postres");
             comboBox1.SelectedIndex = 0;
+
+            conexion = Connection.GetConnection();
+            MySqlCommand cm = new MySqlCommand("SELECT nombre FROM cat_productos", conexion);
+            cbProducto.Items.Add(cm);
         }
 
         private void cargarAlimentos(string product)
@@ -98,11 +83,6 @@ namespace Kelotitos
             }
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Button1_Click_1(object sender, EventArgs e)
         {
             //TODO: Hacer transacciones
@@ -113,7 +93,6 @@ namespace Kelotitos
                 MySqlConnection conexion = Connection.GetConnection();
                 MySqlCommand comm = conexion.CreateCommand();
                 comm.CommandText = "INSERT INTO sale (datetime_sale, total_sale, client_id_client, user_id_user) VALUES (now(), 0, @client, @user)";
-                comm.Parameters.AddWithValue("@client", cliente.id_client);
                 comm.Parameters.AddWithValue("@user", Login.idUsuario);
                 comm.ExecuteNonQuery();
                 id = Convert.ToInt32(comm.LastInsertedId);
@@ -166,10 +145,6 @@ namespace Kelotitos
             carrito.Clear();
             dataGridView1.Rows.Clear();
             label5.Text = "$0.00";
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Lbhora_Click(object sender, EventArgs e)
@@ -245,16 +220,6 @@ namespace Kelotitos
         {
             n = e.RowIndex;
             Console.WriteLine(n);
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
