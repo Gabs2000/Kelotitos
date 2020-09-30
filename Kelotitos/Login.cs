@@ -30,7 +30,7 @@ namespace Kelotitos
 
             if (string.IsNullOrEmpty(user_textbox.Text) || string.IsNullOrEmpty(password_textbox.Text))
             {
-                MessageBox.Show("Los campos no pueden quedar vacios", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden quedar vacíos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -49,7 +49,7 @@ namespace Kelotitos
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o Contraseña incorrectos", "Log In", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario o Contraseña Incorrectos", "Log In", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     conexion.Close();
                 }
             }
@@ -57,7 +57,7 @@ namespace Kelotitos
 
         private void register_button_Click(object sender, EventArgs e)
         {
-            string input = Interaction.InputBox("Introduzca la contraseña de administrador para crear un usuario", "Aviso", "", -1, -1);
+            string input = Interaction.InputBox("Introduzca la contraseña de ADMINISTRADOR para crear un nuevo usuario", "Aviso", "", -1, -1);
 
 
             if (input == "admin")
@@ -68,7 +68,7 @@ namespace Kelotitos
             }
             else
             {
-                MessageBox.Show("Contraseña de administrador incorrecta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Contraseña de Administrador Incorrecta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
