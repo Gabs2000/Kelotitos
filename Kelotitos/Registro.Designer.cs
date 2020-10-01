@@ -51,7 +51,7 @@
             this.name_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
             this.name_textbox.Location = new System.Drawing.Point(589, 114);
-            this.name_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.name_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.name_textbox.Multiline = true;
             this.name_textbox.Name = "name_textbox";
             this.name_textbox.Size = new System.Drawing.Size(577, 38);
@@ -68,9 +68,9 @@
             this.label3.Location = new System.Drawing.Point(388, 113);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 39);
+            this.label3.Size = new System.Drawing.Size(147, 39);
             this.label3.TabIndex = 16;
-            this.label3.Text = "NOMBRE:";
+            this.label3.Text = "Nombre:";
             // 
             // registeruser_textbox
             // 
@@ -80,7 +80,7 @@
             this.registeruser_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registeruser_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
             this.registeruser_textbox.Location = new System.Drawing.Point(589, 194);
-            this.registeruser_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registeruser_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.registeruser_textbox.Multiline = true;
             this.registeruser_textbox.Name = "registeruser_textbox";
             this.registeruser_textbox.Size = new System.Drawing.Size(577, 38);
@@ -95,7 +95,7 @@
             this.registerpassword_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerpassword_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
             this.registerpassword_textbox.Location = new System.Drawing.Point(589, 277);
-            this.registerpassword_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerpassword_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.registerpassword_textbox.Multiline = true;
             this.registerpassword_textbox.Name = "registerpassword_textbox";
             this.registerpassword_textbox.PasswordChar = '*';
@@ -112,9 +112,9 @@
             this.label1.Location = new System.Drawing.Point(385, 194);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 39);
+            this.label1.Size = new System.Drawing.Size(144, 39);
             this.label1.TabIndex = 20;
-            this.label1.Text = "USUARIO:";
+            this.label1.Text = "Usuario:";
             // 
             // label2
             // 
@@ -126,9 +126,9 @@
             this.label2.Location = new System.Drawing.Point(299, 277);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 39);
+            this.label2.Size = new System.Drawing.Size(202, 39);
             this.label2.TabIndex = 21;
-            this.label2.Text = "CONTRASEÑA:";
+            this.label2.Text = "Contraseña:";
             // 
             // register_button
             // 
@@ -137,7 +137,7 @@
             this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
             this.register_button.Location = new System.Drawing.Point(619, 476);
-            this.register_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.register_button.Margin = new System.Windows.Forms.Padding(4);
             this.register_button.Name = "register_button";
             this.register_button.Size = new System.Drawing.Size(223, 66);
             this.register_button.TabIndex = 23;
@@ -152,7 +152,7 @@
             this.back_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
             this.back_button.Location = new System.Drawing.Point(312, 476);
-            this.back_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.back_button.Margin = new System.Windows.Forms.Padding(4);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(269, 66);
             this.back_button.TabIndex = 22;
@@ -182,7 +182,7 @@
             this.confirmpassword_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmpassword_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
             this.confirmpassword_textbox.Location = new System.Drawing.Point(589, 362);
-            this.confirmpassword_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmpassword_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.confirmpassword_textbox.Multiline = true;
             this.confirmpassword_textbox.Name = "confirmpassword_textbox";
             this.confirmpassword_textbox.PasswordChar = '*';
@@ -226,7 +226,7 @@
             this.Controls.Add(this.registeruser_textbox);
             this.Controls.Add(this.name_textbox);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
