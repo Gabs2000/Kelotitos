@@ -45,26 +45,26 @@ namespace Kelotitos
 
         private void RegistrarProductos_Load(object sender, EventArgs e)
         {
-            MySqlConnection conexion = Connection.GetConnection();
+            //MySqlConnection conexion = Connection.GetConnection();
 
-            MySqlCommand cm = new MySqlCommand("SELECT id_prov, name_prov FROM provider", conexion);
-            MySqlDataReader consultar = cm.ExecuteReader();
+            //MySqlCommand cm = new MySqlCommand("SELECT id_prov, name_prov FROM provider", conexion);
+            //MySqlDataReader consultar = cm.ExecuteReader();
 
-            listaProveedores = new List<providerAccount>();
+            //listaProveedores = new List<providerAccount>();
             
-            while (consultar.Read())
-            {
-                providerAccount proveedor = new providerAccount();
-                proveedor.id_prov = consultar.GetInt32(0);
-                proveedor.name_prov = consultar.GetString(1);
-                listaProveedores.Add(proveedor);
-                ComboBoxItem item = new ComboBoxItem();
-                item.Text = $"{proveedor.id_prov} - {proveedor.name_prov}";
-                item.Value = proveedor.id_prov;
+            //while (consultar.Read())
+            //{
+            //    providerAccount proveedor = new providerAccount();
+            //    proveedor.id_prov = consultar.GetInt32(0);
+            //    proveedor.name_prov = consultar.GetString(1);
+            //    listaProveedores.Add(proveedor);
+            //    ComboBoxItem item = new ComboBoxItem();
+            //    item.Text = $"{proveedor.id_prov} - {proveedor.name_prov}";
+            //    item.Value = proveedor.id_prov;
 
-                comboBox1.Items.Add(item);
-                comboBox1.SelectedIndex = 0;
-            }
+            //    comboBox1.Items.Add(item);
+            //    comboBox1.SelectedIndex = 0;
+            //}
 
         }
 

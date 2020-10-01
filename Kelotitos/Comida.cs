@@ -76,7 +76,7 @@ namespace Kelotitos
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cargarAlimentos(comboBox1.SelectedItem.ToString());
+            //cargarAlimentos(comboBox1.SelectedItem.ToString());
             if(comboBox2.Items.Count > 0)
             {
                 comboBox2.SelectedIndex = 0;

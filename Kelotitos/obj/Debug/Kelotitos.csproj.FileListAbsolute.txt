@@ -173,3 +173,4 @@ C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotit
 C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyComplete
 C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
 C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Form1.resources
