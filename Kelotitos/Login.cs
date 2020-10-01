@@ -30,7 +30,7 @@ namespace Kelotitos
 
             if (string.IsNullOrEmpty(user_textbox.Text) || string.IsNullOrEmpty(password_textbox.Text))
             {
-                MessageBox.Show("Los campos no pueden quedar vacíos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden quedar vacíos.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -75,6 +75,11 @@ namespace Kelotitos
         private void Hora_Tick(object sender, EventArgs e)
         {
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
+        }
+
+        private void password_textbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
