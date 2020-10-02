@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 
 namespace Kelotitos
 {
@@ -37,10 +37,65 @@ namespace Kelotitos
             comboBox1.Items.Add("Postres");
             comboBox1.SelectedIndex = 0;
 
-            conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT nombre FROM cat_productos", conexion);
-            cbProducto.Items.Add(cm);
+            this.cargarProductos();
+            this.cargarTiposProductos();
+            this.cargarTamanios();
+
+
         }
+
+        private void cargarProductos()
+        {
+            conexion = Connection.GetConnection();
+            MySqlCommand sc = new MySqlCommand("SELECT id_producto,nombre FROM cat_productos WHERE estatus = 1", conexion);
+            MySqlDataReader reader;
+
+            reader = sc.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_producto", typeof(int));
+            dt.Columns.Add("nombre", typeof(string));
+            dt.Load(reader);
+
+            cbProducto.ValueMember = "id_producto";
+            cbProducto.DisplayMember = "nombre";
+            cbProducto.DataSource = dt;
+        }
+
+        private void cargarTiposProductos()
+        {
+            conexion = Connection.GetConnection();
+            MySqlCommand sc = new MySqlCommand("SELECT id_tipo_producto, tipo_producto FROM cat_tipos_productos WHERE estatus = 1", conexion);
+            MySqlDataReader reader;
+
+            reader = sc.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_tipo_producto", typeof(int));
+            dt.Columns.Add("tipo_producto", typeof(string));
+            dt.Load(reader);
+
+            cbTipo.ValueMember = "id_tipo_producto";
+            cbTipo.DisplayMember = "tipo_producto";
+            cbTipo.DataSource = dt;
+        }
+
+        private void cargarTamanios()
+        {
+            conexion = Connection.GetConnection();
+            MySqlCommand sc = new MySqlCommand("SELECT id_tamanio, tamanio FROM cat_tamanios WHERE estatus = 1", conexion);
+            MySqlDataReader reader;
+
+            reader = sc.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_tamanio", typeof(int));
+            dt.Columns.Add("tamanio", typeof(string));
+            dt.Load(reader);
+
+            cbTamanio.ValueMember = "id_tamanio";
+            cbTamanio.DisplayMember = "tamanio";
+            cbTamanio.DataSource = dt;
+        }
+
+        //Anterior
 
         private void cargarAlimentos(string product)
         {
@@ -72,15 +127,6 @@ namespace Kelotitos
                 comboBox2.Text = "";
             }
 
-        }
-
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //cargarAlimentos(comboBox1.SelectedItem.ToString());
-            if(comboBox2.Items.Count > 0)
-            {
-                comboBox2.SelectedIndex = 0;
-            }
         }
 
         private void Button1_Click_1(object sender, EventArgs e)
