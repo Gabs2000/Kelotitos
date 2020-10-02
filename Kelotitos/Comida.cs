@@ -30,12 +30,6 @@ namespace Kelotitos
         {
             carrito = new List<ProductAccount>();
             listaProductos = new List<ProductAccount>();
-            comboBox1.Items.Add("Alitas");
-            comboBox1.Items.Add("Hamburguesa");
-            comboBox1.Items.Add("Papas");
-            comboBox1.Items.Add("Bebida");
-            comboBox1.Items.Add("Postres");
-            comboBox1.SelectedIndex = 0;
 
             this.cargarProductos();
             this.cargarTiposProductos();
@@ -47,10 +41,10 @@ namespace Kelotitos
         private void cargarProductos()
         {
             conexion = Connection.GetConnection();
-            MySqlCommand sc = new MySqlCommand("SELECT id_producto,nombre FROM cat_productos WHERE estatus = 1", conexion);
+            MySqlCommand cm = new MySqlCommand("SELECT id_producto,nombre FROM cat_productos WHERE estatus = 1", conexion);
             MySqlDataReader reader;
 
-            reader = sc.ExecuteReader();
+            reader = cm.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Columns.Add("id_producto", typeof(int));
             dt.Columns.Add("nombre", typeof(string));
@@ -64,10 +58,10 @@ namespace Kelotitos
         private void cargarTiposProductos()
         {
             conexion = Connection.GetConnection();
-            MySqlCommand sc = new MySqlCommand("SELECT id_tipo_producto, tipo_producto FROM cat_tipos_productos WHERE estatus = 1", conexion);
+            MySqlCommand cm = new MySqlCommand("SELECT id_tipo_producto, tipo_producto FROM cat_tipos_productos WHERE estatus = 1", conexion);
             MySqlDataReader reader;
 
-            reader = sc.ExecuteReader();
+            reader = cm.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Columns.Add("id_tipo_producto", typeof(int));
             dt.Columns.Add("tipo_producto", typeof(string));
@@ -81,10 +75,10 @@ namespace Kelotitos
         private void cargarTamanios()
         {
             conexion = Connection.GetConnection();
-            MySqlCommand sc = new MySqlCommand("SELECT id_tamanio, tamanio FROM cat_tamanios WHERE estatus = 1", conexion);
+            MySqlCommand cm = new MySqlCommand("SELECT id_tamanio, tamanio FROM cat_tamanios WHERE estatus = 1", conexion);
             MySqlDataReader reader;
 
-            reader = sc.ExecuteReader();
+            reader = cm.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Columns.Add("id_tamanio", typeof(int));
             dt.Columns.Add("tamanio", typeof(string));
@@ -94,6 +88,54 @@ namespace Kelotitos
             cbTamanio.DisplayMember = "tamanio";
             cbTamanio.DataSource = dt;
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if((cbProducto.SelectedItem != null) && (cbTipo != null) && (cbTamanio != null))
+            {
+                //Agregamos al carrito
+
+                conexion = Connection.GetConnection();
+                MySqlCommand cm = new MySqlCommand("SELECT P.id_producto," +
+                                                        "P.nombre, " +
+                                                        "TP.tipo_producto, " +
+                                                        "T.tamanio, " +
+                                                        "P.precio, " +
+                                                        "P.estatus, " +
+                                                        "P.fecha_creacion " +
+                                                    "FROM cat_productos P " +
+                                                    "INNER JOIN cat_tamanios T " +
+                                                        "ON P.id_tamanio = T.id_tamanio " +
+                                                    "INNER JOIN cat_tipos_productos TP " +
+                                                        "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                    "WHERE P.nombre = @nombre " +
+                                                    "AND P.id_tamanio = @idTamanio " +
+                                                    "AND P.id_tipo_producto = @idTipoProducto", conexion);
+                cm.Parameters.AddWithValue("@nombre", cbProducto.SelectedItem);
+                cm.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedItem);
+                cm.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedItem);
+                MySqlDataReader reader;
+
+                reader = cm.ExecuteReader();
+                DataTable dt = new DataTable();
+                dataGridView1.DataSource = dt;
+
+                int n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = "nombre";
+                dataGridView1.Rows[n].Cells[1].Value = "tipo_producto";
+                dataGridView1.Rows[n].Cells[2].Value = "tamanio";
+                dataGridView1.Rows[n].Cells[3].Value = "precio";
+                dataGridView1.Rows[n].Cells[4].Value = 1;
+                dataGridView1.Rows[n].Cells[5].Value = "precio";
+                //carrito.Add(productNew);
+                //sumarTotal(productNew.precio);
+            }
+        }
+
+
+
+
+
 
         //Anterior
 
