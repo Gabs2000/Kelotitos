@@ -29,21 +29,21 @@ namespace Kelotitos
         private void register_button_Click(object sender, EventArgs e)
         {
             userAccount newAccount = new userAccount();
-            newAccount.name_user = name_textbox.Text.Trim();
-            newAccount.account_user = registeruser_textbox.Text.Trim();
-            newAccount.password_user = registerpassword_textbox.Text.Trim();
-            newAccount.type_user = 1;
+            newAccount.nombre = name_textbox.Text.Trim();
+            newAccount.usuario = registeruser_textbox.Text.Trim();
+            newAccount.contrasena = registerpassword_textbox.Text.Trim();
+            newAccount.administrador = 0;
             confirmpassword_textbox.Text.Trim();
 
             if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(registeruser_textbox.Text) || string.IsNullOrEmpty(registerpassword_textbox.Text) || string.IsNullOrEmpty(confirmpassword_textbox.Text))
             {
-                MessageBox.Show("Los campos no pueden quedar vacios", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden quedar vacíos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 if (registerpassword_textbox.Text != confirmpassword_textbox.Text)
                 {
-                    MessageBox.Show("Las contraseñas no coinciden, porfavor coloque la misma contraseña en ambos campos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Las contraseñas no coinciden, por favor coloque la misma contraseña en ambos campos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -52,9 +52,9 @@ namespace Kelotitos
                     MySqlConnection conexion = Connection.GetConnection();
 
                     MySqlCommand compareUser = new MySqlCommand();
-                    compareUser.CommandText = "SELECT * FROM user WHERE account_user = @newAccount.account_user AND password_user = @newAccount.password_user";
-                    compareUser.Parameters.AddWithValue("@newAccount.account_user", newAccount.account_user);
-                    compareUser.Parameters.AddWithValue("@newAccount.password_user", newAccount.password_user);
+                    compareUser.CommandText = "SELECT * FROM usuarios WHERE usuario = @newAccount.usuario AND contrasena = @newAccount.contrasena";
+                    compareUser.Parameters.AddWithValue("@newAccount.usuario", newAccount.usuario);
+                    compareUser.Parameters.AddWithValue("@newAccount.contrasena", newAccount.contrasena);
                     compareUser.Connection = conexion;
 
                     MySqlDataReader leer = compareUser.ExecuteReader();

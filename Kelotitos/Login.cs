@@ -23,14 +23,14 @@ namespace Kelotitos
             MySqlConnection conexion = Connection.GetConnection();
 
             MySqlCommand login = new MySqlCommand();
-            login.CommandText = "SELECT * FROM user WHERE account_user = @user AND password_user = @password";
+            login.CommandText = "SELECT * FROM usuarios WHERE usuario = @user AND contrasena = @password";
             login.Parameters.AddWithValue("@user", user);
             login.Parameters.AddWithValue("@password", password);
             login.Connection = conexion;
 
             if (string.IsNullOrEmpty(user_textbox.Text) || string.IsNullOrEmpty(password_textbox.Text))
             {
-                MessageBox.Show("Los campos no pueden quedar vacios", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden quedar vacíos.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -49,7 +49,7 @@ namespace Kelotitos
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o Contraseña incorrectos", "Log In", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario o Contraseña Incorrectos", "Log In", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     conexion.Close();
                 }
             }
@@ -57,7 +57,7 @@ namespace Kelotitos
 
         private void register_button_Click(object sender, EventArgs e)
         {
-            string input = Interaction.InputBox("Introduzca la contraseña de administrador para crear un usuario", "Aviso", "", -1, -1);
+            string input = Interaction.InputBox("Introduzca la contraseña de ADMINISTRADOR para crear un nuevo usuario", "Aviso", "", -1, -1);
 
 
             if (input == "admin")
@@ -68,33 +68,18 @@ namespace Kelotitos
             }
             else
             {
-                MessageBox.Show("Contraseña de administrador incorrecta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Contraseña de Administrador Incorrecta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void Lbhora_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
-        }
-
-        private void Lbhora_Click_2(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Hora_Tick(object sender, EventArgs e)
         {
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
+        }
+
+        private void password_textbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

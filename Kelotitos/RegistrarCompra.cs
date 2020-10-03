@@ -38,28 +38,28 @@ namespace Kelotitos
 
         private void RegistrarCompra_Load(object sender, EventArgs e)
         {
-            listaProductos = new List<ProductAccount>();
-            listaProveedores = new List<providerAccount>();
-            carrito = new List<ProductAccount>();
+            //listaProductos = new List<ProductAccount>();
+            //listaProveedores = new List<providerAccount>();
+            //carrito = new List<ProductAccount>();
 
-            MySqlConnection conexion = Connection.GetConnection();
+            //MySqlConnection conexion = Connection.GetConnection();
 
-            MySqlCommand cm = new MySqlCommand("SELECT id_prov, name_prov FROM provider", conexion);
-            MySqlDataReader consultar = cm.ExecuteReader();
+            //MySqlCommand cm = new MySqlCommand("SELECT id_prov, name_prov FROM provider", conexion);
+            //MySqlDataReader consultar = cm.ExecuteReader();
 
-            while (consultar.Read())
-            {
-                providerAccount proveedor = new providerAccount();
-                proveedor.id_prov = consultar.GetInt32(0);
-                proveedor.name_prov = consultar.GetString(1);
-                listaProveedores.Add(proveedor);
-                ComboBoxItem item = new ComboBoxItem();
-                item.Text = $"{proveedor.id_prov} - {proveedor.name_prov}";
-                item.Value = proveedor.id_prov;
+            //while (consultar.Read())
+            //{
+            //    providerAccount proveedor = new providerAccount();
+            //    proveedor.id_prov = consultar.GetInt32(0);
+            //    proveedor.name_prov = consultar.GetString(1);
+            //    listaProveedores.Add(proveedor);
+            //    ComboBoxItem item = new ComboBoxItem();
+            //    item.Text = $"{proveedor.id_prov} - {proveedor.name_prov}";
+            //    item.Value = proveedor.id_prov;
 
-                comboBox1.Items.Add(item);
-                comboBox1.SelectedIndex = 0;
-            }
+            //    comboBox1.Items.Add(item);
+            //    comboBox1.SelectedIndex = 0;
+            //}
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -102,16 +102,16 @@ namespace Kelotitos
 
                 if(noRows > 0)
                 {
-                    MessageBox.Show("Compra registrada con exito, su stock ha sido actualizado", "Compra realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Compra registrada con éxito, su stock ha sido actualizado", "Compra realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     reset();
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un error en la transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Hubo un error en la transacción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } else
             {
-                MessageBox.Show("Agregue algunos articulos antes de confirmar", "Carrito vacio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Agregue algunos artículos antes de confirmar", "Carrito vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -211,7 +211,7 @@ namespace Kelotitos
                     }
                 } catch (System.InvalidOperationException err)
                 {
-                    MessageBox.Show("La nueva fila sin confirmar no se puede eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La nueva fila sin confirmar, no se puede eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 
             }
@@ -233,7 +233,7 @@ namespace Kelotitos
         private void button5_Click(object sender, EventArgs e)
         {
             reset();
-            MessageBox.Show("Compra cancelada, los articulos fueron eliminados", "Compra cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Compra cancelada, los artículos fueron eliminados", "Compra cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Label5_Click(object sender, EventArgs e)

@@ -39,20 +39,6 @@ namespace Kelotitos
             ToRegistrarProductos.Show();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            Registrar_Cliente ToRegistrar_Cliente = new Registrar_Cliente();
-            this.Hide();
-            ToRegistrar_Cliente.Show();
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-            Comida ToRegistro = new Comida();
-            this.Hide();
-            ToRegistro.Show();
-        }
-
         private void Button1_Click(object sender, EventArgs e)
         {
             Login ToLogin = new Login();
@@ -77,6 +63,13 @@ namespace Kelotitos
             RegistrarProovedor ToLogin = new RegistrarProovedor();
             this.Hide();
             ToLogin.Show();
+        }
+
+        private void lblRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            Comida ToRegistro = new Comida();
+            this.Hide();
+            ToRegistro.Show();
         }
     }
 }

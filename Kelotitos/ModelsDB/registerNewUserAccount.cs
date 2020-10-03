@@ -12,8 +12,8 @@ namespace Kelotitos.MySql
         public static int agregar(userAccount add)
         {
             int devolver = 0;
-            MySqlCommand comand = new MySqlCommand(String.Format("INSERT INTO user(name_user, account_user, password_user, type_user) values('{0}', '{1}', '{2}', '{3}')",
-                add.name_user, add.account_user, add.password_user, add.type_user), Connection.GetConnection());
+            MySqlCommand comand = new MySqlCommand(String.Format("INSERT INTO usuarios(nombre, usuario, contrasena, administrador) values('{0}', '{1}', '{2}', '{3}')",
+                add.nombre, add.usuario, add.contrasena, add.administrador), Connection.GetConnection());
             devolver = comand.ExecuteNonQuery();
             return devolver;
         }

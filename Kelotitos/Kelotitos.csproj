@@ -124,12 +124,6 @@
     <Compile Include="Elegir.Designer.cs">
       <DependentUpon>Elegir.cs</DependentUpon>
     </Compile>
-    <Compile Include="Juego.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Juego.Designer.cs">
-      <DependentUpon>Juego.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,12 +141,6 @@
     <Compile Include="ModelsDB\userAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistrarCliente.Designer.cs">
-      <DependentUpon>RegistrarCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegistrarCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +165,12 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrodeInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrodeInventario.Designer.cs">
+      <DependentUpon>RegistrodeInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketFinal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,9 +186,6 @@
     <EmbeddedResource Include="Elegir.resx">
       <DependentUpon>Elegir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Juego.resx">
-      <DependentUpon>Juego.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,9 +199,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegistrarCliente.resx">
-      <DependentUpon>RegistrarCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="RegistrarCompra.resx">
       <DependentUpon>RegistrarCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrodeInventario.resx">
+      <DependentUpon>RegistrodeInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketFinal.resx">
       <DependentUpon>TicketFinal.cs</DependentUpon>
