@@ -93,122 +93,154 @@ namespace Kelotitos
         {
             if((cbProducto.SelectedItem != null) && (cbTipo != null) && (cbTamanio != null))
             {
-                //Agregamos al carrito
-                string nombre, tipoProducto, tamanio;
-                int precio, id;
-                conexion = Connection.GetConnection();
+                try
+                {
+                    if(numCantidad.Value > 0)
+                    {
+                        lblError.Text = "Error";
+                        lblError.Visible = false;
 
-                //Obtenemos el id del producto
-                MySqlCommand cmId= new MySqlCommand("SELECT " +
-                                                            "P.id_producto " +
-                                                        "FROM cat_productos P " +
-                                                        "INNER JOIN cat_tamanios T " +
-                                                            "ON P.id_tamanio = T.id_tamanio " +
-                                                        "INNER JOIN cat_tipos_productos TP " +
-                                                            "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                        "WHERE P.id_producto = @idProducto " +
-                                                        "AND P.id_tamanio = @idTamanio " +
-                                                        "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                cmId.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                cmId.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                cmId.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
+                        //Agregamos al carrito
+                        string nombre, tipoProducto, tamanio;
+                        int precio, id;
+                        decimal subtotal;
+                        conexion = Connection.GetConnection();
 
-                var resultadoId = cmId.ExecuteScalar();
+                        //Obtenemos el id del producto
+                        MySqlCommand cmId= new MySqlCommand("SELECT " +
+                                                                    "P.id_producto " +
+                                                                "FROM cat_productos P " +
+                                                                "INNER JOIN cat_tamanios T " +
+                                                                    "ON P.id_tamanio = T.id_tamanio " +
+                                                                "INNER JOIN cat_tipos_productos TP " +
+                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                                "WHERE P.id_producto = @idProducto " +
+                                                                "AND P.id_tamanio = @idTamanio " +
+                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
+                        cmId.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
+                        cmId.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
+                        cmId.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
 
-                id = Convert.ToInt32(Convert.ToString(resultadoId));
+                        var resultadoId = cmId.ExecuteScalar();
 
-                //Obtenemos el nombre del producto
-                MySqlCommand cmNombre = new MySqlCommand("SELECT " +
-                                                            "P.nombre " +
-                                                        "FROM cat_productos P " +
-                                                        "INNER JOIN cat_tamanios T " +
-                                                            "ON P.id_tamanio = T.id_tamanio " +
-                                                        "INNER JOIN cat_tipos_productos TP " +
-                                                            "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                        "WHERE P.id_producto = @idProducto " +
-                                                        "AND P.id_tamanio = @idTamanio " +
-                                                        "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                cmNombre.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                cmNombre.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                cmNombre.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
+                        id = Convert.ToInt32(Convert.ToString(resultadoId));
 
-                var resultadoNombre = cmNombre.ExecuteScalar();
+                        //Obtenemos el nombre del producto
+                        MySqlCommand cmNombre = new MySqlCommand("SELECT " +
+                                                                    "P.nombre " +
+                                                                "FROM cat_productos P " +
+                                                                "INNER JOIN cat_tamanios T " +
+                                                                    "ON P.id_tamanio = T.id_tamanio " +
+                                                                "INNER JOIN cat_tipos_productos TP " +
+                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                                "WHERE P.id_producto = @idProducto " +
+                                                                "AND P.id_tamanio = @idTamanio " +
+                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
+                        cmNombre.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
+                        cmNombre.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
+                        cmNombre.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
 
-                nombre = Convert.ToString(resultadoNombre);
+                        var resultadoNombre = cmNombre.ExecuteScalar();
 
-
-                // Obtenemos el tipo de producto
-                MySqlCommand cmTipo = new MySqlCommand("SELECT " +
-                                                            "TP.tipo_producto " +
-                                                        "FROM cat_productos P " +
-                                                        "INNER JOIN cat_tamanios T " +
-                                                            "ON P.id_tamanio = T.id_tamanio " +
-                                                        "INNER JOIN cat_tipos_productos TP " +
-                                                            "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                        "WHERE P.id_producto = @idProducto " +
-                                                        "AND P.id_tamanio = @idTamanio " +
-                                                        "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                cmTipo.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                cmTipo.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                cmTipo.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
-
-                var resultadoTipo = cmTipo.ExecuteScalar();
-
-                tipoProducto = Convert.ToString(resultadoTipo);
+                        nombre = Convert.ToString(resultadoNombre);
 
 
-                // Obtenemos el tamaño de producto
-                MySqlCommand cmTamanio = new MySqlCommand("SELECT " +
-                                                            "T.tamanio " +
-                                                        "FROM cat_productos P " +
-                                                        "INNER JOIN cat_tamanios T " +
-                                                            "ON P.id_tamanio = T.id_tamanio " +
-                                                        "INNER JOIN cat_tipos_productos TP " +
-                                                            "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                        "WHERE P.id_producto = @idProducto " +
-                                                        "AND P.id_tamanio = @idTamanio " +
-                                                        "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                cmTamanio.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                cmTamanio.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                cmTamanio.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
+                        // Obtenemos el tipo de producto
+                        MySqlCommand cmTipo = new MySqlCommand("SELECT " +
+                                                                    "TP.tipo_producto " +
+                                                                "FROM cat_productos P " +
+                                                                "INNER JOIN cat_tamanios T " +
+                                                                    "ON P.id_tamanio = T.id_tamanio " +
+                                                                "INNER JOIN cat_tipos_productos TP " +
+                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                                "WHERE P.id_producto = @idProducto " +
+                                                                "AND P.id_tamanio = @idTamanio " +
+                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
+                        cmTipo.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
+                        cmTipo.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
+                        cmTipo.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
 
-                var resultadoTamanio = cmTamanio.ExecuteScalar();
+                        var resultadoTipo = cmTipo.ExecuteScalar();
 
-                tamanio = Convert.ToString(resultadoTamanio);
-
-
-                // Obtenemos el precio de producto
-                MySqlCommand cmPrecio = new MySqlCommand("SELECT " +
-                                                            "P.precio " +
-                                                        "FROM cat_productos P " +
-                                                        "INNER JOIN cat_tamanios T " +
-                                                            "ON P.id_tamanio = T.id_tamanio " +
-                                                        "INNER JOIN cat_tipos_productos TP " +
-                                                            "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                        "WHERE P.id_producto = @idProducto " +
-                                                        "AND P.id_tamanio = @idTamanio " +
-                                                        "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                cmPrecio.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                cmPrecio.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                cmPrecio.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
-
-                var resultadoPrecio = cmPrecio.ExecuteScalar();
-
-                precio = Convert.ToInt32(Convert.ToString(resultadoPrecio));
+                        tipoProducto = Convert.ToString(resultadoTipo);
 
 
+                        // Obtenemos el tamaño de producto
+                        MySqlCommand cmTamanio = new MySqlCommand("SELECT " +
+                                                                    "T.tamanio " +
+                                                                "FROM cat_productos P " +
+                                                                "INNER JOIN cat_tamanios T " +
+                                                                    "ON P.id_tamanio = T.id_tamanio " +
+                                                                "INNER JOIN cat_tipos_productos TP " +
+                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                                "WHERE P.id_producto = @idProducto " +
+                                                                "AND P.id_tamanio = @idTamanio " +
+                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
+                        cmTamanio.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
+                        cmTamanio.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
+                        cmTamanio.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
 
-                //Console.WriteLine(id + ", " + nombre + ", " + tipoProducto + ", " + tamanio + ", " + precio);
+                        var resultadoTamanio = cmTamanio.ExecuteScalar();
 
-                int n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value = id;
-                dataGridView1.Rows[n].Cells[1].Value = nombre;
-                dataGridView1.Rows[n].Cells[2].Value = tipoProducto;
-                dataGridView1.Rows[n].Cells[3].Value = tamanio;
-                dataGridView1.Rows[n].Cells[4].Value = precio;
-                dataGridView1.Rows[n].Cells[5].Value = 1;
-                dataGridView1.Rows[n].Cells[6].Value = precio;
+                        tamanio = Convert.ToString(resultadoTamanio);
+
+
+                        // Obtenemos el precio de producto
+                        MySqlCommand cmPrecio = new MySqlCommand("SELECT " +
+                                                                    "P.precio " +
+                                                                "FROM cat_productos P " +
+                                                                "INNER JOIN cat_tamanios T " +
+                                                                    "ON P.id_tamanio = T.id_tamanio " +
+                                                                "INNER JOIN cat_tipos_productos TP " +
+                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                                "WHERE P.id_producto = @idProducto " +
+                                                                "AND P.id_tamanio = @idTamanio " +
+                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
+                        cmPrecio.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
+                        cmPrecio.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
+                        cmPrecio.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
+
+                        var resultadoPrecio = cmPrecio.ExecuteScalar();
+
+                        precio = Convert.ToInt32(Convert.ToString(resultadoPrecio));
+
+                        subtotal = precio * numCantidad.Value;
+
+                        //Console.WriteLine(id + ", " + nombre + ", " + tipoProducto + ", " + tamanio + ", " + precio);
+
+                        // Se guardan los valores en el datagridview1
+                        int n = dataGridView1.Rows.Add();
+                        dataGridView1.Rows[n].Cells[0].Value = id;
+                        dataGridView1.Rows[n].Cells[1].Value = nombre;
+                        dataGridView1.Rows[n].Cells[2].Value = tipoProducto;
+                        dataGridView1.Rows[n].Cells[3].Value = tamanio;
+                        dataGridView1.Rows[n].Cells[4].Value = precio;
+                        dataGridView1.Rows[n].Cells[5].Value = numCantidad.Value;
+                        dataGridView1.Rows[n].Cells[6].Value = subtotal;
+
+                        //Una vez que se agrega el producto, se resetean los campos
+                        cbProducto.SelectedIndex = 0;
+                        cbTamanio.SelectedIndex = 0;
+                        cbTipo.SelectedIndex = 0;
+                        numCantidad.Value = 0;
+
+                    } else
+                    {
+                        lblError.Text = "Error: Debes de poner una cantidad de producto!";
+                        lblError.Visible = true;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err);
+                }
+
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
 
 
