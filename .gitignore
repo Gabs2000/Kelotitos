@@ -6,6 +6,9 @@
 *.user
 *.userosscache
 *.sln.docstates
+/Kelotitos/ModelsDB/Connection.cs
+/Kelotitos/bin/Debug
+/Kelotitos/obj/Debug
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

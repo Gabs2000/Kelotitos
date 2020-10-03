@@ -47,10 +47,8 @@ C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
 C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
 C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
 C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
-C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Juego.resources
 C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
 C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
-C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registrar_Cliente.resources
 C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
 C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
 C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProovedor.resources
@@ -233,3 +231,4 @@ C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\bin\Debug\itext.styledxmlpar
 C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\bin\Debug\itext.svg.xml
 C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\bin\Debug\MySql.Data.xml
 C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyComplete
+C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Form1.resources
