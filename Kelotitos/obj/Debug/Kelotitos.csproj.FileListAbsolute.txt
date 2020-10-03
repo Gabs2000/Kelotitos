@@ -174,3 +174,20 @@ C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotit
 C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
 C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Form1.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProovedor.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.Form1.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
+C:\Users\vjvit\Desktop\Sistemas Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb

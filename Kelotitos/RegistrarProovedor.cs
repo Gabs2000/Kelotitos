@@ -40,7 +40,7 @@ namespace Kelotitos
 
             if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
-                MessageBox.Show("Los campos no pueden quedar vacios", "Registro Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden quedar vacíos", "Registro Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -65,14 +65,14 @@ namespace Kelotitos
                     int resultado = RegisterNewProvider.agregar(newProviderAccount);
                     if (resultado > 0)
                     {
-                        MessageBox.Show("Proveedor Registrado con Exito!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Proveedor Registrado con Éxito!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Elegir ToElegir = new Elegir();
                         this.Hide();
                         ToElegir.Show();
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo guardar a el Proveedor", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se puede guardar a el Proveedor", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
