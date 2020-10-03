@@ -36,7 +36,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -114,18 +113,9 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Cantidad";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(214, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 34);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Eliminar ";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(390, 331);
+            this.button2.Location = new System.Drawing.Point(290, 331);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 34);
             this.button2.TabIndex = 9;
@@ -135,11 +125,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(559, 331);
+            this.button3.Location = new System.Drawing.Point(460, 331);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(91, 34);
             this.button3.TabIndex = 10;
-            this.button3.Text = "Cancelar";
+            this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -150,7 +140,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.radioButton2);
@@ -178,7 +167,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }
