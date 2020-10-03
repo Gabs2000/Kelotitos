@@ -120,7 +120,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 34);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Regresar";
+            this.button1.Text = "Eliminar ";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -139,7 +139,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(91, 34);
             this.button3.TabIndex = 10;
-            this.button3.Text = "Salir";
+            this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

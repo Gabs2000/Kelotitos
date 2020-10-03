@@ -103,5 +103,9 @@ namespace Kelotitos
 
         }
 
+        private void name_textbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

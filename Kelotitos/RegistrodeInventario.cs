@@ -18,7 +18,8 @@ namespace Kelotitos
         }
 
         private void button2_Click(object sender, EventArgs e)
-        { 
+        {
+            MessageBox.Show("Producto Agregado");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace Kelotitos
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
