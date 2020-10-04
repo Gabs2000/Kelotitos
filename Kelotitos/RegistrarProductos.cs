@@ -112,7 +112,7 @@ namespace Kelotitos
 
             if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
-                MessageBox.Show("Los campos no pueden quedar vacios", "Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden quedar vacíos", "Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

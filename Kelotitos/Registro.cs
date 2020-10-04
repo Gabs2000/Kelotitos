@@ -37,13 +37,13 @@ namespace Kelotitos
 
             if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(registeruser_textbox.Text) || string.IsNullOrEmpty(registerpassword_textbox.Text) || string.IsNullOrEmpty(confirmpassword_textbox.Text))
             {
-                MessageBox.Show("Los campos no pueden quedar vacios", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden quedar vacíos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 if (registerpassword_textbox.Text != confirmpassword_textbox.Text)
                 {
-                    MessageBox.Show("Las contraseñas no coinciden, porfavor coloque la misma contraseña en ambos campos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Las contraseñas no coinciden, por favor coloque la misma contraseña en ambos campos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
