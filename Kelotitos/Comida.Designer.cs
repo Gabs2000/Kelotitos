@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.lbhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.dgwCarrito = new System.Windows.Forms.DataGridView();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +41,8 @@
             this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.lblProducto = new System.Windows.Forms.Label();
             this.cbProducto = new System.Windows.Forms.ComboBox();
             this.cbTipo = new System.Windows.Forms.ComboBox();
@@ -57,45 +54,24 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnSumarCant = new System.Windows.Forms.Button();
+            this.btnRestarCant = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // btnConfirmar
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(14, 117);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(368, 39);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(388, 117);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(499, 39);
-            this.comboBox2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button1.Location = new System.Drawing.Point(337, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 66);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Confirmar ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            this.btnConfirmar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnConfirmar.Location = new System.Drawing.Point(761, 540);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(126, 31);
+            this.btnConfirmar.TabIndex = 12;
+            this.btnConfirmar.Text = "Confirmar ";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // lbhora
             // 
@@ -104,7 +80,7 @@
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
             this.lbhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
-            this.lbhora.Location = new System.Drawing.Point(32, 9);
+            this.lbhora.Location = new System.Drawing.Point(-13, 9);
             this.lbhora.Name = "lbhora";
             this.lbhora.Size = new System.Drawing.Size(93, 31);
             this.lbhora.TabIndex = 30;
@@ -116,24 +92,23 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // button3
+            // btnRegresar
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button3.Location = new System.Drawing.Point(58, 505);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(260, 66);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "Regresar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnRegresar.Location = new System.Drawing.Point(12, 496);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(126, 31);
+            this.btnRegresar.TabIndex = 31;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // dataGridView1
+            // dgwCarrito
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgwCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProducto,
             this.producto,
             this.descripcionProducto,
@@ -141,14 +116,14 @@
             this.precioProducto,
             this.cantidad,
             this.subtotal});
-            this.dataGridView1.Location = new System.Drawing.Point(14, 171);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(873, 319);
-            this.dataGridView1.TabIndex = 33;
-            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            this.dgwCarrito.Location = new System.Drawing.Point(14, 171);
+            this.dgwCarrito.MultiSelect = false;
+            this.dgwCarrito.Name = "dgwCarrito";
+            this.dgwCarrito.RowHeadersWidth = 51;
+            this.dgwCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgwCarrito.Size = new System.Drawing.Size(873, 319);
+            this.dgwCarrito.TabIndex = 33;
+            this.dgwCarrito.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarrito_RowHeaderMouseClick);
             // 
             // idProducto
             // 
@@ -209,46 +184,29 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
-            // label5
+            // lblTotal
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label5.Location = new System.Drawing.Point(388, 617);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 73);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "$0.00";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.lblTotal.Location = new System.Drawing.Point(808, 500);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(82, 31);
+            this.lblTotal.TabIndex = 51;
+            this.lblTotal.Text = "$0.00";
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label6.Location = new System.Drawing.Point(125, 617);
+            this.label6.Location = new System.Drawing.Point(692, 500);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(257, 73);
+            this.label6.Size = new System.Drawing.Size(110, 31);
             this.label6.TabIndex = 50;
             this.label6.Text = "TOTAL:";
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button4.Location = new System.Drawing.Point(665, 505);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(222, 66);
-            this.button4.TabIndex = 52;
-            this.button4.Text = "Eliminar ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // lblProducto
             // 
@@ -266,6 +224,7 @@
             this.cbProducto.Name = "cbProducto";
             this.cbProducto.Size = new System.Drawing.Size(205, 21);
             this.cbProducto.TabIndex = 54;
+            this.cbProducto.SelectedIndexChanged += new System.EventHandler(this.cbProducto_SelectedIndexChanged);
             // 
             // cbTipo
             // 
@@ -274,6 +233,7 @@
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(221, 21);
             this.cbTipo.TabIndex = 55;
+            this.cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
             // 
             // cbTamanio
             // 
@@ -303,12 +263,14 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
             this.btnAgregar.Location = new System.Drawing.Point(775, 69);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 59;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // numCantidad
@@ -341,20 +303,48 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(740, 607);
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnEliminar.Location = new System.Drawing.Point(761, 134);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(126, 31);
             this.btnEliminar.TabIndex = 63;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Text = "Eliminar Producto";
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnSumarCant
+            // 
+            this.btnSumarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSumarCant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnSumarCant.Location = new System.Drawing.Point(497, 134);
+            this.btnSumarCant.Name = "btnSumarCant";
+            this.btnSumarCant.Size = new System.Drawing.Size(126, 31);
+            this.btnSumarCant.TabIndex = 64;
+            this.btnSumarCant.Text = "Sumar Cantidad";
+            this.btnSumarCant.UseVisualStyleBackColor = false;
+            this.btnSumarCant.Click += new System.EventHandler(this.btnSumarCant_Click);
+            // 
+            // btnRestarCant
+            // 
+            this.btnRestarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRestarCant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnRestarCant.Location = new System.Drawing.Point(629, 134);
+            this.btnRestarCant.Name = "btnRestarCant";
+            this.btnRestarCant.Size = new System.Drawing.Size(126, 31);
+            this.btnRestarCant.TabIndex = 65;
+            this.btnRestarCant.Text = "Restar Cantidad";
+            this.btnRestarCant.UseVisualStyleBackColor = false;
+            this.btnRestarCant.Click += new System.EventHandler(this.btnRestarCant_Click);
             // 
             // Comida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(940, 759);
+            this.ClientSize = new System.Drawing.Size(915, 592);
+            this.Controls.Add(this.btnRestarCant);
+            this.Controls.Add(this.btnSumarCant);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblCantidad);
@@ -366,20 +356,17 @@
             this.Controls.Add(this.cbTipo);
             this.Controls.Add(this.cbProducto);
             this.Controls.Add(this.lblProducto);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dgwCarrito);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lbhora);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnConfirmar);
             this.Name = "Comida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comida";
             this.Load += new System.EventHandler(this.Comida_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarrito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -387,17 +374,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label lbhora;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridView dgwCarrito;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.ComboBox cbProducto;
         private System.Windows.Forms.ComboBox cbTipo;
@@ -416,5 +399,7 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnSumarCant;
+        private System.Windows.Forms.Button btnRestarCant;
     }
 }

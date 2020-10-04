@@ -53,8 +53,8 @@ namespace Kelotitos
             newProviderAccount.name_prov = name_textbox.Text.Trim();
             newProviderAccount.name_prov = textBox2.Text.Trim();
             newProviderAccount.cant_prov = numericUpDown1.Value.ToString();
-            newProviderAccount.cat_prov = cmb.Items.AddRange();
-            if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(numericUpDown1) || string.IsNullOrEmpty(cmb))
+            newProviderAccount.cat_prov = comboBox1.Items.AddRange();
+            if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(numericUpDown1) || string.IsNullOrEmpty(comboBox1))
             {
                 MessageBox.Show("Los campos requieren de una respuesta", "RegistroInventario", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
