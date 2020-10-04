@@ -247,7 +247,6 @@ C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\bin\Debug\itext.pdfa.dll
 C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\bin\Debug\itext.sign.dll
 C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\bin\Debug\itext.styledxmlparser.dll
 C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\bin\Debug\itext.svg.dll
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\bin\Debug\MySql.Data.dll
 C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\bin\Debug\Google.Protobuf.dll
 C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\bin\Debug\Zstandard.Net.dll
 C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.Streams.dll
@@ -350,4 +349,8 @@ C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreC
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyComplete
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
+<<<<<<< HEAD
 C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
+=======
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
+>>>>>>> 6682c4c009442b0d22da1970dafcbae1ade26cf6

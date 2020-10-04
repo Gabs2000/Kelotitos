@@ -53,6 +53,7 @@ DROP TABLE IF EXISTS cat_tipos_productos;
 CREATE TABLE cat_tipos_productos (
 	id_tipo_producto INT NOT NULL auto_increment,
 	tipo_producto VARCHAR(100),
+    si_tamanio INT,
 	estatus INT,
 	fecha_creacion DATETIME,
     CONSTRAINT id_tipo_producto_Pk primary key (id_tipo_producto)
