@@ -13,52 +13,58 @@ namespace Kelotitos
     public partial class Comida : Form
     {
         MySqlConnection conexion;
-        List<ProductAccount> listaProductos;
-        List<ProductAccount> carrito;
-        int n;
+        int indice;
 
         public Comida()
-        {
-            InitializeComponent();
-        }
-        public Comida(clientAccount cliente)
         {
             InitializeComponent();
         }
 
         private void Comida_Load(object sender, EventArgs e)
         {
-            carrito = new List<ProductAccount>();
-            listaProductos = new List<ProductAccount>();
-
             this.cargarProductos();
-            this.cargarTiposProductos();
-            this.cargarTamanios();
-
-
         }
 
         private void cargarProductos()
         {
             conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT id_producto,nombre FROM cat_productos WHERE estatus = 1", conexion);
+            MySqlCommand cm = new MySqlCommand("SELECT " +
+                                                    "nombre " +
+                                                "FROM cat_productos " +
+                                                "WHERE estatus = 1 " +
+                                                "GROUP BY nombre", conexion);
             MySqlDataReader reader;
 
             reader = cm.ExecuteReader();
             DataTable dt = new DataTable();
-            dt.Columns.Add("id_producto", typeof(int));
             dt.Columns.Add("nombre", typeof(string));
             dt.Load(reader);
 
-            cbProducto.ValueMember = "id_producto";
             cbProducto.DisplayMember = "nombre";
             cbProducto.DataSource = dt;
+        }
+
+        private void cbProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Cada que se cambie el producto se va a ejecutar este método
+            this.cargarTiposProductos();
         }
 
         private void cargarTiposProductos()
         {
             conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT id_tipo_producto, tipo_producto FROM cat_tipos_productos WHERE estatus = 1", conexion);
+
+            //Retorna todos los tipos de productos que tiene asignado el producto elegido
+            MySqlCommand cm = new MySqlCommand("SELECT " +
+                                                    "TP.id_tipo_producto, " +
+                                                    "TP.tipo_producto " +
+                                                "FROM cat_productos P " +
+                                                "INNER JOIN snack_db.cat_tipos_productos TP " +
+                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                "WHERE P.nombre = @nombre " +
+                                                "AND P.estatus = 1 " +
+                                                "GROUP BY TP.id_tipo_producto, TP.tipo_producto", conexion);
+            cm.Parameters.AddWithValue("@nombre", cbProducto.Text);
             MySqlDataReader reader;
 
             reader = cm.ExecuteReader();
@@ -72,10 +78,29 @@ namespace Kelotitos
             cbTipo.DataSource = dt;
         }
 
+        private void cbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Cada que se cambie el tipo de producto se va a ejecutar este método
+            this.cargarTamanios();
+        }
+
         private void cargarTamanios()
         {
             conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT id_tamanio, tamanio FROM cat_tamanios WHERE estatus = 1", conexion);
+            //Se retorna los diferentes tamaños que tiene asignado el producto y tipo de producto seleccionado
+            MySqlCommand cm = new MySqlCommand("SELECT " +
+                                                    "P.id_tamanio, " +
+                                                    "T.tamanio " +
+                                                "FROM cat_productos P " +
+                                                "LEFT OUTER JOIN cat_tamanios T " +
+                                                    "ON P.id_tamanio = T.id_tamanio " +
+                                                "LEFT OUTER JOIN cat_tipos_productos TP " +
+                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                "WHERE P.nombre = @nombre " +
+                                                "AND P.id_tipo_producto = @idTipoProducto " +
+                                                "AND P.estatus = 1", conexion);
+            cm.Parameters.AddWithValue("@nombre", cbProducto.Text);
+            cm.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
             MySqlDataReader reader;
 
             reader = cm.ExecuteReader();
@@ -91,140 +116,75 @@ namespace Kelotitos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if((cbProducto.SelectedItem != null) && (cbTipo != null) && (cbTamanio != null))
+            if ((cbProducto.SelectedItem != null) && (cbTipo != null))
             {
                 try
                 {
-                    if(numCantidad.Value > 0)
+                    if (numCantidad.Value > 0)
                     {
                         lblError.Text = "Error";
                         lblError.Visible = false;
 
                         //Agregamos al carrito
-                        string nombre, tipoProducto, tamanio;
-                        int precio, id;
-                        decimal subtotal;
+                        double subtotal;
                         conexion = Connection.GetConnection();
 
                         //Obtenemos el id del producto
-                        MySqlCommand cmId= new MySqlCommand("SELECT " +
-                                                                    "P.id_producto " +
-                                                                "FROM cat_productos P " +
-                                                                "INNER JOIN cat_tamanios T " +
-                                                                    "ON P.id_tamanio = T.id_tamanio " +
-                                                                "INNER JOIN cat_tipos_productos TP " +
-                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                                "WHERE P.id_producto = @idProducto " +
-                                                                "AND P.id_tamanio = @idTamanio " +
-                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                        cmId.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                        cmId.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
+                        MySqlCommand cmId = new MySqlCommand("SELECT " +
+                                                                "P.id_producto, " +
+                                                                "P.nombre, " +
+                                                                "TP.tipo_producto, " +
+                                                                "T.tamanio, " +
+                                                                "P.precio " +
+                                                            "FROM cat_productos P " +
+                                                            "LEFT OUTER JOIN cat_tamanios T " +
+                                                               "ON P.id_tamanio = T.id_tamanio " +
+                                                            "LEFT OUTER JOIN cat_tipos_productos TP " +
+                                                                "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                                                            "WHERE P.nombre = @nombre " +
+                                                            "AND P.id_tipo_producto = @idTipoProducto " +
+                                                            "AND IF(TP.si_tamanio = 1, P.id_tamanio = @idTamanio, P.id_tamanio IS NULL) " +
+                                                            "AND P.estatus = 1 ", conexion);
+                        cmId.Parameters.AddWithValue("@nombre", cbProducto.Text);
                         cmId.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
+                        cmId.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
 
-                        var resultadoId = cmId.ExecuteScalar();
+                        var resultado = cmId.ExecuteReader();
 
-                        id = Convert.ToInt32(Convert.ToString(resultadoId));
+                        if (resultado.HasRows)
+                        {
+                            resultado.Read();// Get first record.
 
-                        //Obtenemos el nombre del producto
-                        MySqlCommand cmNombre = new MySqlCommand("SELECT " +
-                                                                    "P.nombre " +
-                                                                "FROM cat_productos P " +
-                                                                "INNER JOIN cat_tamanios T " +
-                                                                    "ON P.id_tamanio = T.id_tamanio " +
-                                                                "INNER JOIN cat_tipos_productos TP " +
-                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                                "WHERE P.id_producto = @idProducto " +
-                                                                "AND P.id_tamanio = @idTamanio " +
-                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                        cmNombre.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                        cmNombre.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                        cmNombre.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
+                            // Se guardan los valores en el datagridview1
+                            int n = dgwCarrito.Rows.Add();
+                            dgwCarrito.Rows[n].Cells[0].Value = resultado.GetInt32(0);
+                            dgwCarrito.Rows[n].Cells[1].Value = resultado.GetString(1);
+                            dgwCarrito.Rows[n].Cells[2].Value = resultado.GetString(2);
+                            if (resultado[3] != DBNull.Value)
+                            {
+                                dgwCarrito.Rows[n].Cells[3].Value = resultado.GetString(3);
+                            }
+                            dgwCarrito.Rows[n].Cells[4].Value = resultado.GetInt32(4);
+                            dgwCarrito.Rows[n].Cells[5].Value = numCantidad.Value;
 
-                        var resultadoNombre = cmNombre.ExecuteScalar();
+                            subtotal = Convert.ToDouble(resultado.GetInt32(4) * numCantidad.Value);
+                            dgwCarrito.Rows[n].Cells[6].Value = subtotal;
 
-                        nombre = Convert.ToString(resultadoNombre);
+                            //Una vez que se agrega el producto, se resetean los campos
+                            cbProducto.SelectedIndex = 0;
+                            cbTamanio.SelectedIndex = 0;
+                            cbTipo.SelectedIndex = 0;
+                            numCantidad.Value = 0;
 
+                            //Le sumamos al total el subtotal
+                            this.sumarTotal(subtotal);
+                        }
 
-                        // Obtenemos el tipo de producto
-                        MySqlCommand cmTipo = new MySqlCommand("SELECT " +
-                                                                    "TP.tipo_producto " +
-                                                                "FROM cat_productos P " +
-                                                                "INNER JOIN cat_tamanios T " +
-                                                                    "ON P.id_tamanio = T.id_tamanio " +
-                                                                "INNER JOIN cat_tipos_productos TP " +
-                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                                "WHERE P.id_producto = @idProducto " +
-                                                                "AND P.id_tamanio = @idTamanio " +
-                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                        cmTipo.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                        cmTipo.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                        cmTipo.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
+                        // Evita que se seleccione automáticamente una fila
+                        dgwCarrito.ClearSelection();
 
-                        var resultadoTipo = cmTipo.ExecuteScalar();
-
-                        tipoProducto = Convert.ToString(resultadoTipo);
-
-
-                        // Obtenemos el tamaño de producto
-                        MySqlCommand cmTamanio = new MySqlCommand("SELECT " +
-                                                                    "T.tamanio " +
-                                                                "FROM cat_productos P " +
-                                                                "INNER JOIN cat_tamanios T " +
-                                                                    "ON P.id_tamanio = T.id_tamanio " +
-                                                                "INNER JOIN cat_tipos_productos TP " +
-                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                                "WHERE P.id_producto = @idProducto " +
-                                                                "AND P.id_tamanio = @idTamanio " +
-                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                        cmTamanio.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                        cmTamanio.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                        cmTamanio.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
-
-                        var resultadoTamanio = cmTamanio.ExecuteScalar();
-
-                        tamanio = Convert.ToString(resultadoTamanio);
-
-
-                        // Obtenemos el precio de producto
-                        MySqlCommand cmPrecio = new MySqlCommand("SELECT " +
-                                                                    "P.precio " +
-                                                                "FROM cat_productos P " +
-                                                                "INNER JOIN cat_tamanios T " +
-                                                                    "ON P.id_tamanio = T.id_tamanio " +
-                                                                "INNER JOIN cat_tipos_productos TP " +
-                                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                                "WHERE P.id_producto = @idProducto " +
-                                                                "AND P.id_tamanio = @idTamanio " +
-                                                                "AND P.id_tipo_producto = @idTipoProducto", conexion);
-                        cmPrecio.Parameters.AddWithValue("@idProducto", cbProducto.SelectedValue);
-                        cmPrecio.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
-                        cmPrecio.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
-
-                        var resultadoPrecio = cmPrecio.ExecuteScalar();
-
-                        precio = Convert.ToInt32(Convert.ToString(resultadoPrecio));
-
-                        subtotal = precio * numCantidad.Value;
-
-                        //Console.WriteLine(id + ", " + nombre + ", " + tipoProducto + ", " + tamanio + ", " + precio);
-
-                        // Se guardan los valores en el datagridview1
-                        int n = dataGridView1.Rows.Add();
-                        dataGridView1.Rows[n].Cells[0].Value = id;
-                        dataGridView1.Rows[n].Cells[1].Value = nombre;
-                        dataGridView1.Rows[n].Cells[2].Value = tipoProducto;
-                        dataGridView1.Rows[n].Cells[3].Value = tamanio;
-                        dataGridView1.Rows[n].Cells[4].Value = precio;
-                        dataGridView1.Rows[n].Cells[5].Value = numCantidad.Value;
-                        dataGridView1.Rows[n].Cells[6].Value = subtotal;
-
-                        //Una vez que se agrega el producto, se resetean los campos
-                        cbProducto.SelectedIndex = 0;
-                        cbTamanio.SelectedIndex = 0;
-                        cbTipo.SelectedIndex = 0;
-                        numCantidad.Value = 0;
-
-                    } else
+                    }
+                    else
                     {
                         lblError.Text = "Error: Debes de poner una cantidad de producto!";
                         lblError.Visible = true;
@@ -238,112 +198,223 @@ namespace Kelotitos
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
-
-        }
-
-
-
-
-
-
-        //Anterior
-
-        private void cargarAlimentos(string product)
-        {
-            comboBox2.Items.Clear();
-            listaProductos.Clear();
-            conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT id_prod, name_prod, des_prod, price_prod, stock_prod FROM product WHERE name_prod = @product && stock_prod > 0", conexion);
-            cm.Parameters.AddWithValue("@product", product);
-            MySqlDataReader consultar = cm.ExecuteReader();
-            while (consultar.Read())
+            try
             {
-                ProductAccount producto = new ProductAccount();
-                producto.id_prod = consultar.GetInt32(0);
-                producto.name_prod = consultar.GetString(1);
-                producto.des_prod = consultar.GetString(2);
-                producto.price_prod = consultar.GetDouble(3);
-                producto.stock_prod = consultar.GetInt32(4);
-                listaProductos.Add(producto);
-                ComboBoxItem item = new ComboBoxItem();
-                item.Text = $"{producto.des_prod}";
-                item.Value = producto.id_prod;
-
-                comboBox2.Items.Add(item);
-                comboBox2.SelectedIndex = 0;
-            }
-
-            if (comboBox2.Items.Count == 0)
-            {
-                comboBox2.Text = "";
-            }
-
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-            //TODO: Hacer transacciones
-            //Insertar compra
-            if (carrito.Count > 0)
-            {
-                int id;
-                MySqlConnection conexion = Connection.GetConnection();
-                MySqlCommand comm = conexion.CreateCommand();
-                comm.CommandText = "INSERT INTO sale (datetime_sale, total_sale, client_id_client, user_id_user) VALUES (now(), 0, @client, @user)";
-                comm.Parameters.AddWithValue("@user", Login.idUsuario);
-                comm.ExecuteNonQuery();
-                id = Convert.ToInt32(comm.LastInsertedId);
-                conexion.Close();
-
-                //Insertar detalles de compra 
-                int noRows = -1;
-                foreach (ProductAccount producto in carrito)
+                if (dgwCarrito.Rows.Count > 0)
                 {
-                    try
-                    {
-                        conexion = Connection.GetConnection();
-                        comm = conexion.CreateCommand();
-                        comm.CommandText = "INSERT INTO sale_has_product (sale_id_sale, product_id_prod, quantity_prod) VALUES (@id_sale, @id_prod, 1)";
-                        comm.Parameters.AddWithValue("@id_sale", id);
-                        comm.Parameters.AddWithValue("@id_prod", producto.id_prod);
-                        noRows = comm.ExecuteNonQuery();
-                    }
-                    catch (Exception err)
-                    {
-                        Console.WriteLine(err);
-                    }
-                    finally
-                    {
-                        conexion.Close();
-                    }
-                }
 
-                if (noRows > 0)
-                {
-                    MessageBox.Show("Compra registrada con exito", "Compra realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    reset();
+                    int idVenta, cantidad;
+
+                    string folio;
+                    string queryContador = "SELECT COUNT(*) FROM snack_db.ventas";
+
+                    string queryInsertVenta = "INSERT INTO snack_db.ventas " +
+                                                    "(folio, id_usuario, fecha_venta, total, estatus, fecha_creacion) " +
+                                                "VALUES " +
+                                                    "(@folio,@idUsuario,NOW(),@total,1,NOW())";
+
+                    string queryMaximo = "SELECT MAX(folio) FROM snack_db.ventas";
+
+                    string queryDetalleVenta = "INSERT INTO snack_db.detalles_ventas " +
+                                                "(id_venta, id_producto, cantidad, estatus, fecha_creacion) " +
+                                                "VALUES " +
+                                                "(@idVenta,@idProducto,@cantidad,1,NOW())";
+
+                    conexion = Connection.GetConnection();
+
+                    //Obtenemos el valor de registros que hay en la tabla ventas y guardamos el valor en la
+                    //variable cantidad
+                    using (MySqlCommand cm = new MySqlCommand(queryContador, conexion))
+                    {
+                        using (var resultado = cm.ExecuteReader())
+                        {
+                            resultado.Read();
+
+                            cantidad = resultado.GetInt32(0);
+
+                            resultado.Close();
+                        }
+                    }
+
+                    if (cantidad > 0)
+                    {
+                        //Si existen registros en la tabla ventas, entonces generamos el siguiente número de folio
+                        using (MySqlCommand cmFa = new MySqlCommand(queryMaximo, conexion))
+                        {
+
+                            var folioAnterior = cmFa.ExecuteReader();
+
+                            folioAnterior.Read();
+
+                            folio = (Convert.ToInt32(folioAnterior.GetString(0)) + 1).ToString();
+
+                            //Agrega los ceros necesarios para que quede el folio con el formato 0000
+                            if (folio.Length == 1)
+                            {
+                                folio = "000" + folio;
+                            }
+                            else if (folio.Length == 2)
+                            {
+                                folio = "00" + folio;
+                            }
+                            else if (folio.Length == 3)
+                            {
+                                folio = "0" + folio;
+                            }
+
+                            folioAnterior.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        //Si no hay registros en la tabla ventas, entonces ponemos el folio como 0001
+                        folio = "0001";
+                    }
+
+                    // Insertamos en la tabla ventas
+                    using (MySqlCommand venta = new MySqlCommand(queryInsertVenta, conexion))
+                    {
+                        venta.Parameters.AddWithValue("@folio", folio);
+                        venta.Parameters.AddWithValue("@idUsuario", Login.idUsuario);
+                        venta.Parameters.AddWithValue("@total", lblTotal.Text.Replace("$", ""));
+                        venta.ExecuteNonQuery();
+                        idVenta = Convert.ToInt32(venta.LastInsertedId);
+
+                        //Console.WriteLine(idVenta);
+                    }
+
+                    //Insertamos los detalles de la venta
+                    foreach (DataGridViewRow row in dgwCarrito.Rows)
+                    {
+                        if (row.IsNewRow == false)
+                        {
+                            using (MySqlCommand detalle = new MySqlCommand(queryDetalleVenta, conexion))
+                            {
+                                detalle.Parameters.AddWithValue("@idVenta", idVenta);
+                                detalle.Parameters.AddWithValue("@idProducto", row.Cells[0].Value);
+                                detalle.Parameters.AddWithValue("@cantidad", row.Cells[5].Value);
+                                detalle.ExecuteNonQuery();
+                            }
+                        }
+                    }
+
+                    //MessageBox.Show("Compra registrada con exito", "Compra realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.reset();
+
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un error en la transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Agregue algunos articulos al carrito antes de confirmar", "Carrito vacio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch (Exception err)
             {
-                MessageBox.Show("Agregue algunos articulos antes de confirmar", "Carrito vacio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hubo un error en la transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(err);
             }
 
-            Confirmacion_de_pedido ToMenu = new Confirmacion_de_pedido(carrito);
+            Confirmacion_de_pedido ToMenu = new Confirmacion_de_pedido();
             this.Hide();
             ToMenu.Show();
         }
-        private void reset()
+
+        private void sumarTotal(double subtotal)
         {
-            carrito.Clear();
-            dataGridView1.Rows.Clear();
-            label5.Text = "$0.00";
+            double nuevoTotal = Double.Parse(lblTotal.Text.Replace("$", "")) + subtotal;
+            string total = string.Format("{0:0.00}", nuevoTotal);
+            lblTotal.Text = $"${total}";
+        }
+
+        private void restarTotal(double valor)
+        {
+            double nuevoTotal = Double.Parse(lblTotal.Text.Replace("$", "")) - valor;
+            string total = string.Format("{0:0.00}", nuevoTotal);
+            lblTotal.Text = $"${total}";
+        }
+
+        private void dgwCarrito_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            // Con este se obtiene el indice de la fila seleccionada
+            indice = e.RowIndex;
+            Console.WriteLine(indice);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            if (indice != -1)
+            {
+                try
+                {
+                    var valorSubtotal = Convert.ToDouble(dgwCarrito.Rows[indice].Cells[6].Value);
+
+                    this.restarTotal(valorSubtotal);
+
+                    dgwCarrito.Rows.RemoveAt(indice);
+                    //Console.WriteLine("Eliminar: " + n);
+
+                    // Evita que se seleccione automáticamente una fila
+                    dgwCarrito.ClearSelection();
+                }
+                catch (System.InvalidOperationException err)
+                {
+                    MessageBox.Show("Debe seleccionar primero el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+        }
+
+        private void btnRestarCant_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                var valorPrecioUnitario = Convert.ToDouble(dgwCarrito.Rows[indice].Cells[4].Value);
+
+                this.restarTotal(valorPrecioUnitario);
+
+                dgwCarrito.Rows[indice].Cells[5].Value = (Convert.ToInt32(dgwCarrito.Rows[indice].Cells[5].Value) - 1).ToString();
+
+                if (Convert.ToInt32(dgwCarrito.Rows[indice].Cells[5].Value) == 0)
+                {
+                    dgwCarrito.Rows.RemoveAt(indice);
+                    // Evita que se seleccione automáticamente una fila
+                    dgwCarrito.ClearSelection();
+                }
+            }
+            catch (System.InvalidOperationException err)
+            {
+                MessageBox.Show("Debe seleccionar primero el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnSumarCant_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var valorPrecioUnitario = Convert.ToDouble(dgwCarrito.Rows[indice].Cells[4].Value);
+
+                dgwCarrito.Rows[indice].Cells[5].Value = (Convert.ToInt32(dgwCarrito.Rows[indice].Cells[5].Value) + 1).ToString();
+
+                this.sumarTotal(valorPrecioUnitario);
+
+            }
+            catch (System.InvalidOperationException err)
+            {
+                MessageBox.Show("Debe seleccionar primero el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Elegir ToElegir = new Elegir();
+            this.Hide();
+            ToElegir.Show();
         }
 
         private void Lbhora_Click(object sender, EventArgs e)
@@ -356,69 +427,11 @@ namespace Kelotitos
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
 
-        private void Button3_Click(object sender, EventArgs e)
+        private void reset()
         {
-            Elegir ToElegir = new Elegir();
-            this.Hide();
-            ToElegir.Show();
+            dgwCarrito.Rows.Clear();
+            lblTotal.Text = "$0.00";
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (comboBox2.Text != "")
-            {
-                //agregamos al carrito
-                ProductAccount productNew = listaProductos[comboBox2.SelectedIndex];
-                productNew.items = 1;
-
-                int n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value = productNew.id_prod;
-                dataGridView1.Rows[n].Cells[1].Value = productNew.name_prod;
-                dataGridView1.Rows[n].Cells[2].Value = productNew.des_prod;
-                dataGridView1.Rows[n].Cells[3].Value = productNew.price_prod;
-                dataGridView1.Rows[n].Cells[4].Value = 1;
-                dataGridView1.Rows[n].Cells[5].Value = productNew.price_prod;
-                carrito.Add(productNew);
-                sumarTotal(productNew.price_prod);
-
-                
-            }
-        }
-
-        private void sumarTotal(double subtotal)
-        {
-            double nuevoTotal = Double.Parse(label5.Text.Replace("$", "")) + subtotal;
-            string total = string.Format("{0:0.00}", nuevoTotal);
-            label5.Text = $"${total}";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (n != -1)
-            {
-                try
-                {
-                    dataGridView1.Rows.RemoveAt(n);
-                    sumarTotal(carrito[n].price_prod * -1);
-                    Console.WriteLine(carrito[n].price_prod * -1);
-                    carrito.RemoveAt(n);
-                    for (int i = 0; i < carrito.Count; i++)
-                    {
-                        Console.WriteLine(carrito[i].name_prod);
-                    }
-                }
-                catch (System.InvalidOperationException err)
-                {
-                    MessageBox.Show("La nueva fila sin confirmar no se puede eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-        }
-
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            n = e.RowIndex;
-            Console.WriteLine(n);
-        }
     }
 }

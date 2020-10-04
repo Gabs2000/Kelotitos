@@ -12,8 +12,8 @@ namespace Kelotitos.ModelsDB
         public int id_prov { get; set; }
         public string name_prov { get; set; }
         public string email_prov { get; set; }
-        public string tel_prov { get; set; }
-        public string location_prov { get; set; }
+        public string cant_prov { get; set; }
+        public string cat_prov { get; set; }
 
         public providerAccount() { }
         public providerAccount(int id, string name)
@@ -26,8 +26,8 @@ namespace Kelotitos.ModelsDB
             this.id_prov = id;
             this.name_prov = name;
             this.email_prov = email;
-            this.tel_prov = tel;
-            this.location_prov = location;
+            this.cant_prov = tel;
+            this.cat_prov = location;
         }
     }
 }

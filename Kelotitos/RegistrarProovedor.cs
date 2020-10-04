@@ -35,8 +35,8 @@ namespace Kelotitos
             providerAccount newProviderAccount = new providerAccount();
             newProviderAccount.name_prov = name_textbox.Text.Trim();
             newProviderAccount.email_prov = textBox2.Text.Trim();
-            newProviderAccount.tel_prov = textBox1.Text.Trim();
-            newProviderAccount.location_prov = textBox3.Text.Trim();
+            newProviderAccount.cant_prov = textBox1.Text.Trim();
+            newProviderAccount.cat_prov = textBox3.Text.Trim();
 
             if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
@@ -50,8 +50,8 @@ namespace Kelotitos
                 newProvider.CommandText = "SELECT * FROM provider WHERE name_prov   ";
                 newProvider.Parameters.AddWithValue("@newProviderAccount.name_prov", newProviderAccount.name_prov);
                 newProvider.Parameters.AddWithValue("@newProviderAccount.email_prov", newProviderAccount.email_prov);
-                newProvider.Parameters.AddWithValue("@newProvideraAccount.tel_prov", newProviderAccount.tel_prov);
-                newProvider.Parameters.AddWithValue("@newProviderAccount.location_prov", newProviderAccount.location_prov);
+                newProvider.Parameters.AddWithValue("@newProvideraAccount.tel_prov", newProviderAccount.cant_prov);
+                newProvider.Parameters.AddWithValue("@newProviderAccount.location_prov", newProviderAccount.cat_prov);
                 newProvider.Connection = conexion;
 
                 MySqlDataReader leer = newProvider.ExecuteReader();
@@ -72,7 +72,7 @@ namespace Kelotitos
                     }
                     else
                     {
-                        MessageBox.Show("No se puede guardar a el Proveedor", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se puede guardar al Proveedor", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
