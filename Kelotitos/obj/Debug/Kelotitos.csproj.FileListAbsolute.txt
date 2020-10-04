@@ -350,3 +350,4 @@ C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreC
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyComplete
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
