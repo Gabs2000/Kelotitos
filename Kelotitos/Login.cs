@@ -10,6 +10,7 @@ namespace Kelotitos
     {
         public static int idUsuario;
         public static string nombreUsuario;
+        public static int siAdmin;
         public Login()
         {
             InitializeComponent();
@@ -39,12 +40,22 @@ namespace Kelotitos
                 {
                     Login.idUsuario = leer.GetInt32(0);
                     Login.nombreUsuario = leer.GetString(1);
+                    Login.siAdmin = leer.GetInt32(4);
                     Console.WriteLine(Login.idUsuario);
                     MessageBox.Show("Bienvenido", "Log In", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Elegir ToMenu = new Elegir();
+
+                    if(leer.GetInt32(4) == 1)
+                    {
+                        Elegir ToMenu = new Elegir();
+                        ToMenu.Show();
+                    }
+                    else
+                    {
+                        Comida comida = new Comida();
+                        comida.Show();
+                    }
 
                     this.Hide();
-                    ToMenu.Show();
                     conexion.Close();
                 }
                 else
@@ -77,9 +88,5 @@ namespace Kelotitos
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
 
-        private void password_textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

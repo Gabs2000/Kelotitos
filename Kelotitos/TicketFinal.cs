@@ -28,6 +28,14 @@ namespace Kelotitos
             InitializeComponent();
         }
 
+        private void TicketFinal_Load(object sender, EventArgs e)
+        {
+            if(Login.siAdmin == 0)
+            {
+                btnMenu.Visible = false;
+            }
+        }
+
         private void btnMenu_Click(object sender, EventArgs e)
         {
             Elegir elegir = new Elegir();

@@ -202,7 +202,7 @@ namespace Kelotitos
         {
             try
             {
-                if (dgwCarrito.Rows.Count > 0)
+                if (dgwCarrito.Rows.Count > 1)
                 {
 
                     int idVenta, cantidad;
@@ -304,6 +304,10 @@ namespace Kelotitos
                     //MessageBox.Show("Compra registrada con exito", "Compra realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.reset();
 
+                    Confirmacion_de_pedido ToMenu = new Confirmacion_de_pedido();
+                    this.Hide();
+                    ToMenu.Show();
+
                 }
                 else
                 {
@@ -315,10 +319,6 @@ namespace Kelotitos
                 MessageBox.Show("Hubo un error en la transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(err);
             }
-
-            Confirmacion_de_pedido ToMenu = new Confirmacion_de_pedido();
-            this.Hide();
-            ToMenu.Show();
         }
 
         private void sumarTotal(double subtotal)
@@ -418,9 +418,19 @@ namespace Kelotitos
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Elegir ToElegir = new Elegir();
-            this.Hide();
-            ToElegir.Show();
+            if (Login.siAdmin == 0)
+            {
+                Login login = new Login();
+                this.Hide();
+                login.Show();
+            }
+            else
+            {
+                Elegir ToElegir = new Elegir();
+                this.Hide();
+                ToElegir.Show();
+            }
+            
         }
 
         private void Lbhora_Click(object sender, EventArgs e)

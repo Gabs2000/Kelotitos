@@ -247,7 +247,7 @@ namespace Kelotitos
         {
             try
             {
-                if (dgwCompras.Rows.Count > 0)
+                if (dgwCompras.Rows.Count > 1)
                 {
 
                     string queryCompra = "INSERT INTO compras_proveedor " +
