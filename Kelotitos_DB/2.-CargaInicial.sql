@@ -6,7 +6,7 @@ VALUES
 ("Grande",1,NOW());
 
 INSERT INTO `snack_db`.`cat_tipos_productos`
-(`tipo_producto`,`siTamanio`,`estatus`,`fecha_creacion`)
+(`tipo_producto`,`si_Tamanio`,`estatus`,`fecha_creacion`)
 VALUES
 ("En vaso",1,1,NOW()),
 ("Entero",0,1,NOW()),

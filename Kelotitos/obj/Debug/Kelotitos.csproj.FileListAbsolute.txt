@@ -351,3 +351,4 @@ C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyC
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
+C:\Users\cesar\source\repos\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
