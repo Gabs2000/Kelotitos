@@ -42,7 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bcancelar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -64,7 +64,6 @@
             this.tabla.TabIndex = 1;
             this.tabla.UseCompatibleStateImageBehavior = false;
             this.tabla.View = System.Windows.Forms.View.Details;
-            this.tabla.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -112,7 +111,6 @@
             this.dirprove.Name = "dirprove";
             this.dirprove.Size = new System.Drawing.Size(288, 20);
             this.dirprove.TabIndex = 7;
-            this.dirprove.TextChanged += new System.EventHandler(this.dirprove_TextChanged);
             // 
             // mailprove
             // 
@@ -120,7 +118,6 @@
             this.mailprove.Name = "mailprove";
             this.mailprove.Size = new System.Drawing.Size(288, 20);
             this.mailprove.TabIndex = 6;
-            this.mailprove.TextChanged += new System.EventHandler(this.mailprove_TextChanged);
             // 
             // telprove
             // 
@@ -128,7 +125,6 @@
             this.telprove.Name = "telprove";
             this.telprove.Size = new System.Drawing.Size(288, 20);
             this.telprove.TabIndex = 5;
-            this.telprove.TextChanged += new System.EventHandler(this.telprove_TextChanged);
             // 
             // nomprove
             // 
@@ -136,7 +132,6 @@
             this.nomprove.Name = "nomprove";
             this.nomprove.Size = new System.Drawing.Size(288, 20);
             this.nomprove.TabIndex = 4;
-            this.nomprove.TextChanged += new System.EventHandler(this.nomprove_TextChanged);
             // 
             // label4
             // 
@@ -155,7 +150,6 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "E-mail";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -175,15 +169,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del proveedor";
             // 
-            // bcancelar
+            // btnCancelar
             // 
-            this.bcancelar.Location = new System.Drawing.Point(88, 265);
-            this.bcancelar.Name = "bcancelar";
-            this.bcancelar.Size = new System.Drawing.Size(75, 23);
-            this.bcancelar.TabIndex = 3;
-            this.bcancelar.Text = "Cancelar";
-            this.bcancelar.UseVisualStyleBackColor = true;
-            this.bcancelar.Click += new System.EventHandler(this.bcancelar_Click);
+            this.btnCancelar.Location = new System.Drawing.Point(88, 265);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnRegistrar
             // 
@@ -212,7 +206,7 @@
             this.ClientSize = new System.Drawing.Size(878, 498);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.bcancelar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabla);
             this.Name = "RegistrarProveedor";
@@ -237,7 +231,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button bcancelar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.ColumnHeader columnHeader1;

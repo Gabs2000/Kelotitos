@@ -18,42 +18,7 @@ namespace Prueba
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nomprove_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mailprove_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dirprove_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void telprove_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -84,12 +49,13 @@ namespace Prueba
                 fila.SubItems.Add(mail);
 
                 tabla.Items.Add(fila);
-                bcancelar_Click(sender, e);
+                btnCancelar_Click(sender, e);
 
             }
 
         }
-        private void bcancelar_Click(object sender, EventArgs e)
+
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             nomprove.Clear();
             dirprove.Clear();
