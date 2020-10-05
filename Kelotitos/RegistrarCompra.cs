@@ -271,6 +271,8 @@ namespace Kelotitos
                         }
                     }
 
+                    this.agregarInventario();
+
                     MessageBox.Show("Compra registrada con exito", "Compra realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.reset();
 
@@ -284,6 +286,25 @@ namespace Kelotitos
             {
                 MessageBox.Show("Hubo un error en la transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(err);
+            }
+        }
+
+        private void agregarInventario()
+        {
+            foreach (DataGridViewRow row in dgwCompras.Rows)
+            {
+                if (row.IsNewRow == false)
+                {
+                    string querySumarInv = "UPDATE inventario " +
+                                            "SET cantidad = cantidad + @cantidad " +
+                                            "WHERE id_inventario = @idInventario";
+                    using (MySqlCommand detalle = new MySqlCommand(querySumarInv, conexion))
+                    {
+                        detalle.Parameters.AddWithValue("@cantidad", row.Cells[4].Value);
+                        detalle.Parameters.AddWithValue("@idInventario", row.Cells[0].Value);
+                        detalle.ExecuteNonQuery();
+                    }
+                }
             }
         }
 
