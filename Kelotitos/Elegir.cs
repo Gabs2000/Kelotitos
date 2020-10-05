@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prueba;
+using System;
 using System.Windows.Forms;
 
 namespace Kelotitos
@@ -48,7 +49,7 @@ namespace Kelotitos
 
         private void lblRegProveedor_Click(object sender, EventArgs e)
         {
-            RegistrarProovedor ToLogin = new RegistrarProovedor();
+            RegistrarProveedor ToLogin = new RegistrarProveedor();
             this.Hide();
             ToLogin.Show();
         }

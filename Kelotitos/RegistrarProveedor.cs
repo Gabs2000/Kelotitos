@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kelotitos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,7 +58,7 @@ namespace Prueba
 
         }
 
-        private void bregistrar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             //valida que todos los campos esten llenos
             if (nomprove.Text == "")
@@ -96,5 +97,11 @@ namespace Prueba
             mailprove.Clear();
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Elegir elegir = new Elegir();
+            this.Hide();
+            elegir.Show();
+        }
     }
 }
