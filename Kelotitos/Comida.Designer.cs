@@ -33,13 +33,6 @@
             this.lbhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dgwCarrito = new System.Windows.Forms.DataGridView();
-            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tamanio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
@@ -57,6 +50,14 @@
             this.btnRestarCant = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tamanio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +68,7 @@
             this.btnConfirmar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirmar.Location = new System.Drawing.Point(729, 457);
+            this.btnConfirmar.Location = new System.Drawing.Point(769, 706);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(126, 31);
             this.btnConfirmar.TabIndex = 12;
@@ -82,7 +83,7 @@
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
             this.lbhora.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.lbhora.Location = new System.Drawing.Point(725, 17);
+            this.lbhora.Location = new System.Drawing.Point(756, 40);
             this.lbhora.Name = "lbhora";
             this.lbhora.Size = new System.Drawing.Size(73, 24);
             this.lbhora.TabIndex = 30;
@@ -105,76 +106,14 @@
             this.precioProducto,
             this.cantidad,
             this.subtotal});
-            this.dgwCarrito.Location = new System.Drawing.Point(37, 214);
+            this.dgwCarrito.Location = new System.Drawing.Point(94, 390);
             this.dgwCarrito.MultiSelect = false;
             this.dgwCarrito.Name = "dgwCarrito";
             this.dgwCarrito.RowHeadersWidth = 51;
             this.dgwCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCarrito.Size = new System.Drawing.Size(635, 356);
+            this.dgwCarrito.Size = new System.Drawing.Size(823, 302);
             this.dgwCarrito.TabIndex = 33;
             this.dgwCarrito.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarrito_RowHeaderMouseClick);
-            // 
-            // idProducto
-            // 
-            this.idProducto.Frozen = true;
-            this.idProducto.HeaderText = "ID";
-            this.idProducto.MinimumWidth = 6;
-            this.idProducto.Name = "idProducto";
-            this.idProducto.ReadOnly = true;
-            this.idProducto.Width = 50;
-            // 
-            // producto
-            // 
-            this.producto.Frozen = true;
-            this.producto.HeaderText = "Producto";
-            this.producto.MinimumWidth = 170;
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            this.producto.Width = 170;
-            // 
-            // descripcionProducto
-            // 
-            this.descripcionProducto.Frozen = true;
-            this.descripcionProducto.HeaderText = "Tipo";
-            this.descripcionProducto.MinimumWidth = 100;
-            this.descripcionProducto.Name = "descripcionProducto";
-            this.descripcionProducto.ReadOnly = true;
-            // 
-            // Tamanio
-            // 
-            this.Tamanio.Frozen = true;
-            this.Tamanio.HeaderText = "Tamaño";
-            this.Tamanio.MinimumWidth = 70;
-            this.Tamanio.Name = "Tamanio";
-            this.Tamanio.ReadOnly = true;
-            this.Tamanio.Width = 70;
-            // 
-            // precioProducto
-            // 
-            this.precioProducto.Frozen = true;
-            this.precioProducto.HeaderText = "Precio";
-            this.precioProducto.MinimumWidth = 70;
-            this.precioProducto.Name = "precioProducto";
-            this.precioProducto.ReadOnly = true;
-            this.precioProducto.Width = 70;
-            // 
-            // cantidad
-            // 
-            this.cantidad.Frozen = true;
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 50;
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 50;
-            // 
-            // subtotal
-            // 
-            this.subtotal.Frozen = true;
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.MinimumWidth = 70;
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            this.subtotal.Width = 70;
             // 
             // lblTotal
             // 
@@ -182,7 +121,7 @@
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblTotal.Location = new System.Drawing.Point(808, 406);
+            this.lblTotal.Location = new System.Drawing.Point(654, 706);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(82, 31);
             this.lblTotal.TabIndex = 51;
@@ -194,7 +133,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(692, 406);
+            this.label6.Location = new System.Drawing.Point(538, 706);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 31);
             this.label6.TabIndex = 50;
@@ -203,7 +142,7 @@
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(34, 154);
+            this.lblProducto.Location = new System.Drawing.Point(74, 280);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(50, 13);
             this.lblProducto.TabIndex = 53;
@@ -212,7 +151,7 @@
             // cbProducto
             // 
             this.cbProducto.FormattingEnabled = true;
-            this.cbProducto.Location = new System.Drawing.Point(37, 171);
+            this.cbProducto.Location = new System.Drawing.Point(77, 297);
             this.cbProducto.Name = "cbProducto";
             this.cbProducto.Size = new System.Drawing.Size(205, 21);
             this.cbProducto.TabIndex = 54;
@@ -221,7 +160,7 @@
             // cbTipo
             // 
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(248, 171);
+            this.cbTipo.Location = new System.Drawing.Point(288, 297);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(221, 21);
             this.cbTipo.TabIndex = 55;
@@ -230,7 +169,7 @@
             // cbTamanio
             // 
             this.cbTamanio.FormattingEnabled = true;
-            this.cbTamanio.Location = new System.Drawing.Point(475, 171);
+            this.cbTamanio.Location = new System.Drawing.Point(515, 297);
             this.cbTamanio.Name = "cbTamanio";
             this.cbTamanio.Size = new System.Drawing.Size(196, 21);
             this.cbTamanio.TabIndex = 56;
@@ -238,7 +177,7 @@
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(248, 153);
+            this.lblTipo.Location = new System.Drawing.Point(288, 279);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(28, 13);
             this.lblTipo.TabIndex = 57;
@@ -247,7 +186,7 @@
             // lblTamanio
             // 
             this.lblTamanio.AutoSize = true;
-            this.lblTamanio.Location = new System.Drawing.Point(475, 153);
+            this.lblTamanio.Location = new System.Drawing.Point(515, 279);
             this.lblTamanio.Name = "lblTamanio";
             this.lblTamanio.Size = new System.Drawing.Size(46, 13);
             this.lblTamanio.TabIndex = 58;
@@ -257,7 +196,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(777, 169);
+            this.btnAgregar.Location = new System.Drawing.Point(817, 295);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 59;
@@ -267,7 +206,7 @@
             // 
             // numCantidad
             // 
-            this.numCantidad.Location = new System.Drawing.Point(678, 171);
+            this.numCantidad.Location = new System.Drawing.Point(718, 297);
             this.numCantidad.Name = "numCantidad";
             this.numCantidad.Size = new System.Drawing.Size(80, 20);
             this.numCantidad.TabIndex = 60;
@@ -275,7 +214,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(678, 153);
+            this.lblCantidad.Location = new System.Drawing.Point(718, 279);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(49, 13);
             this.lblCantidad.TabIndex = 61;
@@ -287,7 +226,7 @@
             this.lblError.BackColor = System.Drawing.Color.Transparent;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(811, 66);
+            this.lblError.Location = new System.Drawing.Point(739, 151);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(40, 17);
             this.lblError.TabIndex = 62;
@@ -298,7 +237,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(729, 306);
+            this.btnEliminar.Location = new System.Drawing.Point(742, 335);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(126, 31);
             this.btnEliminar.TabIndex = 63;
@@ -310,7 +249,7 @@
             // 
             this.btnSumarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSumarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnSumarCant.Location = new System.Drawing.Point(729, 232);
+            this.btnSumarCant.Location = new System.Drawing.Point(478, 335);
             this.btnSumarCant.Name = "btnSumarCant";
             this.btnSumarCant.Size = new System.Drawing.Size(126, 31);
             this.btnSumarCant.TabIndex = 64;
@@ -322,7 +261,7 @@
             // 
             this.btnRestarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRestarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnRestarCant.Location = new System.Drawing.Point(729, 269);
+            this.btnRestarCant.Location = new System.Drawing.Point(610, 335);
             this.btnRestarCant.Name = "btnRestarCant";
             this.btnRestarCant.Size = new System.Drawing.Size(126, 31);
             this.btnRestarCant.TabIndex = 65;
@@ -334,7 +273,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Kelotitos.Properties.Resources.kelotitos6;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(94, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(540, 143);
             this.pictureBox1.TabIndex = 66;
@@ -353,13 +292,85 @@
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // idProducto
+            // 
+            this.idProducto.Frozen = true;
+            this.idProducto.HeaderText = "ID";
+            this.idProducto.MinimumWidth = 6;
+            this.idProducto.Name = "idProducto";
+            this.idProducto.ReadOnly = true;
+            this.idProducto.Width = 50;
+            // 
+            // producto
+            // 
+            this.producto.Frozen = true;
+            this.producto.HeaderText = "Producto";
+            this.producto.MinimumWidth = 200;
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            this.producto.Width = 200;
+            // 
+            // descripcionProducto
+            // 
+            this.descripcionProducto.Frozen = true;
+            this.descripcionProducto.HeaderText = "Tipo";
+            this.descripcionProducto.MinimumWidth = 150;
+            this.descripcionProducto.Name = "descripcionProducto";
+            this.descripcionProducto.ReadOnly = true;
+            this.descripcionProducto.Width = 150;
+            // 
+            // Tamanio
+            // 
+            this.Tamanio.Frozen = true;
+            this.Tamanio.HeaderText = "Tamaño";
+            this.Tamanio.MinimumWidth = 100;
+            this.Tamanio.Name = "Tamanio";
+            this.Tamanio.ReadOnly = true;
+            // 
+            // precioProducto
+            // 
+            this.precioProducto.Frozen = true;
+            this.precioProducto.HeaderText = "Precio";
+            this.precioProducto.MinimumWidth = 100;
+            this.precioProducto.Name = "precioProducto";
+            this.precioProducto.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.Frozen = true;
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 70;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            this.cantidad.Width = 70;
+            // 
+            // subtotal
+            // 
+            this.subtotal.Frozen = true;
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.MinimumWidth = 100;
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label1.Location = new System.Drawing.Point(67, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 56);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Ventas";
+            // 
             // Comida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(915, 592);
+            this.ClientSize = new System.Drawing.Size(953, 749);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRestarCant);
             this.Controls.Add(this.btnSumarCant);
@@ -422,5 +433,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.Label label1;
     }
 }
