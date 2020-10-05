@@ -171,11 +171,11 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrodeInventario.cs">
+    <Compile Include="RegistroInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrodeInventario.Designer.cs">
-      <DependentUpon>RegistrodeInventario.cs</DependentUpon>
+    <Compile Include="RegistroInventario.Designer.cs">
+      <DependentUpon>RegistroInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="TicketFinal.cs">
       <SubType>Form</SubType>
@@ -220,8 +220,8 @@
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrodeInventario.resx">
-      <DependentUpon>RegistrodeInventario.cs</DependentUpon>
+    <EmbeddedResource Include="RegistroInventario.resx">
+      <DependentUpon>RegistroInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketFinal.resx">
       <DependentUpon>TicketFinal.cs</DependentUpon>
