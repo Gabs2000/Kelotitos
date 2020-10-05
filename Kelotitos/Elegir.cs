@@ -67,5 +67,12 @@ namespace Kelotitos
             this.Hide();
             inv.Show();
         }
+
+        private void lblRegCatalogos_Click(object sender, EventArgs e)
+        {
+            RegistrarCatalogos catalogo = new RegistrarCatalogos();
+            this.Hide();
+            catalogo.Show();
+        }
     }
 }

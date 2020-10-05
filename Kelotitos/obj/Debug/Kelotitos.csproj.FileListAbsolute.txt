@@ -56,3 +56,4 @@ C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\De
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
