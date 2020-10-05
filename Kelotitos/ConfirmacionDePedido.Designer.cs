@@ -33,10 +33,9 @@
             this.lbhora = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnTicket = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -46,126 +45,96 @@
             // 
             // lbhora
             // 
-            this.lbhora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbhora.AutoSize = true;
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
             this.lbhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
-            this.lbhora.Location = new System.Drawing.Point(16, 11);
-            this.lbhora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbhora.Location = new System.Drawing.Point(12, 9);
             this.lbhora.Name = "lbhora";
-            this.lbhora.Size = new System.Drawing.Size(85, 39);
+            this.lbhora.Size = new System.Drawing.Size(68, 31);
             this.lbhora.TabIndex = 10;
             this.lbhora.Text = "hora";
             this.lbhora.UseWaitCursor = true;
-            this.lbhora.Click += new System.EventHandler(this.Lbhora_Click);
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(335, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(155, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(491, 135);
+            this.label2.Size = new System.Drawing.Size(113, 31);
             this.label2.TabIndex = 11;
             this.label2.Text = "ORDEN";
             this.label2.UseWaitCursor = true;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label3.Location = new System.Drawing.Point(207, 198);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(47, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(281, 76);
+            this.label3.Size = new System.Drawing.Size(116, 31);
             this.label3.TabIndex = 5;
             this.label3.Text = "Usuario:";
             this.label3.UseWaitCursor = true;
             // 
-            // button2
+            // btnRegresar
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button2.Location = new System.Drawing.Point(71, 294);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(335, 91);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.UseWaitCursor = true;
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnRegresar.Location = new System.Drawing.Point(78, 199);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(126, 31);
+            this.btnRegresar.TabIndex = 23;
+            this.btnRegresar.Text = "Regresar ";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.UseWaitCursor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // button3
+            // btnTicket
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button3.Location = new System.Drawing.Point(429, 294);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(345, 91);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Regresar ";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.UseWaitCursor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.btnTicket.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnTicket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnTicket.Location = new System.Drawing.Point(224, 199);
+            this.btnTicket.Name = "btnTicket";
+            this.btnTicket.Size = new System.Drawing.Size(126, 31);
+            this.btnTicket.TabIndex = 24;
+            this.btnTicket.Text = "Ticket";
+            this.btnTicket.UseVisualStyleBackColor = false;
+            this.btnTicket.UseWaitCursor = true;
+            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
             // 
-            // button4
+            // lblUsuario
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button4.Location = new System.Drawing.Point(783, 294);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(328, 91);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Aceptar";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.UseWaitCursor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(615, 198);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 76);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "XXX";
-            this.label4.UseWaitCursor = true;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.lblUsuario.Location = new System.Drawing.Point(169, 113);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(68, 31);
+            this.lblUsuario.TabIndex = 25;
+            this.lblUsuario.Text = "XXX";
+            this.lblUsuario.UseWaitCursor = true;
             // 
             // Confirmacion_de_pedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1225, 494);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(427, 270);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.btnTicket);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbhora);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Confirmacion_de_pedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirmacion_de_pedido";
@@ -182,9 +151,8 @@
         private System.Windows.Forms.Label lbhora;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnTicket;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

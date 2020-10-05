@@ -30,54 +30,47 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.lbhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnNuevaVenta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(238, 121);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(172, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 58);
+            this.label1.Size = new System.Drawing.Size(0, 46);
             this.label1.TabIndex = 19;
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // button1
+            // btnMenu
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button1.Location = new System.Drawing.Point(206, 357);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 71);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Regresar ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnMenu.Location = new System.Drawing.Point(112, 188);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(126, 31);
+            this.btnMenu.TabIndex = 21;
+            this.btnMenu.Text = "Menú Principal";
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // lbhora
             // 
-            this.lbhora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbhora.AutoSize = true;
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
-            this.lbhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lbhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
-            this.lbhora.Location = new System.Drawing.Point(16, 11);
-            this.lbhora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbhora.Location = new System.Drawing.Point(12, 9);
             this.lbhora.Name = "lbhora";
-            this.lbhora.Size = new System.Drawing.Size(116, 39);
+            this.lbhora.Size = new System.Drawing.Size(69, 25);
             this.lbhora.TabIndex = 22;
             this.lbhora.Text = "HORA";
             this.lbhora.Click += new System.EventHandler(this.Lbhora_Click);
@@ -87,41 +80,48 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // button2
+            // btnImprimir
             // 
-            this.button2.Location = new System.Drawing.Point(249, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 51);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Imprimir ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnImprimir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnImprimir.Location = new System.Drawing.Point(112, 80);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(126, 31);
+            this.btnImprimir.TabIndex = 23;
+            this.btnImprimir.Text = "Imprimir Ticket";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // button3
+            // btnNuevaVenta
             // 
-            this.button3.Location = new System.Drawing.Point(249, 206);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(185, 83);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Nueva Venta ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnNuevaVenta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnNuevaVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnNuevaVenta.Location = new System.Drawing.Point(112, 130);
+            this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevaVenta.Name = "btnNuevaVenta";
+            this.btnNuevaVenta.Size = new System.Drawing.Size(126, 31);
+            this.btnNuevaVenta.TabIndex = 24;
+            this.btnNuevaVenta.Text = "Nueva Venta ";
+            this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // TicketFinal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(697, 511);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(365, 276);
+            this.Controls.Add(this.btnNuevaVenta);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.lbhora);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TicketFinal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicketFinal";
-            this.Load += new System.EventHandler(this.TicketFinal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,10 +129,10 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Label lbhora;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnNuevaVenta;
     }
 }

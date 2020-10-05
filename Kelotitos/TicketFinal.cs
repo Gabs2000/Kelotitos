@@ -28,18 +28,23 @@ namespace Kelotitos
             InitializeComponent();
         }
 
-        private void Label2_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
-            Elegir ToElegir = new Elegir();
+            Elegir elegir = new Elegir();
             this.Hide();
-            ToElegir.Show();
+            elegir.Show();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
-            Confirmacion_de_pedido ToElegir = new Confirmacion_de_pedido();
+            Comida comida = new Comida();
             this.Hide();
-            ToElegir.Show();
+            comida.Show();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Lbhora_Click(object sender, EventArgs e)
@@ -50,63 +55,6 @@ namespace Kelotitos
         private void Timer1_Tick(object sender, EventArgs e)
         {
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TicketFinal_Load(object sender, EventArgs e)
-        {
-            CrearPdf();
-        }
-        private void CrearPdf()
-        {
-            PdfWriter pdfWriter = new PdfWriter("ReporteTicket.pdf");
-            PdfDocument pdf = new PdfDocument(pdfWriter);
-            Document documento = new Document(pdf, PageSize.LETTER);
-
-            documento.SetMargins(60, 20, 55, 20);
-
-            
-            PdfFont fontColumnas = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
-            PdfFont fontContenido = PdfFontFactory.CreateFont(StandardFonts.HELVETICA);
-
-            string[] columnas = { "IdCliente", "IdUsuarioDelSistema", "NombreProducto", "Descripcion Compra", "PrecioVenta", "TOTAL" };
-
-            float[] tamanios = { 2, 4, 2, 2, 4 };
-            Table tabla = new Table(UnitValue.CreatePercentArray(tamanios));
-            tabla.SetWidth(UnitValue.CreatePercentValue(100));
-
-            foreach (string columna in columnas)
-            {
-                tabla.AddHeaderCell(new Cell().Add(new Paragraph(columna).SetFont(fontColumnas)));
-            }
-
-            string sql = "SELECT p. FROM product AS p INNER JOIN categorias AS c WHERE";
-
-            MySqlConnection conexion = Connection.GetConnection();
-
-            MySqlCommand cm = new MySqlCommand("SELECT id_prov, name_prov FROM provider", conexion);
-            MySqlDataReader consultar = cm.ExecuteReader();
-
-            //while (reader.Read())
-            //{
-            //    tabla.AddCell(new Cell().Add(new Paragraph(reader[""].ToString()).SetFont(fontContenido)));
-            //    tabla.AddCell(new Cell().Add(new Paragraph(reader[""].ToString()).SetFont(fontContenido)));
-            //    tabla.AddCell(new Cell().Add(new Paragraph(reader[""].ToString()).SetFont(fontContenido)));
-            //    tabla.AddCell(new Cell().Add(new Paragraph(reader[""].ToString()).SetFont(fontContenido)));
-            //    tabla.AddCell(new Cell().Add(new Paragraph(reader[""].ToString()).SetFont(fontContenido)));
-            //}
-            documento.Add(tabla);
-            documento.Close();
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
