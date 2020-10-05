@@ -25,33 +25,28 @@ namespace Kelotitos
 
         }
 
-        private void Label3_Click(object sender, EventArgs e)
+        private void lblRegProducto_Click(object sender, EventArgs e)
         {
             RegistrarProductos ToRegistrarProductos = new RegistrarProductos();
             this.Hide();
             ToRegistrarProductos.Show();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Login ToLogin = new Login();
             this.Hide();
             ToLogin.Show();
         }
 
-        private void Label4_Click(object sender, EventArgs e)
+        private void lblRegCompra_Click(object sender, EventArgs e)
         {
             RegistrarCompra ToLogin = new RegistrarCompra();
             this.Hide();
             ToLogin.Show();
         }
 
-        private void Labelx_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label5_Click(object sender, EventArgs e)
+        private void lblRegProveedor_Click(object sender, EventArgs e)
         {
             RegistrarProovedor ToLogin = new RegistrarProovedor();
             this.Hide();

@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblRegProducto = new System.Windows.Forms.Label();
             this.lbhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.lblRegCompra = new System.Windows.Forms.Label();
+            this.lblRegProveedor = new System.Windows.Forms.Label();
             this.lblRegistrarVenta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblRegInventario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label3
+            // lblRegProducto
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label3.Location = new System.Drawing.Point(68, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(365, 46);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Registrar Producto ";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
+            this.lblRegProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRegProducto.AutoSize = true;
+            this.lblRegProducto.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.lblRegProducto.Location = new System.Drawing.Point(68, 69);
+            this.lblRegProducto.Name = "lblRegProducto";
+            this.lblRegProducto.Size = new System.Drawing.Size(365, 46);
+            this.lblRegProducto.TabIndex = 17;
+            this.lblRegProducto.Text = "Registrar Producto ";
+            this.lblRegProducto.Click += new System.EventHandler(this.lblRegProducto_Click);
             // 
             // lbhora
             // 
@@ -73,47 +73,47 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // button1
+            // btnCerrarSesion
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button1.Location = new System.Drawing.Point(198, 398);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 52);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Regresar ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCerrarSesion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnCerrarSesion.Location = new System.Drawing.Point(198, 398);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(217, 52);
+            this.btnCerrarSesion.TabIndex = 29;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
-            // label4
+            // lblRegCompra
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label4.Location = new System.Drawing.Point(68, 185);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(345, 46);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Registrar Compra ";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
+            this.lblRegCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRegCompra.AutoSize = true;
+            this.lblRegCompra.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.lblRegCompra.Location = new System.Drawing.Point(68, 185);
+            this.lblRegCompra.Name = "lblRegCompra";
+            this.lblRegCompra.Size = new System.Drawing.Size(345, 46);
+            this.lblRegCompra.TabIndex = 30;
+            this.lblRegCompra.Text = "Registrar Compra ";
+            this.lblRegCompra.Click += new System.EventHandler(this.lblRegCompra_Click);
             // 
-            // label5
+            // lblRegProveedor
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label5.Location = new System.Drawing.Point(68, 248);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 46);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Registrar Proveedor ";
-            this.label5.Click += new System.EventHandler(this.Label5_Click);
+            this.lblRegProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRegProveedor.AutoSize = true;
+            this.lblRegProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.lblRegProveedor.Location = new System.Drawing.Point(68, 248);
+            this.lblRegProveedor.Name = "lblRegProveedor";
+            this.lblRegProveedor.Size = new System.Drawing.Size(387, 46);
+            this.lblRegProveedor.TabIndex = 31;
+            this.lblRegProveedor.Text = "Registrar Proveedor ";
+            this.lblRegProveedor.Click += new System.EventHandler(this.lblRegProveedor_Click);
             // 
             // lblRegistrarVenta
             // 
@@ -156,12 +156,12 @@
             this.ClientSize = new System.Drawing.Size(649, 495);
             this.Controls.Add(this.lblRegInventario);
             this.Controls.Add(this.lblRegistrarVenta);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblRegProveedor);
+            this.Controls.Add(this.lblRegCompra);
+            this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.lbhora);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblRegProducto);
             this.Name = "Elegir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Elegir";
@@ -173,12 +173,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRegProducto;
         private System.Windows.Forms.Label lbhora;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Label lblRegCompra;
+        private System.Windows.Forms.Label lblRegProveedor;
         private System.Windows.Forms.Label lblRegistrarVenta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRegInventario;
