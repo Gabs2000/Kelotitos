@@ -37,6 +37,30 @@ namespace Kelotitos
 
         public void cargarInventario()
         {
+<<<<<<< HEAD
+            listaProductos = new List<ProductAccount>();
+            listaProveedores = new List<providerAccount>();
+            carrito = new List<ProductAccount>();
+
+            MySqlConnection conexion = Connection.GetConnection();
+
+            MySqlCommand cm = new MySqlCommand("SELECT id_prov, name_prov FROM provider", conexion);
+            MySqlDataReader consultar = cm.ExecuteReader();
+
+            while (consultar.Read())
+            {
+                providerAccount proveedor = new providerAccount();
+                proveedor.id_prov = consultar.GetInt32(0);
+                proveedor.name_prov = consultar.GetString(1);
+                listaProveedores.Add(proveedor);
+                ComboBoxItem item = new ComboBoxItem();
+                item.Text = $"{proveedor.id_prov} - {proveedor.name_prov}";
+                item.Value = proveedor.id_prov;
+
+                comboBox1.Items.Add(item);
+                comboBox1.SelectedIndex = 0;
+            }
+=======
             conexion = Connection.GetConnection();
             MySqlCommand cm = new MySqlCommand("SELECT " +
                                                     "id_inventario, " +
@@ -84,6 +108,7 @@ namespace Kelotitos
             cbProveedor.ValueMember = "id_proveedor";
             cbProveedor.DisplayMember = "proveedor";
             cbProveedor.DataSource = dt;
+>>>>>>> funcionalidad
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

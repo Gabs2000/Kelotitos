@@ -15,8 +15,8 @@ namespace Kelotitos
 {
     public partial class Form1 : Form
     {
-        private int resultado;
-        private object name_textbox;
+        //private int resultado;
+        //private object name_textbox;
 
         public Form1()
         {
