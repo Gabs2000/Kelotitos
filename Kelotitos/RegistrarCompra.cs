@@ -16,14 +16,275 @@ namespace Kelotitos
 {
     public partial class RegistrarCompra : Form
     {
-        List<providerAccount> listaProveedores;
-        List<ProductAccount> listaProductos;
-        List<ProductAccount> carrito;
-        private int n = -1;
+        MySqlConnection conexion;
+        int indice;
 
         public RegistrarCompra()
         {
             InitializeComponent();
+        }
+
+        private void dgwCompras_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            indice = e.RowIndex;
+            Console.WriteLine(indice);
+        }
+
+        private void RegistrarCompra_Load(object sender, EventArgs e)
+        {
+            this.cargarInventario();
+        }
+
+        public void cargarInventario()
+        {
+            conexion = Connection.GetConnection();
+            MySqlCommand cm = new MySqlCommand("SELECT " +
+                                                    "id_inventario, " +
+                                                    "nombre " +
+                                                "FROM inventario " +
+                                                "WHERE estatus = 1", conexion);
+            MySqlDataReader reader;
+
+            reader = cm.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_inventario", typeof(int));
+            dt.Columns.Add("nombre", typeof(string));
+            dt.Load(reader);
+
+            cbInventario.ValueMember = "id_inventario";
+            cbInventario.DisplayMember = "nombre";
+            cbInventario.DataSource = dt;
+        }
+
+        private void cbInventario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.cargarProveedor();
+        }
+
+        public void cargarProveedor()
+        {
+            conexion = Connection.GetConnection();
+            MySqlCommand cm = new MySqlCommand("SELECT " +
+                                                    "P.id_proveedor, " +
+                                                    "P.proveedor " +
+                                                "FROM proveedores P " +
+                                                "INNER JOIN inventario I " +
+                                                    "ON P.id_proveedor = I.id_proveedor " +
+                                                "WHERE P.estatus = 1 " +
+                                                "AND I.nombre = @nombreInv", conexion);
+            cm.Parameters.AddWithValue("@nombreInv", cbInventario.Text);
+            MySqlDataReader reader;
+
+            reader = cm.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_proveedor", typeof(int));
+            dt.Columns.Add("proveedor", typeof(string));
+            dt.Load(reader);
+
+            cbProveedor.ValueMember = "id_proveedor";
+            cbProveedor.DisplayMember = "proveedor";
+            cbProveedor.DataSource = dt;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if ((cbInventario != null) && (cbProveedor != null))
+            {
+                try
+                {
+                    if (numCantidad.Value > 0)
+                    {
+                        lblError.Text = "Error";
+                        lblError.Visible = false;
+
+                        //Agregamos al carrito
+                        double subtotal;
+                        conexion = Connection.GetConnection();
+
+                        //Obtenemos el id del producto
+                        MySqlCommand cmId = new MySqlCommand("SELECT " +
+                                                                "I.id_inventario, " +
+                                                                "I.nombre, " +
+                                                                "P.proveedor, " +
+                                                                "I.precio_compra " +
+                                                            "FROM inventario I " +
+                                                            "INNER JOIN proveedores P " +
+                                                                "ON I.id_proveedor = P.id_proveedor " +
+                                                            "WHERE P.estatus = 1 " +
+                                                            "AND I.id_inventario = @idInventario " +
+                                                            "AND P.id_proveedor = @idProveedor", conexion);
+                        cmId.Parameters.AddWithValue("@idInventario", cbInventario.SelectedValue);
+                        cmId.Parameters.AddWithValue("@idProveedor", cbProveedor.SelectedValue);
+
+                        var resultado = cmId.ExecuteReader();
+
+                        if (resultado.HasRows)
+                        {
+                            resultado.Read();// Get first record.
+
+                            // Se guardan los valores en el datagridview1
+                            int n = dgwCompras.Rows.Add();
+                            dgwCompras.Rows[n].Cells[0].Value = resultado.GetInt32(0);
+                            dgwCompras.Rows[n].Cells[1].Value = resultado.GetString(1);
+                            dgwCompras.Rows[n].Cells[2].Value = resultado.GetString(2);
+                            dgwCompras.Rows[n].Cells[3].Value = resultado.GetInt32(3);
+                            dgwCompras.Rows[n].Cells[4].Value = numCantidad.Value;
+
+                            subtotal = Convert.ToDouble(resultado.GetInt32(3) * numCantidad.Value);
+                            dgwCompras.Rows[n].Cells[5].Value = subtotal;
+
+                            //Una vez que se agrega el producto, se resetean los campos
+                            cbInventario.SelectedIndex = 0;
+                            cbProveedor.SelectedIndex = 0;
+                            numCantidad.Value = 0;
+
+                            //Le sumamos al total el subtotal
+                            this.sumarTotal(subtotal);
+                        }
+
+                        // Evita que se seleccione automáticamente una fila
+                        dgwCompras.ClearSelection();
+
+                    }
+                    else
+                    {
+                        lblError.Text = "Error: Debes de poner una cantidad de producto!";
+                        lblError.Visible = true;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err);
+                }
+
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (indice != -1)
+            {
+                try
+                {
+                    var valorSubtotal = Convert.ToDouble(dgwCompras.Rows[indice].Cells[5].Value);
+
+                    this.restarTotal(valorSubtotal);
+
+                    dgwCompras.Rows.RemoveAt(indice);
+                    //Console.WriteLine("Eliminar: " + n);
+
+                    // Evita que se seleccione automáticamente una fila
+                    dgwCompras.ClearSelection();
+                }
+                catch (System.InvalidOperationException err)
+                {
+                    MessageBox.Show("Debe seleccionar primero el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void sumarTotal(double subtotal)
+        {
+            double nuevoTotal = Double.Parse(lblTotal.Text.Replace("$", "")) + subtotal;
+            string total = string.Format("{0:0.00}", nuevoTotal);
+            lblTotal.Text = $"${total}";
+        }
+
+        private void restarTotal(double valor)
+        {
+            double nuevoTotal = Double.Parse(lblTotal.Text.Replace("$", "")) - valor;
+            string total = string.Format("{0:0.00}", nuevoTotal);
+            lblTotal.Text = $"${total}";
+        }
+
+        private void btnSumarCant_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var valorPrecioUnitario = Convert.ToDouble(dgwCompras.Rows[indice].Cells[3].Value);
+
+                dgwCompras.Rows[indice].Cells[4].Value = (Convert.ToInt32(dgwCompras.Rows[indice].Cells[4].Value) + 1).ToString();
+
+                this.sumarTotal(valorPrecioUnitario);
+
+                dgwCompras.Rows[indice].Cells[5].Value = Convert.ToInt32(dgwCompras.Rows[indice].Cells[3].Value) * Convert.ToInt32(dgwCompras.Rows[indice].Cells[4].Value);
+
+            }
+            catch (System.InvalidOperationException err)
+            {
+                MessageBox.Show("Debe seleccionar primero el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRestarCant_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var valorPrecioUnitario = Convert.ToDouble(dgwCompras.Rows[indice].Cells[3].Value);
+
+                this.restarTotal(valorPrecioUnitario);
+
+                dgwCompras.Rows[indice].Cells[4].Value = (Convert.ToInt32(dgwCompras.Rows[indice].Cells[4].Value) - 1).ToString();
+
+                if (Convert.ToInt32(dgwCompras.Rows[indice].Cells[4].Value) == 0)
+                {
+                    dgwCompras.Rows.RemoveAt(indice);
+                    // Evita que se seleccione automáticamente una fila
+                    dgwCompras.ClearSelection();
+                }
+
+                dgwCompras.Rows[indice].Cells[5].Value = Convert.ToInt32(dgwCompras.Rows[indice].Cells[3].Value) * Convert.ToInt32(dgwCompras.Rows[indice].Cells[4].Value);
+
+            }
+            catch (System.InvalidOperationException err)
+            {
+                MessageBox.Show("Debe seleccionar primero el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgwCompras.Rows.Count > 0)
+                {
+
+                    string queryCompra = "INSERT INTO compras_proveedor " +
+                                        "(id_inventario, cantidad, estatus, fecha_creacion) " +
+                                        "VALUES " +
+                                        "(@idInventario, @cantidad, 1, NOW())";
+
+                    conexion = Connection.GetConnection();
+
+                    //Insertamos las compras
+                    foreach (DataGridViewRow row in dgwCompras.Rows)
+                    {
+                        if (row.IsNewRow == false)
+                        {
+                            using (MySqlCommand compra = new MySqlCommand(queryCompra, conexion))
+                            {
+                                compra.Parameters.AddWithValue("@idInventario", row.Cells[0].Value);
+                                compra.Parameters.AddWithValue("@cantidad", row.Cells[4].Value);
+                                compra.ExecuteNonQuery();
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Compra registrada con exito", "Compra realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.reset();
+
+                }
+                else
+                {
+                    MessageBox.Show("Agregue algunos articulos al carrito antes de confirmar", "Carrito vacio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Hubo un error en la transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(err);
+            }
         }
 
         private void Lbhora_Click(object sender, EventArgs e)
@@ -36,209 +297,17 @@ namespace Kelotitos
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
 
-        private void RegistrarCompra_Load(object sender, EventArgs e)
+        private void reset()
         {
-            //listaProductos = new List<ProductAccount>();
-            //listaProveedores = new List<providerAccount>();
-            //carrito = new List<ProductAccount>();
-
-            //MySqlConnection conexion = Connection.GetConnection();
-
-            //MySqlCommand cm = new MySqlCommand("SELECT id_prov, name_prov FROM provider", conexion);
-            //MySqlDataReader consultar = cm.ExecuteReader();
-
-            //while (consultar.Read())
-            //{
-            //    providerAccount proveedor = new providerAccount();
-            //    proveedor.id_prov = consultar.GetInt32(0);
-            //    proveedor.name_prov = consultar.GetString(1);
-            //    listaProveedores.Add(proveedor);
-            //    ComboBoxItem item = new ComboBoxItem();
-            //    item.Text = $"{proveedor.id_prov} - {proveedor.name_prov}";
-            //    item.Value = proveedor.id_prov;
-
-            //    comboBox1.Items.Add(item);
-            //    comboBox1.SelectedIndex = 0;
-            //}
+            dgwCompras.Rows.Clear();
+            lblTotal.Text = "$0.00";
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            //TODO: Hacer transacciones
-            //Insertar compra
-            if (carrito.Count > 0)
-            {
-                int id;
-                MySqlConnection conexion = Connection.GetConnection();
-                MySqlCommand comm = conexion.CreateCommand();
-                comm.CommandText = "INSERT INTO purchase (datetime_pur, total_pur) VALUES (now(), 0)";
-                comm.ExecuteNonQuery();
-                id = Convert.ToInt32(comm.LastInsertedId);
-                conexion.Close();
-
-                //Insertar detalles de compra 
-                int noRows = -1;
-                foreach(ProductAccount producto in carrito)
-                {
-                    try
-                    {
-                        conexion = Connection.GetConnection();
-                        comm = conexion.CreateCommand();
-                        comm.CommandText = "INSERT INTO purchase_has_product (purchase_id_pur, product_id_prod, quantity_prod) VALUES (@id_pur, @id_prod, @quantity)";
-                        comm.Parameters.AddWithValue("@id_pur", id);
-                        comm.Parameters.AddWithValue("@id_prod", producto.id_prod);
-                        comm.Parameters.AddWithValue("@quantity", producto.items);
-                        noRows = comm.ExecuteNonQuery();
-                    }
-                    catch(Exception err)
-                    {
-                        Console.WriteLine(err);
-                    }
-                    finally
-                    {
-                        conexion.Close();
-                    }
-                }
-
-                if(noRows > 0)
-                {
-                    MessageBox.Show("Compra registrada con éxito, su stock ha sido actualizado", "Compra realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    reset();
-                }
-                else
-                {
-                    MessageBox.Show("Hubo un error en la transacción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            } else
-            {
-                MessageBox.Show("Agregue algunos artículos antes de confirmar", "Carrito vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
             Elegir ToMenu = new Elegir();
             this.Hide();
             ToMenu.Show();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            numericUpDown1.Value = 0;
-            comboBox2.Items.Clear();
-            listaProductos.Clear();
-            //TODO: Mostrar productos del nuevo proveedor
-            int id = listaProveedores[comboBox1.SelectedIndex].id_prov;
-            MySqlConnection conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT id_prod, name_prod, purchasePrice_prod FROM product WHERE provider_id_prov = @id", conexion);
-            cm.Parameters.AddWithValue("@id", id);
-            MySqlDataReader consultar = cm.ExecuteReader();
-
-            while (consultar.Read())
-            {
-                ProductAccount producto = new ProductAccount();
-                producto.id_prod = consultar.GetInt32(0);
-                producto.name_prod = consultar.GetString(1);
-                producto.purchasePrice_prod = consultar.GetDouble(2);
-                listaProductos.Add(producto);
-                ComboBoxItem item = new ComboBoxItem();
-                item.Text = $"{producto.id_prod} - {producto.name_prod}";
-                item.Value = producto.id_prod;
-
-                comboBox2.Items.Add(item);
-                comboBox2.SelectedIndex = 0;
-            }
-
-            if (comboBox2.Items.Count == 0)
-            {
-                comboBox2.Text = "";
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (comboBox2.Text != "" && numericUpDown1.Value != 0)
-            {
-                listaProductos[comboBox2.SelectedIndex].items = Convert.ToInt32(numericUpDown1.Value);
-                //agregamos al carrito
-                carrito.Add(listaProductos[comboBox2.SelectedIndex]);
-                ProductAccount producto = listaProductos[comboBox2.SelectedIndex];
-                providerAccount proveedor = listaProveedores[comboBox1.SelectedIndex];
-                double total = producto.purchasePrice_prod * Convert.ToDouble(numericUpDown1.Value);
-                Console.WriteLine(total);
-                //mostrar en datagrid
-                int n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[0].Value = producto.id_prod;
-                dataGridView1.Rows[n].Cells[1].Value = producto.name_prod;
-                dataGridView1.Rows[n].Cells[2].Value = proveedor.name_prov;
-                dataGridView1.Rows[n].Cells[3].Value = producto.purchasePrice_prod;
-                dataGridView1.Rows[n].Cells[4].Value = total;
-
-                sumarTotal(total);
-            }
-        }
-
-        private void sumarTotal(double subtotal)
-        {
-            double nuevoTotal = Double.Parse(label5.Text.Replace("$", "")) + subtotal;
-            string total = string.Format("{0:0.00}", nuevoTotal);
-            label5.Text = $"${total}";
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //numericUpDown1.Value = 0;
-            //numericUpDown1.Maximum = listaProductos[comboBox2.SelectedIndex].stock_prod;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if(n != -1)
-            {
-                try
-                {
-                    dataGridView1.Rows.RemoveAt(n);
-                    sumarTotal(carrito[n].purchasePrice_prod * carrito[n].items * -1);
-                    carrito.RemoveAt(n);
-                    for (int i = 0; i < carrito.Count; i++)
-                    {
-                        Console.WriteLine(carrito[i].name_prod);
-                    }
-                } catch (System.InvalidOperationException err)
-                {
-                    MessageBox.Show("La nueva fila sin confirmar, no se puede eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
-            }
-        }
-
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            n = e.RowIndex;
-            Console.WriteLine(n);
-        }
-
-        private void reset()
-        {
-            carrito.Clear();
-            dataGridView1.Rows.Clear();
-            label5.Text = "$0.00";
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            reset();
-            MessageBox.Show("Compra cancelada, los artículos fueron eliminados", "Compra cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void Label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

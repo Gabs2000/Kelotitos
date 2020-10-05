@@ -350,11 +350,7 @@ C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyC
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
 C:\Users\Oscar\source\repos\Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
-=======
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
->>>>>>> 6682c4c009442b0d22da1970dafcbae1ade26cf6
 =======
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
 >>>>>>> 6682c4c009442b0d22da1970dafcbae1ade26cf6

@@ -385,6 +385,9 @@ namespace Kelotitos
                     // Evita que se seleccione automáticamente una fila
                     dgwCarrito.ClearSelection();
                 }
+
+                dgwCarrito.Rows[indice].Cells[6].Value = Convert.ToInt32(dgwCarrito.Rows[indice].Cells[4].Value) * Convert.ToInt32(dgwCarrito.Rows[indice].Cells[5].Value);
+
             }
             catch (System.InvalidOperationException err)
             {
@@ -402,6 +405,9 @@ namespace Kelotitos
                 dgwCarrito.Rows[indice].Cells[5].Value = (Convert.ToInt32(dgwCarrito.Rows[indice].Cells[5].Value) + 1).ToString();
 
                 this.sumarTotal(valorPrecioUnitario);
+
+                dgwCarrito.Rows[indice].Cells[6].Value = Convert.ToInt32(dgwCarrito.Rows[indice].Cells[4].Value) * Convert.ToInt32(dgwCarrito.Rows[indice].Cells[5].Value);
+
 
             }
             catch (System.InvalidOperationException err)
