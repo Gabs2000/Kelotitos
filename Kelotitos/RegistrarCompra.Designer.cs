@@ -41,6 +41,7 @@
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotalProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -71,11 +72,12 @@
             // cbProveedor
             // 
             this.cbProveedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cbProveedor.Enabled = false;
             this.cbProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbProveedor.FormattingEnabled = true;
-            this.cbProveedor.Location = new System.Drawing.Point(293, 117);
+            this.cbProveedor.Location = new System.Drawing.Point(348, 120);
             this.cbProveedor.Name = "cbProveedor";
-            this.cbProveedor.Size = new System.Drawing.Size(443, 21);
+            this.cbProveedor.Size = new System.Drawing.Size(335, 21);
             this.cbProveedor.TabIndex = 31;
             // 
             // timer1
@@ -88,7 +90,7 @@
             this.cbInventario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cbInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbInventario.FormattingEnabled = true;
-            this.cbInventario.Location = new System.Drawing.Point(27, 117);
+            this.cbInventario.Location = new System.Drawing.Point(82, 120);
             this.cbInventario.Name = "cbInventario";
             this.cbInventario.Size = new System.Drawing.Size(260, 21);
             this.cbInventario.TabIndex = 32;
@@ -99,7 +101,7 @@
             this.btnConfirmar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnConfirmar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.btnConfirmar.Location = new System.Drawing.Point(785, 549);
+            this.btnConfirmar.Location = new System.Drawing.Point(891, 547);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(97, 26);
             this.btnConfirmar.TabIndex = 36;
@@ -111,7 +113,7 @@
             // 
             this.numCantidad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.numCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.numCantidad.Location = new System.Drawing.Point(742, 117);
+            this.numCantidad.Location = new System.Drawing.Point(692, 120);
             this.numCantidad.Name = "numCantidad";
             this.numCantidad.Size = new System.Drawing.Size(56, 20);
             this.numCantidad.TabIndex = 38;
@@ -122,7 +124,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(322, 83);
+            this.label1.Location = new System.Drawing.Point(377, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 31);
             this.label1.TabIndex = 39;
@@ -136,12 +138,13 @@
             this.producto,
             this.proveedor,
             this.precioUnitario,
+            this.Cantidad,
             this.subtotalProducto});
             this.dgwCompras.Location = new System.Drawing.Point(38, 206);
             this.dgwCompras.Name = "dgwCompras";
             this.dgwCompras.ReadOnly = true;
             this.dgwCompras.RowHeadersWidth = 51;
-            this.dgwCompras.Size = new System.Drawing.Size(844, 271);
+            this.dgwCompras.Size = new System.Drawing.Size(962, 271);
             this.dgwCompras.TabIndex = 40;
             this.dgwCompras.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCompras_RowHeaderMouseClick);
             // 
@@ -178,6 +181,12 @@
             this.precioUnitario.ReadOnly = true;
             this.precioUnitario.Width = 125;
             // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
             // subtotalProducto
             // 
             this.subtotalProducto.HeaderText = "Subtotal";
@@ -204,7 +213,7 @@
             this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.btnEliminar.Location = new System.Drawing.Point(785, 174);
+            this.btnEliminar.Location = new System.Drawing.Point(873, 174);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 26);
             this.btnEliminar.TabIndex = 42;
@@ -218,7 +227,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(85, 83);
+            this.label2.Location = new System.Drawing.Point(140, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 31);
             this.label2.TabIndex = 43;
@@ -229,7 +238,7 @@
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.btnAgregar.Location = new System.Drawing.Point(804, 113);
+            this.btnAgregar.Location = new System.Drawing.Point(785, 116);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(97, 26);
             this.btnAgregar.TabIndex = 44;
@@ -243,7 +252,7 @@
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.lblTotal.Location = new System.Drawing.Point(782, 494);
+            this.lblTotal.Location = new System.Drawing.Point(888, 492);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(82, 31);
             this.lblTotal.TabIndex = 49;
@@ -255,7 +264,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label6.Location = new System.Drawing.Point(666, 494);
+            this.label6.Location = new System.Drawing.Point(772, 492);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 31);
             this.label6.TabIndex = 48;
@@ -265,40 +274,43 @@
             // 
             this.btnRestarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRestarCant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.btnRestarCant.Location = new System.Drawing.Point(679, 174);
+            this.btnRestarCant.Location = new System.Drawing.Point(767, 174);
             this.btnRestarCant.Name = "btnRestarCant";
             this.btnRestarCant.Size = new System.Drawing.Size(97, 26);
             this.btnRestarCant.TabIndex = 50;
             this.btnRestarCant.Text = "Restar Cantidad";
             this.btnRestarCant.UseVisualStyleBackColor = false;
+            this.btnRestarCant.Click += new System.EventHandler(this.btnRestarCant_Click);
             // 
             // btnSumarCant
             // 
             this.btnSumarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSumarCant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.btnSumarCant.Location = new System.Drawing.Point(576, 174);
+            this.btnSumarCant.Location = new System.Drawing.Point(664, 174);
             this.btnSumarCant.Name = "btnSumarCant";
             this.btnSumarCant.Size = new System.Drawing.Size(97, 26);
             this.btnSumarCant.TabIndex = 51;
             this.btnSumarCant.Text = "Sumar Cantidad";
             this.btnSumarCant.UseVisualStyleBackColor = false;
+            this.btnSumarCant.Click += new System.EventHandler(this.btnSumarCant_Click);
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(638, 27);
+            this.lblError.Location = new System.Drawing.Point(590, 27);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(29, 13);
             this.lblError.TabIndex = 52;
             this.lblError.Text = "Error";
+            this.lblError.Visible = false;
             // 
             // RegistrarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(919, 602);
+            this.ClientSize = new System.Drawing.Size(1012, 602);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnSumarCant);
             this.Controls.Add(this.btnRestarCant);
@@ -341,13 +353,14 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnRestarCant;
+        private System.Windows.Forms.Button btnSumarCant;
+        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn proveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotalProducto;
-        private System.Windows.Forms.Button btnRestarCant;
-        private System.Windows.Forms.Button btnSumarCant;
-        private System.Windows.Forms.Label lblError;
     }
 }
