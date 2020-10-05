@@ -98,13 +98,15 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(152, 319);
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnAceptar.Location = new System.Drawing.Point(139, 321);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(62, 28);
+            this.btnAceptar.Size = new System.Drawing.Size(114, 32);
             this.btnAceptar.TabIndex = 30;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // label4
@@ -119,13 +121,15 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(313, 319);
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnRegresar.Location = new System.Drawing.Point(300, 321);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(68, 28);
+            this.btnRegresar.Size = new System.Drawing.Size(114, 32);
             this.btnRegresar.TabIndex = 27;
             this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // label3
