@@ -8,7 +8,7 @@ namespace Kelotitos.MySql
         private static string Server = "127.0.0.1";
         private static string Database = "snack_db";
         private static string User = "root";
-        private static string Password = "root";
+        private static string Password = "2000";
 
         private static string StrConnection = $"server={Server}; database={Database}; Uid={User}; pwd={Password}";
 
