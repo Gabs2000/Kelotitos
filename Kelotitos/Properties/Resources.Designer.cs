@@ -113,6 +113,16 @@ namespace Kelotitos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flecha_pequeña {
+            get {
+                object obj = ResourceManager.GetObject("flecha pequeña", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fondo {
             get {
                 object obj = ResourceManager.GetObject("Fondo", resourceCulture);
@@ -156,6 +166,26 @@ namespace Kelotitos.Properties {
         internal static System.Drawing.Bitmap Imagen_31 {
             get {
                 object obj = ResourceManager.GetObject("Imagen 31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kelotitos4 {
+            get {
+                object obj = ResourceManager.GetObject("kelotitos4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kelotitos5 {
+            get {
+                object obj = ResourceManager.GetObject("kelotitos5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
