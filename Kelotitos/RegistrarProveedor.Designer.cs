@@ -72,7 +72,7 @@
             this.columnHeader4});
             this.tabla.GridLines = true;
             this.tabla.HideSelection = false;
-            this.tabla.Location = new System.Drawing.Point(47, 538);
+            this.tabla.Location = new System.Drawing.Point(47, 524);
             this.tabla.Name = "tabla";
             this.tabla.Size = new System.Drawing.Size(804, 42);
             this.tabla.TabIndex = 1;
