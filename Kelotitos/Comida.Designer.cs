@@ -106,7 +106,7 @@
             this.precioProducto,
             this.cantidad,
             this.subtotal});
-            this.dgwCarrito.Location = new System.Drawing.Point(94, 390);
+            this.dgwCarrito.Location = new System.Drawing.Point(69, 398);
             this.dgwCarrito.MultiSelect = false;
             this.dgwCarrito.Name = "dgwCarrito";
             this.dgwCarrito.RowHeadersWidth = 51;
@@ -202,7 +202,7 @@
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(74, 280);
+            this.lblProducto.Location = new System.Drawing.Point(65, 295);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(50, 13);
             this.lblProducto.TabIndex = 53;
@@ -211,7 +211,7 @@
             // cbProducto
             // 
             this.cbProducto.FormattingEnabled = true;
-            this.cbProducto.Location = new System.Drawing.Point(77, 297);
+            this.cbProducto.Location = new System.Drawing.Point(68, 312);
             this.cbProducto.Name = "cbProducto";
             this.cbProducto.Size = new System.Drawing.Size(205, 21);
             this.cbProducto.TabIndex = 54;
@@ -220,7 +220,7 @@
             // cbTipo
             // 
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(288, 297);
+            this.cbTipo.Location = new System.Drawing.Point(279, 312);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(221, 21);
             this.cbTipo.TabIndex = 55;
@@ -229,7 +229,7 @@
             // cbTamanio
             // 
             this.cbTamanio.FormattingEnabled = true;
-            this.cbTamanio.Location = new System.Drawing.Point(515, 297);
+            this.cbTamanio.Location = new System.Drawing.Point(506, 312);
             this.cbTamanio.Name = "cbTamanio";
             this.cbTamanio.Size = new System.Drawing.Size(196, 21);
             this.cbTamanio.TabIndex = 56;
@@ -237,7 +237,7 @@
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(288, 279);
+            this.lblTipo.Location = new System.Drawing.Point(279, 294);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(28, 13);
             this.lblTipo.TabIndex = 57;
@@ -246,7 +246,7 @@
             // lblTamanio
             // 
             this.lblTamanio.AutoSize = true;
-            this.lblTamanio.Location = new System.Drawing.Point(515, 279);
+            this.lblTamanio.Location = new System.Drawing.Point(506, 294);
             this.lblTamanio.Name = "lblTamanio";
             this.lblTamanio.Size = new System.Drawing.Size(46, 13);
             this.lblTamanio.TabIndex = 58;
@@ -256,7 +256,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(817, 295);
+            this.btnAgregar.Location = new System.Drawing.Point(808, 310);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 59;
@@ -266,7 +266,7 @@
             // 
             // numCantidad
             // 
-            this.numCantidad.Location = new System.Drawing.Point(718, 297);
+            this.numCantidad.Location = new System.Drawing.Point(709, 312);
             this.numCantidad.Name = "numCantidad";
             this.numCantidad.Size = new System.Drawing.Size(80, 20);
             this.numCantidad.TabIndex = 60;
@@ -274,7 +274,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(718, 279);
+            this.lblCantidad.Location = new System.Drawing.Point(709, 294);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(49, 13);
             this.lblCantidad.TabIndex = 61;
@@ -297,7 +297,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(742, 335);
+            this.btnEliminar.Location = new System.Drawing.Point(733, 350);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(126, 31);
             this.btnEliminar.TabIndex = 63;
@@ -309,7 +309,7 @@
             // 
             this.btnSumarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSumarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnSumarCant.Location = new System.Drawing.Point(478, 335);
+            this.btnSumarCant.Location = new System.Drawing.Point(469, 350);
             this.btnSumarCant.Name = "btnSumarCant";
             this.btnSumarCant.Size = new System.Drawing.Size(126, 31);
             this.btnSumarCant.TabIndex = 64;
@@ -321,7 +321,7 @@
             // 
             this.btnRestarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRestarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnRestarCant.Location = new System.Drawing.Point(610, 335);
+            this.btnRestarCant.Location = new System.Drawing.Point(601, 350);
             this.btnRestarCant.Name = "btnRestarCant";
             this.btnRestarCant.Size = new System.Drawing.Size(126, 31);
             this.btnRestarCant.TabIndex = 65;
@@ -333,7 +333,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Kelotitos.Properties.Resources.kelotitos6;
-            this.pictureBox1.Location = new System.Drawing.Point(94, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(77, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(540, 143);
             this.pictureBox1.TabIndex = 66;
@@ -344,10 +344,10 @@
             this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnRegresar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegresar.Image = global::Kelotitos.Properties.Resources.flecha;
-            this.btnRegresar.Location = new System.Drawing.Point(14, 17);
+            this.btnRegresar.Image = global::Kelotitos.Properties.Resources.flecha_pequeña;
+            this.btnRegresar.Location = new System.Drawing.Point(24, 12);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(73, 75);
+            this.btnRegresar.Size = new System.Drawing.Size(40, 41);
             this.btnRegresar.TabIndex = 31;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);

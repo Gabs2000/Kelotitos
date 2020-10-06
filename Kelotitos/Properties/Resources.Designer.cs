@@ -93,6 +93,16 @@ namespace Kelotitos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap elotekelot {
+            get {
+                object obj = ResourceManager.GetObject("elotekelot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap elotes_verdes {
             get {
                 object obj = ResourceManager.GetObject("elotes verdes", resourceCulture);

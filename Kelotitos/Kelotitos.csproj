@@ -297,5 +297,17 @@
   <ItemGroup>
     <None Include="Resources\elotes verdes.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha pequeña.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kelotitos5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kelotitos4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elotekelot.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

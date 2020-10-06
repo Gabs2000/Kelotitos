@@ -40,23 +40,30 @@
             this.lblRegCatalogos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRegProducto
             // 
+            this.lblRegProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRegProducto.AutoSize = true;
-            this.lblRegProducto.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblRegProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRegProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegProducto.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblRegProducto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRegProducto.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegProducto.ForeColor = System.Drawing.Color.Black;
-            this.lblRegProducto.Location = new System.Drawing.Point(298, 408);
-            this.lblRegProducto.MinimumSize = new System.Drawing.Size(238, 0);
+            this.lblRegProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRegProducto.Location = new System.Drawing.Point(295, 388);
+            this.lblRegProducto.MaximumSize = new System.Drawing.Size(250, 0);
+            this.lblRegProducto.MinimumSize = new System.Drawing.Size(250, 0);
             this.lblRegProducto.Name = "lblRegProducto";
-            this.lblRegProducto.Size = new System.Drawing.Size(238, 31);
+            this.lblRegProducto.Size = new System.Drawing.Size(250, 29);
             this.lblRegProducto.TabIndex = 17;
             this.lblRegProducto.Text = "Registrar Producto ";
-            this.lblRegProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRegProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblRegProducto.Click += new System.EventHandler(this.lblRegProducto_Click);
             // 
             // lbhora
@@ -65,7 +72,7 @@
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
             this.lbhora.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbhora.Location = new System.Drawing.Point(735, 30);
+            this.lbhora.Location = new System.Drawing.Point(756, 40);
             this.lbhora.Name = "lbhora";
             this.lbhora.Size = new System.Drawing.Size(73, 24);
             this.lbhora.TabIndex = 27;
@@ -82,7 +89,7 @@
             this.btnCerrarSesion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(792, 690);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(800, 700);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(131, 37);
             this.btnCerrarSesion.TabIndex = 29;
@@ -92,15 +99,20 @@
             // 
             // lblRegCompra
             // 
+            this.lblRegCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRegCompra.AutoSize = true;
-            this.lblRegCompra.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblRegCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRegCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegCompra.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblRegCompra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRegCompra.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegCompra.ForeColor = System.Drawing.Color.Black;
-            this.lblRegCompra.Location = new System.Drawing.Point(298, 546);
-            this.lblRegCompra.MinimumSize = new System.Drawing.Size(238, 0);
+            this.lblRegCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRegCompra.Location = new System.Drawing.Point(295, 526);
+            this.lblRegCompra.MaximumSize = new System.Drawing.Size(250, 0);
+            this.lblRegCompra.MinimumSize = new System.Drawing.Size(250, 0);
             this.lblRegCompra.Name = "lblRegCompra";
-            this.lblRegCompra.Size = new System.Drawing.Size(238, 31);
+            this.lblRegCompra.Size = new System.Drawing.Size(250, 29);
             this.lblRegCompra.TabIndex = 30;
             this.lblRegCompra.Text = "Registrar Compra ";
             this.lblRegCompra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,30 +120,37 @@
             // 
             // lblRegProveedor
             // 
+            this.lblRegProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRegProveedor.AutoSize = true;
-            this.lblRegProveedor.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblRegProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRegProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegProveedor.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblRegProveedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRegProveedor.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegProveedor.ForeColor = System.Drawing.Color.Black;
-            this.lblRegProveedor.Location = new System.Drawing.Point(298, 480);
+            this.lblRegProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRegProveedor.Location = new System.Drawing.Point(295, 460);
+            this.lblRegProveedor.MaximumSize = new System.Drawing.Size(250, 29);
+            this.lblRegProveedor.MinimumSize = new System.Drawing.Size(250, 0);
             this.lblRegProveedor.Name = "lblRegProveedor";
-            this.lblRegProveedor.Size = new System.Drawing.Size(238, 31);
+            this.lblRegProveedor.Size = new System.Drawing.Size(250, 29);
             this.lblRegProveedor.TabIndex = 31;
             this.lblRegProveedor.Text = "Registrar Proveedor ";
-            this.lblRegProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRegProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblRegProveedor.Click += new System.EventHandler(this.lblRegProveedor_Click);
             // 
             // lblRegistrarVenta
             // 
             this.lblRegistrarVenta.AutoSize = true;
-            this.lblRegistrarVenta.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblRegistrarVenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRegistrarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrarVenta.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblRegistrarVenta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRegistrarVenta.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistrarVenta.ForeColor = System.Drawing.Color.Black;
-            this.lblRegistrarVenta.Location = new System.Drawing.Point(37, 546);
-            this.lblRegistrarVenta.MinimumSize = new System.Drawing.Size(238, 0);
+            this.lblRegistrarVenta.Location = new System.Drawing.Point(34, 526);
+            this.lblRegistrarVenta.MaximumSize = new System.Drawing.Size(250, 0);
+            this.lblRegistrarVenta.MinimumSize = new System.Drawing.Size(250, 0);
             this.lblRegistrarVenta.Name = "lblRegistrarVenta";
-            this.lblRegistrarVenta.Size = new System.Drawing.Size(238, 31);
+            this.lblRegistrarVenta.Size = new System.Drawing.Size(250, 29);
             this.lblRegistrarVenta.TabIndex = 32;
             this.lblRegistrarVenta.Text = "Registrar Venta ";
             this.lblRegistrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,14 +159,15 @@
             // lblRegInventario
             // 
             this.lblRegInventario.AutoSize = true;
-            this.lblRegInventario.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblRegInventario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRegInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegInventario.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblRegInventario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRegInventario.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegInventario.ForeColor = System.Drawing.Color.Black;
-            this.lblRegInventario.Location = new System.Drawing.Point(37, 480);
-            this.lblRegInventario.MinimumSize = new System.Drawing.Size(238, 0);
+            this.lblRegInventario.Location = new System.Drawing.Point(34, 460);
+            this.lblRegInventario.MaximumSize = new System.Drawing.Size(250, 0);
+            this.lblRegInventario.MinimumSize = new System.Drawing.Size(250, 0);
             this.lblRegInventario.Name = "lblRegInventario";
-            this.lblRegInventario.Size = new System.Drawing.Size(238, 31);
+            this.lblRegInventario.Size = new System.Drawing.Size(250, 29);
             this.lblRegInventario.TabIndex = 34;
             this.lblRegInventario.Text = "Registrar Inventario";
             this.lblRegInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,14 +176,15 @@
             // lblRegCatalogos
             // 
             this.lblRegCatalogos.AutoSize = true;
-            this.lblRegCatalogos.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblRegCatalogos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRegCatalogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegCatalogos.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblRegCatalogos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRegCatalogos.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegCatalogos.ForeColor = System.Drawing.Color.Black;
-            this.lblRegCatalogos.Location = new System.Drawing.Point(37, 408);
-            this.lblRegCatalogos.MinimumSize = new System.Drawing.Size(238, 0);
+            this.lblRegCatalogos.Location = new System.Drawing.Point(34, 388);
+            this.lblRegCatalogos.MaximumSize = new System.Drawing.Size(250, 0);
+            this.lblRegCatalogos.MinimumSize = new System.Drawing.Size(250, 0);
             this.lblRegCatalogos.Name = "lblRegCatalogos";
-            this.lblRegCatalogos.Size = new System.Drawing.Size(238, 31);
+            this.lblRegCatalogos.Size = new System.Drawing.Size(250, 29);
             this.lblRegCatalogos.TabIndex = 35;
             this.lblRegCatalogos.Text = "Registrar Catálogos";
             this.lblRegCatalogos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,7 +194,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos4;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(77, 78);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(782, 97);
             this.pictureBox1.TabIndex = 36;
@@ -185,11 +206,21 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(61, 255);
+            this.label1.Location = new System.Drawing.Point(67, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(401, 56);
             this.label1.TabIndex = 37;
             this.label1.Text = "Menú Principal";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::Kelotitos.Properties.Resources.elotekelot;
+            this.pictureBox2.Location = new System.Drawing.Point(574, 278);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(357, 354);
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
             // 
             // Elegir
             // 
@@ -198,6 +229,7 @@
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(953, 749);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblRegCatalogos);
@@ -214,6 +246,7 @@
             this.Text = "Elegir";
             this.Load += new System.EventHandler(this.Elegir_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +265,6 @@
         private System.Windows.Forms.Label lblRegCatalogos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
