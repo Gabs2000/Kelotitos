@@ -89,5 +89,10 @@ namespace Kelotitos
             this.Hide();
             elegir.Show();
         }
+
+        private void cbProveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
