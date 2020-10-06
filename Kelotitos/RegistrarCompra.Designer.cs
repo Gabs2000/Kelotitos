@@ -52,22 +52,19 @@
             this.btnRestarCant = new System.Windows.Forms.Button();
             this.btnSumarCant = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCompras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbhora
             // 
             this.lbhora.AutoSize = true;
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
-            this.lbhora.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbhora.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbhora.Location = new System.Drawing.Point(790, 31);
+            this.lbhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
+            this.lbhora.Location = new System.Drawing.Point(19, 9);
             this.lbhora.Name = "lbhora";
-            this.lbhora.Size = new System.Drawing.Size(73, 24);
+            this.lbhora.Size = new System.Drawing.Size(93, 31);
             this.lbhora.TabIndex = 29;
             this.lbhora.Text = "HORA";
             this.lbhora.Click += new System.EventHandler(this.Lbhora_Click);
@@ -78,7 +75,7 @@
             this.cbProveedor.Enabled = false;
             this.cbProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbProveedor.FormattingEnabled = true;
-            this.cbProveedor.Location = new System.Drawing.Point(375, 242);
+            this.cbProveedor.Location = new System.Drawing.Point(348, 120);
             this.cbProveedor.Name = "cbProveedor";
             this.cbProveedor.Size = new System.Drawing.Size(335, 21);
             this.cbProveedor.TabIndex = 31;
@@ -93,7 +90,7 @@
             this.cbInventario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cbInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbInventario.FormattingEnabled = true;
-            this.cbInventario.Location = new System.Drawing.Point(104, 242);
+            this.cbInventario.Location = new System.Drawing.Point(82, 120);
             this.cbInventario.Name = "cbInventario";
             this.cbInventario.Size = new System.Drawing.Size(260, 21);
             this.cbInventario.TabIndex = 32;
@@ -103,8 +100,8 @@
             // 
             this.btnConfirmar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirmar.Location = new System.Drawing.Point(864, 567);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnConfirmar.Location = new System.Drawing.Point(891, 547);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(97, 26);
             this.btnConfirmar.TabIndex = 36;
@@ -116,7 +113,7 @@
             // 
             this.numCantidad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.numCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.numCantidad.Location = new System.Drawing.Point(732, 242);
+            this.numCantidad.Location = new System.Drawing.Point(692, 120);
             this.numCantidad.Name = "numCantidad";
             this.numCantidad.Size = new System.Drawing.Size(56, 20);
             this.numCantidad.TabIndex = 38;
@@ -125,11 +122,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(372, 223);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.label1.Location = new System.Drawing.Point(377, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(146, 31);
             this.label1.TabIndex = 39;
             this.label1.Text = "Proveedor ";
             // 
@@ -143,11 +140,11 @@
             this.precioUnitario,
             this.Cantidad,
             this.subtotalProducto});
-            this.dgwCompras.Location = new System.Drawing.Point(26, 310);
+            this.dgwCompras.Location = new System.Drawing.Point(38, 206);
             this.dgwCompras.Name = "dgwCompras";
             this.dgwCompras.ReadOnly = true;
             this.dgwCompras.RowHeadersWidth = 51;
-            this.dgwCompras.Size = new System.Drawing.Size(962, 231);
+            this.dgwCompras.Size = new System.Drawing.Size(962, 271);
             this.dgwCompras.TabIndex = 40;
             this.dgwCompras.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCompras_RowHeaderMouseClick);
             // 
@@ -202,12 +199,12 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.Image = global::Kelotitos.Properties.Resources.flecha_pequeña;
-            this.btnRegresar.Location = new System.Drawing.Point(12, 12);
+            this.btnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnRegresar.Location = new System.Drawing.Point(40, 483);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(43, 45);
+            this.btnRegresar.Size = new System.Drawing.Size(97, 26);
             this.btnRegresar.TabIndex = 41;
+            this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
@@ -215,8 +212,8 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(835, 278);
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnEliminar.Location = new System.Drawing.Point(873, 174);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 26);
             this.btnEliminar.TabIndex = 42;
@@ -228,11 +225,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(101, 223);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.label2.Location = new System.Drawing.Point(140, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(123, 31);
             this.label2.TabIndex = 43;
             this.label2.Text = "Producto";
             // 
@@ -240,8 +237,8 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(794, 238);
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnAgregar.Location = new System.Drawing.Point(785, 116);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(97, 26);
             this.btnAgregar.TabIndex = 44;
@@ -254,8 +251,8 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblTotal.Location = new System.Drawing.Point(776, 562);
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.lblTotal.Location = new System.Drawing.Point(888, 492);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(82, 31);
             this.lblTotal.TabIndex = 49;
@@ -266,8 +263,8 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(660, 562);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.label6.Location = new System.Drawing.Point(772, 492);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 31);
             this.label6.TabIndex = 48;
@@ -276,8 +273,8 @@
             // btnRestarCant
             // 
             this.btnRestarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRestarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnRestarCant.Location = new System.Drawing.Point(707, 278);
+            this.btnRestarCant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnRestarCant.Location = new System.Drawing.Point(767, 174);
             this.btnRestarCant.Name = "btnRestarCant";
             this.btnRestarCant.Size = new System.Drawing.Size(97, 26);
             this.btnRestarCant.TabIndex = 50;
@@ -288,8 +285,8 @@
             // btnSumarCant
             // 
             this.btnSumarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSumarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnSumarCant.Location = new System.Drawing.Point(586, 278);
+            this.btnSumarCant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
+            this.btnSumarCant.Location = new System.Drawing.Point(664, 174);
             this.btnSumarCant.Name = "btnSumarCant";
             this.btnSumarCant.Size = new System.Drawing.Size(97, 26);
             this.btnSumarCant.TabIndex = 51;
@@ -301,44 +298,19 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(759, 117);
+            this.lblError.Location = new System.Drawing.Point(590, 27);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(29, 13);
             this.lblError.TabIndex = 52;
             this.lblError.Text = "Error";
             this.lblError.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
-            this.pictureBox1.Location = new System.Drawing.Point(104, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(534, 135);
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label3.Location = new System.Drawing.Point(54, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(463, 56);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "Registrar Compra";
-            // 
             // RegistrarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1012, 602);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnSumarCant);
             this.Controls.Add(this.btnRestarCant);
@@ -361,7 +333,6 @@
             this.Load += new System.EventHandler(this.RegistrarCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCompras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,7 +362,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotalProducto;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
     }
 }

@@ -33,13 +33,6 @@
             this.lbhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dgwCarrito = new System.Windows.Forms.DataGridView();
-            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tamanio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
@@ -57,6 +50,13 @@
             this.btnRestarCant = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tamanio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
@@ -114,66 +114,6 @@
             this.dgwCarrito.Size = new System.Drawing.Size(823, 302);
             this.dgwCarrito.TabIndex = 33;
             this.dgwCarrito.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarrito_RowHeaderMouseClick);
-            // 
-            // idProducto
-            // 
-            this.idProducto.Frozen = true;
-            this.idProducto.HeaderText = "ID";
-            this.idProducto.MinimumWidth = 6;
-            this.idProducto.Name = "idProducto";
-            this.idProducto.ReadOnly = true;
-            this.idProducto.Width = 50;
-            // 
-            // producto
-            // 
-            this.producto.Frozen = true;
-            this.producto.HeaderText = "Producto";
-            this.producto.MinimumWidth = 200;
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            this.producto.Width = 200;
-            // 
-            // descripcionProducto
-            // 
-            this.descripcionProducto.Frozen = true;
-            this.descripcionProducto.HeaderText = "Tipo";
-            this.descripcionProducto.MinimumWidth = 150;
-            this.descripcionProducto.Name = "descripcionProducto";
-            this.descripcionProducto.ReadOnly = true;
-            this.descripcionProducto.Width = 150;
-            // 
-            // Tamanio
-            // 
-            this.Tamanio.Frozen = true;
-            this.Tamanio.HeaderText = "Tamaño";
-            this.Tamanio.MinimumWidth = 100;
-            this.Tamanio.Name = "Tamanio";
-            this.Tamanio.ReadOnly = true;
-            // 
-            // precioProducto
-            // 
-            this.precioProducto.Frozen = true;
-            this.precioProducto.HeaderText = "Precio";
-            this.precioProducto.MinimumWidth = 100;
-            this.precioProducto.Name = "precioProducto";
-            this.precioProducto.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.Frozen = true;
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 70;
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 70;
-            // 
-            // subtotal
-            // 
-            this.subtotal.Frozen = true;
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.MinimumWidth = 100;
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
             // 
             // lblTotal
             // 
@@ -351,6 +291,66 @@
             this.btnRegresar.TabIndex = 31;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // idProducto
+            // 
+            this.idProducto.Frozen = true;
+            this.idProducto.HeaderText = "ID";
+            this.idProducto.MinimumWidth = 6;
+            this.idProducto.Name = "idProducto";
+            this.idProducto.ReadOnly = true;
+            this.idProducto.Width = 50;
+            // 
+            // producto
+            // 
+            this.producto.Frozen = true;
+            this.producto.HeaderText = "Producto";
+            this.producto.MinimumWidth = 200;
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            this.producto.Width = 200;
+            // 
+            // descripcionProducto
+            // 
+            this.descripcionProducto.Frozen = true;
+            this.descripcionProducto.HeaderText = "Tipo";
+            this.descripcionProducto.MinimumWidth = 150;
+            this.descripcionProducto.Name = "descripcionProducto";
+            this.descripcionProducto.ReadOnly = true;
+            this.descripcionProducto.Width = 150;
+            // 
+            // Tamanio
+            // 
+            this.Tamanio.Frozen = true;
+            this.Tamanio.HeaderText = "Tamaño";
+            this.Tamanio.MinimumWidth = 100;
+            this.Tamanio.Name = "Tamanio";
+            this.Tamanio.ReadOnly = true;
+            // 
+            // precioProducto
+            // 
+            this.precioProducto.Frozen = true;
+            this.precioProducto.HeaderText = "Precio";
+            this.precioProducto.MinimumWidth = 100;
+            this.precioProducto.Name = "precioProducto";
+            this.precioProducto.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.Frozen = true;
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 70;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            this.cantidad.Width = 70;
+            // 
+            // subtotal
+            // 
+            this.subtotal.Frozen = true;
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.MinimumWidth = 100;
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // label1
             // 

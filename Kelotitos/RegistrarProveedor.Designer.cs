@@ -56,10 +56,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabla
@@ -72,7 +69,7 @@
             this.columnHeader4});
             this.tabla.GridLines = true;
             this.tabla.HideSelection = false;
-            this.tabla.Location = new System.Drawing.Point(47, 538);
+            this.tabla.Location = new System.Drawing.Point(49, 414);
             this.tabla.Name = "tabla";
             this.tabla.Size = new System.Drawing.Size(804, 42);
             this.tabla.TabIndex = 1;
@@ -124,7 +121,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(47, 232);
+            this.groupBox1.Location = new System.Drawing.Point(49, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(804, 257);
             this.groupBox1.TabIndex = 2;
@@ -288,7 +285,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(326, 495);
+            this.btnCancelar.Location = new System.Drawing.Point(88, 332);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 11;
@@ -298,7 +295,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(442, 495);
+            this.btnRegistrar.Location = new System.Drawing.Point(731, 332);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrar.TabIndex = 10;
@@ -308,44 +305,19 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Image = global::Kelotitos.Properties.Resources.flecha_pequeña;
-            this.btnRegresar.Location = new System.Drawing.Point(12, 12);
+            this.btnRegresar.Location = new System.Drawing.Point(731, 385);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(41, 43);
+            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
             this.btnRegresar.TabIndex = 12;
+            this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
-            this.pictureBox1.Location = new System.Drawing.Point(86, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(534, 135);
-            this.pictureBox1.TabIndex = 54;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label11.Location = new System.Drawing.Point(25, 161);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(329, 56);
-            this.label11.TabIndex = 69;
-            this.label11.Text = "Proveedores";
             // 
             // RegistrarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
-            this.ClientSize = new System.Drawing.Size(912, 621);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(878, 468);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnCancelar);
@@ -356,9 +328,7 @@
             this.Text = "Proveedores";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -392,8 +362,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label11;
     }
 }
 
