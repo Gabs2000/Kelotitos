@@ -122,5 +122,10 @@ namespace Kelotitos
         {
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
