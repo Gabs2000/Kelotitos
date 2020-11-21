@@ -41,6 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblReportes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -89,7 +90,7 @@
             this.btnCerrarSesion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(658, 415);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(658, 436);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(131, 37);
             this.btnCerrarSesion.TabIndex = 29;
@@ -218,11 +219,24 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Kelotitos.Properties.Resources.elotekelot;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(540, 165);
+            this.pictureBox2.Location = new System.Drawing.Point(540, 186);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(249, 244);
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
+            // 
+            // lblReportes
+            // 
+            this.lblReportes.AutoSize = true;
+            this.lblReportes.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblReportes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblReportes.Font = new System.Drawing.Font("Bookman Old Style", 18F);
+            this.lblReportes.Location = new System.Drawing.Point(209, 436);
+            this.lblReportes.Name = "lblReportes";
+            this.lblReportes.Size = new System.Drawing.Size(117, 29);
+            this.lblReportes.TabIndex = 39;
+            this.lblReportes.Text = "Reportes";
+            this.lblReportes.Click += new System.EventHandler(this.lblReportes_Click);
             // 
             // Elegir
             // 
@@ -230,7 +244,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(808, 461);
+            this.ClientSize = new System.Drawing.Size(808, 487);
+            this.Controls.Add(this.lblReportes);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -268,5 +283,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblReportes;
     }
 }

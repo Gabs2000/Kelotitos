@@ -74,5 +74,12 @@ namespace Kelotitos
             this.Hide();
             catalogo.Show();
         }
+
+        private void lblReportes_Click(object sender, EventArgs e)
+        {
+            MenuReportes menuReportes = new MenuReportes();
+            this.Hide();
+            menuReportes.Show();
+        }
     }
 }

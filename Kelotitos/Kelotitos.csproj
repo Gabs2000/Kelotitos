@@ -130,6 +130,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuReportes.Designer.cs">
+      <DependentUpon>MenuReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelsDB\clientAccount.cs" />
     <Compile Include="ModelsDB\Connection.cs" />
     <Compile Include="ModelsDB\ProductAccount.cs" />
@@ -177,6 +183,42 @@
     <Compile Include="RegistroInventario.Designer.cs">
       <DependentUpon>RegistroInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCompras.Designer.cs">
+      <DependentUpon>ReporteCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteEmpleados.Designer.cs">
+      <DependentUpon>ReporteEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteInventario.Designer.cs">
+      <DependentUpon>ReporteInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteProductos.Designer.cs">
+      <DependentUpon>ReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteProveedores.Designer.cs">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentas.Designer.cs">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="TicketFinal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuReportes.resx">
+      <DependentUpon>MenuReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -222,6 +267,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroInventario.resx">
       <DependentUpon>RegistroInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCompras.resx">
+      <DependentUpon>ReporteCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEmpleados.resx">
+      <DependentUpon>ReporteEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteInventario.resx">
+      <DependentUpon>ReporteInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProductos.resx">
+      <DependentUpon>ReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProveedores.resx">
+      <DependentUpon>ReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentas.resx">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketFinal.resx">
       <DependentUpon>TicketFinal.cs</DependentUpon>
