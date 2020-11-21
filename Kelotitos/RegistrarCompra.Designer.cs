@@ -65,7 +65,7 @@
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
             this.lbhora.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbhora.Location = new System.Drawing.Point(617, 9);
+            this.lbhora.Location = new System.Drawing.Point(437, 12);
             this.lbhora.Name = "lbhora";
             this.lbhora.Size = new System.Drawing.Size(73, 24);
             this.lbhora.TabIndex = 29;
@@ -78,7 +78,7 @@
             this.cbProveedor.Enabled = false;
             this.cbProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbProveedor.FormattingEnabled = true;
-            this.cbProveedor.Location = new System.Drawing.Point(347, 317);
+            this.cbProveedor.Location = new System.Drawing.Point(319, 257);
             this.cbProveedor.Name = "cbProveedor";
             this.cbProveedor.Size = new System.Drawing.Size(335, 21);
             this.cbProveedor.TabIndex = 31;
@@ -93,7 +93,7 @@
             this.cbInventario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cbInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbInventario.FormattingEnabled = true;
-            this.cbInventario.Location = new System.Drawing.Point(76, 317);
+            this.cbInventario.Location = new System.Drawing.Point(48, 257);
             this.cbInventario.Name = "cbInventario";
             this.cbInventario.Size = new System.Drawing.Size(260, 21);
             this.cbInventario.TabIndex = 32;
@@ -104,7 +104,7 @@
             this.btnConfirmar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirmar.Location = new System.Drawing.Point(769, 706);
+            this.btnConfirmar.Location = new System.Drawing.Point(741, 646);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(97, 26);
             this.btnConfirmar.TabIndex = 36;
@@ -116,7 +116,7 @@
             // 
             this.numCantidad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.numCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.numCantidad.Location = new System.Drawing.Point(704, 317);
+            this.numCantidad.Location = new System.Drawing.Point(676, 257);
             this.numCantidad.Name = "numCantidad";
             this.numCantidad.Size = new System.Drawing.Size(56, 20);
             this.numCantidad.TabIndex = 38;
@@ -127,7 +127,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(344, 298);
+            this.label1.Location = new System.Drawing.Point(316, 238);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 39;
@@ -143,7 +143,7 @@
             this.precioUnitario,
             this.Cantidad,
             this.subtotalProducto});
-            this.dgwCompras.Location = new System.Drawing.Point(40, 398);
+            this.dgwCompras.Location = new System.Drawing.Point(12, 338);
             this.dgwCompras.Name = "dgwCompras";
             this.dgwCompras.ReadOnly = true;
             this.dgwCompras.RowHeadersWidth = 51;
@@ -214,7 +214,7 @@
             this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(748, 354);
+            this.btnEliminar.Location = new System.Drawing.Point(720, 294);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 26);
             this.btnEliminar.TabIndex = 42;
@@ -228,7 +228,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(73, 298);
+            this.label2.Location = new System.Drawing.Point(45, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 43;
@@ -239,7 +239,7 @@
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(766, 313);
+            this.btnAgregar.Location = new System.Drawing.Point(738, 253);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(97, 26);
             this.btnAgregar.TabIndex = 44;
@@ -253,7 +253,7 @@
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblTotal.Location = new System.Drawing.Point(654, 706);
+            this.lblTotal.Location = new System.Drawing.Point(626, 646);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(82, 31);
             this.lblTotal.TabIndex = 49;
@@ -265,7 +265,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(538, 706);
+            this.label6.Location = new System.Drawing.Point(510, 646);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 31);
             this.label6.TabIndex = 48;
@@ -275,7 +275,7 @@
             // 
             this.btnRestarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRestarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnRestarCant.Location = new System.Drawing.Point(645, 354);
+            this.btnRestarCant.Location = new System.Drawing.Point(617, 294);
             this.btnRestarCant.Name = "btnRestarCant";
             this.btnRestarCant.Size = new System.Drawing.Size(97, 26);
             this.btnRestarCant.TabIndex = 50;
@@ -287,7 +287,7 @@
             // 
             this.btnSumarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSumarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnSumarCant.Location = new System.Drawing.Point(542, 354);
+            this.btnSumarCant.Location = new System.Drawing.Point(514, 294);
             this.btnSumarCant.Name = "btnSumarCant";
             this.btnSumarCant.Size = new System.Drawing.Size(97, 26);
             this.btnSumarCant.TabIndex = 51;
@@ -301,7 +301,7 @@
             this.lblError.BackColor = System.Drawing.Color.Transparent;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(574, 295);
+            this.lblError.Location = new System.Drawing.Point(546, 235);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(37, 16);
             this.lblError.TabIndex = 52;
@@ -312,9 +312,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 12);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(216, 48);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(534, 135);
+            this.pictureBox1.Size = new System.Drawing.Size(453, 109);
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
             // 
@@ -322,11 +323,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label3.Location = new System.Drawing.Point(67, 193);
+            this.label3.Location = new System.Drawing.Point(249, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(463, 56);
+            this.label3.Size = new System.Drawing.Size(384, 47);
             this.label3.TabIndex = 68;
             this.label3.Text = "Registrar Compra";
             // 
@@ -336,7 +337,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(953, 749);
+            this.ClientSize = new System.Drawing.Size(914, 700);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblError);

@@ -54,9 +54,9 @@
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.Black;
-            this.btnMenu.Location = new System.Drawing.Point(324, 470);
+            this.btnMenu.Location = new System.Drawing.Point(86, 313);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(249, 54);
             this.btnMenu.TabIndex = 21;
@@ -70,7 +70,7 @@
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
             this.lbhora.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbhora.Location = new System.Drawing.Point(617, 9);
+            this.lbhora.Location = new System.Drawing.Point(82, 9);
             this.lbhora.Name = "lbhora";
             this.lbhora.Size = new System.Drawing.Size(73, 24);
             this.lbhora.TabIndex = 22;
@@ -85,9 +85,9 @@
             // btnImprimir
             // 
             this.btnImprimir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
-            this.btnImprimir.Location = new System.Drawing.Point(324, 256);
+            this.btnImprimir.Location = new System.Drawing.Point(86, 177);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(249, 54);
@@ -99,9 +99,9 @@
             // btnNuevaVenta
             // 
             this.btnNuevaVenta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaVenta.ForeColor = System.Drawing.Color.Black;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(324, 363);
+            this.btnNuevaVenta.Location = new System.Drawing.Point(86, 245);
             this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevaVenta.Name = "btnNuevaVenta";
             this.btnNuevaVenta.Size = new System.Drawing.Size(249, 54);
@@ -113,10 +113,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Kelotitos.Properties.Resources.kelotitos6;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 12);
+            this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 49);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(534, 135);
+            this.pictureBox1.Size = new System.Drawing.Size(362, 94);
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
@@ -126,7 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(953, 749);
+            this.ClientSize = new System.Drawing.Size(432, 393);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnNuevaVenta);
             this.Controls.Add(this.btnImprimir);

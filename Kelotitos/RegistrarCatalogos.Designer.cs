@@ -52,7 +52,7 @@
             this.groupBox1.Controls.Add(this.btnAgrTamanio);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(105, 358);
+            this.groupBox1.Location = new System.Drawing.Point(24, 230);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(330, 227);
             this.groupBox1.TabIndex = 0;
@@ -95,7 +95,7 @@
             this.groupBox2.Controls.Add(this.txtNomTipo);
             this.groupBox2.Controls.Add(this.lblTipo);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(519, 358);
+            this.groupBox2.Location = new System.Drawing.Point(390, 230);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(330, 227);
             this.groupBox2.TabIndex = 1;
@@ -153,9 +153,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 12);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(122, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(536, 144);
+            this.pictureBox1.Size = new System.Drawing.Size(509, 120);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -163,11 +164,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label2.Location = new System.Drawing.Point(67, 193);
+            this.label2.Location = new System.Drawing.Point(165, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(487, 56);
+            this.label2.Size = new System.Drawing.Size(404, 47);
             this.label2.TabIndex = 4;
             this.label2.Text = "Registrar Catálogo";
             // 
@@ -176,7 +177,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
-            this.ClientSize = new System.Drawing.Size(953, 749);
+            this.ClientSize = new System.Drawing.Size(771, 496);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRegresar);

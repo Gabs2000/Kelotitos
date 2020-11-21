@@ -88,5 +88,9 @@ namespace Kelotitos
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

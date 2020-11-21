@@ -43,40 +43,34 @@
             // 
             // user_textbox
             // 
-            this.user_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.user_textbox.BackColor = System.Drawing.Color.White;
             this.user_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_textbox.ForeColor = System.Drawing.Color.Black;
-            this.user_textbox.Location = new System.Drawing.Point(260, 401);
+            this.user_textbox.Location = new System.Drawing.Point(177, 191);
             this.user_textbox.Name = "user_textbox";
-            this.user_textbox.Size = new System.Drawing.Size(660, 38);
+            this.user_textbox.Size = new System.Drawing.Size(347, 38);
             this.user_textbox.TabIndex = 1;
             // 
             // password_textbox
             // 
-            this.password_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.password_textbox.BackColor = System.Drawing.Color.White;
             this.password_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password_textbox.ForeColor = System.Drawing.Color.Black;
-            this.password_textbox.Location = new System.Drawing.Point(260, 470);
+            this.password_textbox.Location = new System.Drawing.Point(177, 235);
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.PasswordChar = '*';
-            this.password_textbox.Size = new System.Drawing.Size(660, 38);
+            this.password_textbox.Size = new System.Drawing.Size(347, 38);
             this.password_textbox.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(18, 462);
+            this.label4.Location = new System.Drawing.Point(8, 238);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(237, 46);
+            this.label4.Size = new System.Drawing.Size(163, 31);
             this.label4.TabIndex = 13;
             this.label4.Text = "Contraseña:";
             // 
@@ -84,23 +78,22 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(69, 393);
+            this.label3.Location = new System.Drawing.Point(55, 191);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 46);
+            this.label3.Size = new System.Drawing.Size(116, 31);
             this.label3.TabIndex = 12;
             this.label3.Text = "Usuario:";
             // 
             // login_button
             // 
-            this.login_button.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.login_button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_button.ForeColor = System.Drawing.Color.Black;
-            this.login_button.Location = new System.Drawing.Point(228, 613);
+            this.login_button.Location = new System.Drawing.Point(56, 324);
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(249, 54);
+            this.login_button.Size = new System.Drawing.Size(214, 54);
             this.login_button.TabIndex = 3;
             this.login_button.Text = "Iniciar Sesión";
             this.login_button.UseVisualStyleBackColor = false;
@@ -108,13 +101,12 @@
             // 
             // register_button
             // 
-            this.register_button.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.register_button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_button.ForeColor = System.Drawing.Color.Black;
-            this.register_button.Location = new System.Drawing.Point(495, 613);
+            this.register_button.Location = new System.Drawing.Point(289, 324);
             this.register_button.Name = "register_button";
-            this.register_button.Size = new System.Drawing.Size(249, 54);
+            this.register_button.Size = new System.Drawing.Size(246, 54);
             this.register_button.TabIndex = 4;
             this.register_button.Text = "Registrar Usuario";
             this.register_button.UseVisualStyleBackColor = false;
@@ -131,7 +123,7 @@
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
             this.lbhora.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbhora.Location = new System.Drawing.Point(561, 9);
+            this.lbhora.Location = new System.Drawing.Point(224, 9);
             this.lbhora.Name = "lbhora";
             this.lbhora.Size = new System.Drawing.Size(73, 24);
             this.lbhora.TabIndex = 22;
@@ -141,9 +133,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
-            this.pictureBox1.Location = new System.Drawing.Point(219, 152);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(77, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(535, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(447, 105);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
@@ -154,7 +147,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(953, 749);
+            this.ClientSize = new System.Drawing.Size(582, 424);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbhora);
             this.Controls.Add(this.register_button);
@@ -167,6 +160,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

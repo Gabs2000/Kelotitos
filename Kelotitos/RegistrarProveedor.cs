@@ -117,5 +117,10 @@ namespace Prueba
             this.Hide();
             elegir.Show();
         }
+
+        private void RegistrarProveedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
