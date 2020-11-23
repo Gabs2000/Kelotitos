@@ -1,4 +1,5 @@
-﻿using Kelotitos.MySql;
+﻿using iText.Layout;
+using Kelotitos.MySql;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,11 @@ namespace Kelotitos
             dgwRepInv.AutoResizeColumns();
             dgwRepInv.ClearSelection();
                 
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
