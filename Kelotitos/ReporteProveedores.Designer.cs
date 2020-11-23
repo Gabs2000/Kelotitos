@@ -32,8 +32,11 @@ namespace Kelotitos
             this.pcRegresar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgwProveedores = new System.Windows.Forms.DataGridView();
+            this.btnPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // pcRegresar
@@ -71,6 +74,25 @@ namespace Kelotitos
             this.label1.TabIndex = 2;
             this.label1.Text = "Reporte Proveedores";
             // 
+            // dgwProveedores
+            // 
+            this.dgwProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwProveedores.Location = new System.Drawing.Point(25, 167);
+            this.dgwProveedores.Name = "dgwProveedores";
+            this.dgwProveedores.Size = new System.Drawing.Size(635, 224);
+            this.dgwProveedores.TabIndex = 3;
+            // 
+            // btnPDF
+            // 
+            this.btnPDF.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnPDF.Location = new System.Drawing.Point(272, 409);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(131, 29);
+            this.btnPDF.TabIndex = 4;
+            this.btnPDF.Text = "Crear PDF";
+            this.btnPDF.UseVisualStyleBackColor = false;
+            // 
             // ReporteProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,6 +100,8 @@ namespace Kelotitos
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(686, 450);
+            this.Controls.Add(this.btnPDF);
+            this.Controls.Add(this.dgwProveedores);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pcRegresar);
@@ -85,8 +109,10 @@ namespace Kelotitos
             this.Name = "ReporteProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Proveedores";
+            this.Load += new System.EventHandler(this.ReporteProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcRegresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +123,7 @@ namespace Kelotitos
         private System.Windows.Forms.PictureBox pcRegresar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgwProveedores;
+        private System.Windows.Forms.Button btnPDF;
     }
 }

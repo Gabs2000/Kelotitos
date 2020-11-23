@@ -277,13 +277,16 @@ namespace Kelotitos
                     // Insertamos en la tabla ventas
                     using (MySqlCommand venta = new MySqlCommand(queryInsertVenta, conexion))
                     {
+                        string total = lblTotal.Text.Replace("$", "");
+                        total = total.Replace(",", ".");
+
                         venta.Parameters.AddWithValue("@folio", folio);
                         venta.Parameters.AddWithValue("@idUsuario", Login.idUsuario);
-                        venta.Parameters.AddWithValue("@total", lblTotal.Text.Replace("$", ""));
+                        venta.Parameters.AddWithValue("@total", total);
                         venta.ExecuteNonQuery();
                         idVenta = Convert.ToInt32(venta.LastInsertedId);
 
-                        //Console.WriteLine(idVenta);
+                        Console.WriteLine(idVenta);
                     }
 
                     //Insertamos los detalles de la venta
