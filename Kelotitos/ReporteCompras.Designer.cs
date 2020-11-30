@@ -38,12 +38,13 @@ namespace Kelotitos
             // 
             // pcRegresar
             // 
-            this.pcRegresar.BackgroundImage = global::Kelotitos.Properties.Resources.flecha_pequeña;
             this.pcRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcRegresar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pcRegresar.Image = global::Kelotitos.Properties.Resources.flecha_pequeña;
             this.pcRegresar.Location = new System.Drawing.Point(12, 12);
             this.pcRegresar.Name = "pcRegresar";
             this.pcRegresar.Size = new System.Drawing.Size(56, 47);
+            this.pcRegresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcRegresar.TabIndex = 0;
             this.pcRegresar.TabStop = false;
             this.pcRegresar.Click += new System.EventHandler(this.pcRegresar_Click);
@@ -51,11 +52,12 @@ namespace Kelotitos
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::Kelotitos.Properties.Resources.kelotitos6;
             this.pictureBox2.Location = new System.Drawing.Point(161, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(299, 79);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 

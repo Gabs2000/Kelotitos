@@ -1656,6 +1656,22 @@
             <param name="extraBottom">extra coloring at the bottom</param>
             <returns>this Element.</returns>
         </member>
+        <member name="M:iText.Layout.ElementPropertyContainer`1.SetBackgroundImage(iText.Layout.Properties.BackgroundImage)">
+            <summary>Specifies a background image for the Element.</summary>
+            <param name="image">
+            
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            </param>
+            <returns>this Element.</returns>
+        </member>
+        <member name="M:iText.Layout.ElementPropertyContainer`1.SetBackgroundImage(System.Collections.Generic.IList{iText.Layout.Properties.BackgroundImage})">
+            <summary>Specifies a list of background images for the Element.</summary>
+            <param name="imagesList">
+            List of
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            </param>
+            <returns>this Element.</returns>
+        </member>
         <member name="M:iText.Layout.ElementPropertyContainer`1.SetBorder(iText.Layout.Borders.Border)">
             <summary>Sets a border for all four edges of this Element with customizable color, width, pattern type.</summary>
             <param name="border">
@@ -1958,7 +1974,14 @@
             <summary>Add a new style to this element.</summary>
             <remarks>
             Add a new style to this element. A style can be used as an effective way
-            to define multiple equal properties to several elements.
+            to define multiple equal properties to several elements, however its properties have
+            lower priority than properties, directly set on
+            <see cref="T:iText.Layout.ElementPropertyContainer`1"/>
+            Note that if several Style objects are added, iText checks them one by one
+            in the order in which they were added and returns the property's value from
+            the last Style object, which contains this property. So, if there are two Style
+            objects added: the first has set width of 100 points and the second of 200 points,
+            iText will get 200 points as width value.
             </remarks>
             <param name="style">the style to be added</param>
             <returns>this element</returns>
@@ -3099,6 +3122,28 @@
             <summary>Gets scaled height of the image.</summary>
             <returns>the current scaled height</returns>
         </member>
+        <member name="M:iText.Layout.Element.Image.SetObjectFit(iText.Layout.Properties.ObjectFit)">
+            <summary>Sets an object-fit mode for the image.</summary>
+            <param name="objectFit">
+            is the
+            <see cref="T:iText.Layout.Properties.ObjectFit"/>
+            mode
+            </param>
+            <returns>this image</returns>
+        </member>
+        <member name="M:iText.Layout.Element.Image.GetObjectFit">
+            <summary>
+            Retrieves the
+            <see cref="T:iText.Layout.Properties.ObjectFit"/>
+            mode for the image.
+            </summary>
+            <returns>
+            an object-fit mode for the image if it was set
+            and default value
+            <see cref="F:iText.Layout.Properties.ObjectFit.FILL"/>
+            otherwise
+            </returns>
+        </member>
         <member name="T:iText.Layout.Element.LineSeparator">
             <summary>
             This is a line separator element which is basically just a horizontal line with
@@ -4211,7 +4256,7 @@
         </member>
         <member name="M:iText.Layout.Element.TabStop.#ctor(System.Single)">
             <summary>Creates a TabStop at the appropriate position.</summary>
-            <param name="tabPosition">a <c>float</c>, measured in points</param>
+            <param name="tabPosition">a <c>float</c>, measured in absolute points</param>
         </member>
         <member name="M:iText.Layout.Element.TabStop.#ctor(System.Single,iText.Layout.Properties.TabAlignment)">
             <summary>
@@ -4223,7 +4268,7 @@
             alignment. A tab alignment defines the way the textual content should be
             positioned with regards to this tab stop.
             </remarks>
-            <param name="tabPosition">a <c>float</c>, measured in points</param>
+            <param name="tabPosition">a <c>float</c>, measured in absolute points</param>
             <param name="tabAlignment">
             a
             <see cref="T:iText.Layout.Properties.TabAlignment"/>
@@ -4243,7 +4288,7 @@
             the TabStop is reached. If null, the space leading up to the TabStop will
             be empty.
             </remarks>
-            <param name="tabPosition">a <c>float</c>, measured in points</param>
+            <param name="tabPosition">a <c>float</c>, measured in absolute points</param>
             <param name="tabAlignment">
             a
             <see cref="T:iText.Layout.Properties.TabAlignment"/>
@@ -4350,10 +4395,10 @@
         </member>
         <member name="T:iText.Layout.Font.FontFamilySplitter">
             <summary>
-            Split css font-family string into list of font-families or generic-families
+            Split CSS font-family string into list of font-families or generic-families
             </summary>
             <depricated>
-            Will be removed in iText 7.2.
+            Will be moved to styled-xml-parser module in iText 7.2.
             </depricated>
         </member>
         <member name="T:iText.Layout.Font.FontInfo">
@@ -6254,7 +6299,14 @@
             <see cref="T:iText.Kernel.Geom.Rectangle">box</see>
             which bounds the area.
             </summary>
-            <param name="bbox"/>
+            <param name="bbox">the area's bounding box</param>
+        </member>
+        <member name="M:iText.Layout.Layout.LayoutArea.Clone">
+            <summary>
+            Creates a "deep copy" of this LayoutArea, meaning the object returned by this method will be independent
+            of the object being cloned.
+            </summary>
+            <returns>the copied LayoutArea.</returns>
         </member>
         <member name="M:iText.Layout.Layout.LayoutArea.Equals(System.Object)">
             <summary><inheritDoc/></summary>
@@ -6264,13 +6316,6 @@
         </member>
         <member name="M:iText.Layout.Layout.LayoutArea.ToString">
             <summary><inheritDoc/></summary>
-        </member>
-        <member name="M:iText.Layout.Layout.LayoutArea.Clone">
-            <summary>
-            Creates a "deep copy" of this LayoutArea, meaning the object returned by this method will be independent
-            of the object being cloned.
-            </summary>
-            <returns>the copied LayoutArea.</returns>
         </member>
         <member name="T:iText.Layout.Layout.LayoutContext">
             <summary>
@@ -6302,7 +6347,7 @@
         </member>
         <member name="M:iText.Layout.Layout.LayoutContext.SetClippedHeight(System.Boolean)">
             <summary>Defines whether the layout area's height is clipped or not.</summary>
-            <param name="clippedHeight"/>
+            <param name="clippedHeight">indicates whether the height is clipped or not.</param>
         </member>
         <member name="M:iText.Layout.Layout.LayoutContext.ToString">
             <summary><inheritDoc/></summary>
@@ -6472,7 +6517,10 @@
             Sets the status of
             <see cref="M:iText.Layout.Renderer.IRenderer.Layout(iText.Layout.Layout.LayoutContext)"/>.
             </summary>
-            <param name="status"/>
+            <param name="status">
+            the status of
+            <see cref="M:iText.Layout.Renderer.IRenderer.Layout(iText.Layout.Layout.LayoutContext)"/>
+            </param>
         </member>
         <member name="M:iText.Layout.Layout.LayoutResult.GetOccupiedArea">
             <summary>
@@ -6504,7 +6552,7 @@
             Sets the split
             <see cref="T:iText.Layout.Renderer.IRenderer">renderer</see>.
             </summary>
-            <param name="splitRenderer"/>
+            <param name="splitRenderer">the renderer to draw the splitted part of the content</param>
         </member>
         <member name="M:iText.Layout.Layout.LayoutResult.GetOverflowRenderer">
             <summary>
@@ -6521,7 +6569,7 @@
             Sets the overflow
             <see cref="T:iText.Layout.Renderer.IRenderer">renderer</see>.
             </summary>
-            <param name="overflowRenderer"/>
+            <param name="overflowRenderer">the renderer to draw the overflowed part of the content</param>
         </member>
         <member name="M:iText.Layout.Layout.LayoutResult.GetCauseOfNothing">
             <summary>
@@ -6672,7 +6720,7 @@
         </member>
         <member name="M:iText.Layout.Layout.RootLayoutArea.SetEmptyArea(System.Boolean)">
             <summary>Defines whether the area already has some placed content or not.</summary>
-            <param name="emptyArea"/>
+            <param name="emptyArea">indicates whether the area already has some placed content or not.</param>
         </member>
         <member name="M:iText.Layout.Layout.RootLayoutArea.Clone">
             <summary>
@@ -6818,7 +6866,8 @@
         </member>
         <member name="M:iText.Layout.Margincollapse.MarginsCollapseHandler.EndChildMarginsHandling(iText.Kernel.Geom.Rectangle)">
             <summary>This method shall be called after child occupied area is included into parent occupied area.</summary>
-            <param name="layoutBox"/>
+            <param name="layoutBox">available area for child and its siblings layout. It might be adjusted inside the method
+                </param>
         </member>
         <member name="T:iText.Layout.Minmaxwidth.RotationMinMaxWidth">
             <summary>Class for min-max-width of rotated elements.</summary>
@@ -7018,6 +7067,15 @@
             <param name="extraRight">extra coloring to the right side</param>
             <param name="extraBottom">extra coloring at the bottom</param>
         </member>
+        <member name="M:iText.Layout.Properties.Background.#ctor(iText.Kernel.Colors.Color,System.Single,iText.Layout.Properties.BackgroundBox)">
+            <summary>Creates a background with a specified color, opacity and clip value.</summary>
+            <param name="color">the background color</param>
+            <param name="opacity">
+            the opacity of the background color; a float between 0 and 1, where 1 stands for fully opaque
+            color and 0 - for fully transparent
+            </param>
+            <param name="clip">the value to clip the background color</param>
+        </member>
         <member name="M:iText.Layout.Properties.Background.GetColor">
             <summary>Gets the background's color.</summary>
             <returns>
@@ -7046,6 +7104,763 @@
             <summary>Gets the extra space that must be filled at the bottom of the Element.</summary>
             <returns>a float value</returns>
         </member>
+        <member name="M:iText.Layout.Properties.Background.GetBackgroundClip">
+            <summary>Gets background clip value.</summary>
+            <returns>background clip value</returns>
+        </member>
+        <member name="T:iText.Layout.Properties.BackgroundBox">
+            <summary>Enum with boxes that can be used as a value in background-clip and background-origin properties.</summary>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundImage.repeatX">
+            <summary>
+            Whether the background-repeat value is not
+            <see cref="!:BackgroundRepeatValue.NO_REPEAT"/>
+            for X axis.
+            </summary>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundImage.repeatY">
+            <summary>
+            Whether the background-repeat value is not
+            <see cref="!:BackgroundRepeatValue.NO_REPEAT"/>
+            for Y axis.
+            </summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Layout.Properties.BackgroundImage)">
+            <summary>
+            Creates a copy of passed
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="backgroundImage">
+            
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            for cloning
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfImageXObject,iText.Layout.Properties.BackgroundRepeat,iText.Layout.Properties.BlendMode)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfImageXObject"/>
+            instance.
+            </param>
+            <param name="repeat">
+            background repeat property.
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </param>
+            <param name="blendMode">
+            the image's blend mode.
+            <see cref="T:iText.Layout.Properties.BlendMode"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfFormXObject,iText.Layout.Properties.BackgroundRepeat,iText.Layout.Properties.BlendMode)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfFormXObject"/>
+            instance.
+            </param>
+            <param name="repeat">
+            background repeat property.
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </param>
+            <param name="blendMode">
+            the image's blend mode.
+            <see cref="T:iText.Layout.Properties.BlendMode"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfImageXObject,iText.Layout.Properties.BackgroundRepeat)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background-image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfImageXObject"/>
+            instance.
+            </param>
+            <param name="repeat">
+            background-repeat property.
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfFormXObject,iText.Layout.Properties.BackgroundRepeat)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background-image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfFormXObject"/>
+            instance.
+            </param>
+            <param name="repeat">
+            background-repeat property.
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfImageXObject)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background-image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfImageXObject"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfFormXObject)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background-image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfFormXObject"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfImageXObject,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background-image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfImageXObject"/>
+            instance.
+            </param>
+            <param name="repeatX">defines whether background is repeated in x dimension.</param>
+            <param name="repeatY">defines whether background is repeated in y dimension.</param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfFormXObject,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background-image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfFormXObject"/>
+            instance.
+            </param>
+            <param name="repeatX">defines whether background is repeated in x dimension.</param>
+            <param name="repeatY">defines whether background is repeated in y dimension.</param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance with linear gradient.
+            </summary>
+            <param name="linearGradientBuilder">
+            the linear gradient builder representing the background image.
+            <see cref="T:iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder,iText.Layout.Properties.BlendMode)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance with linear gradient and custom blending mode.
+            </summary>
+            <param name="linearGradientBuilder">
+            the linear gradient builder representing the background image.
+            <see cref="T:iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder"/>
+            instance.
+            </param>
+            <param name="blendMode">
+            the image's blend mode.
+            <see cref="T:iText.Layout.Properties.BlendMode"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.#ctor(iText.Kernel.Pdf.Xobject.PdfXObject,iText.Layout.Properties.BackgroundRepeat,iText.Layout.Properties.BackgroundPosition,iText.Layout.Properties.BackgroundSize,iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder,iText.Layout.Properties.BlendMode,iText.Layout.Properties.BackgroundBox,iText.Layout.Properties.BackgroundBox)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            instance.
+            </summary>
+            <param name="image">
+            background-image property.
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfXObject"/>
+            instance.
+            </param>
+            <param name="repeat">
+            background-repeat property.
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </param>
+            <param name="position">
+            background-position property.
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            instance.
+            </param>
+            <param name="backgroundSize">
+            background-size property.
+            <see cref="T:iText.Layout.Properties.BackgroundSize"/>
+            instance.
+            </param>
+            <param name="linearGradientBuilder">
+            background-image property.
+            <see cref="T:iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder"/>
+            instance.
+            </param>
+            <param name="blendMode">
+            the image's blend mode.
+            <see cref="T:iText.Layout.Properties.BlendMode"/>
+            instance.
+            </param>
+            <param name="clip">
+            background-clip property.
+            <see cref="T:iText.Layout.Properties.BackgroundBox"/>
+            instance.
+            </param>
+            <param name="origin">
+            background-origin property.
+            <see cref="T:iText.Layout.Properties.BackgroundBox"/>
+            instance.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetBackgroundPosition">
+            <summary>Gets background-position.</summary>
+            <returns>
+            
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetBackgroundSize">
+            <summary>Gets the background size property.</summary>
+            <returns>
+            
+            <see cref="T:iText.Layout.Properties.BackgroundSize"/>
+            instance
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetImageWidth">
+            <summary>Gets initial image width.</summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetImageHeight">
+            <summary>Gets initial image height.</summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetWidth">
+            <summary>Gets initial image width.</summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetHeight">
+            <summary>Gets initial image height.</summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetRepeat">
+            <summary>
+            Gets image
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </summary>
+            <returns>the image background repeat</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetBlendMode">
+            <summary>Get the image's blend mode.</summary>
+            <returns>
+            the
+            <see cref="T:iText.Layout.Properties.BlendMode"/>
+            representation of the image's blend mode
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetBackgroundClip">
+            <summary>Gets background-clip.</summary>
+            <returns>
+            
+            <see cref="T:iText.Layout.Properties.BackgroundBox"/>
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.GetBackgroundOrigin">
+            <summary>Gets background-origin.</summary>
+            <returns>
+            
+            <see cref="T:iText.Layout.Properties.BackgroundBox"/>
+            </returns>
+        </member>
+        <member name="T:iText.Layout.Properties.BackgroundImage.Builder">
+            <summary>
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            builder class.
+            </summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.SetImage(iText.Kernel.Pdf.Xobject.PdfXObject)">
+            <summary>Sets image.</summary>
+            <remarks>
+            Sets image.
+            <para />
+            Makes linearGradientBuilder null as far as we can't have them both.
+            </remarks>
+            <param name="image">
+            
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfXObject"/>
+            to be set.
+            </param>
+            <returns>
+            this
+            <see cref="T:iText.Layout.Properties.BackgroundImage.Builder"/>.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.SetLinearGradientBuilder(iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder)">
+            <summary>Sets linearGradientBuilder.</summary>
+            <remarks>
+            Sets linearGradientBuilder.
+            <para />
+            Makes image null as far as we can't have them both. It also makes background-repeat: no-repeat.
+            </remarks>
+            <param name="linearGradientBuilder">
+            
+            <see cref="T:iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder"/>
+            to be set.
+            </param>
+            <returns>
+            this
+            <see cref="T:iText.Layout.Properties.BackgroundImage.Builder"/>.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.SetBackgroundRepeat(iText.Layout.Properties.BackgroundRepeat)">
+            <summary>Sets background-repeat.</summary>
+            <param name="repeat">
+            
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            to be set.
+            </param>
+            <returns>
+            this
+            <see cref="T:iText.Layout.Properties.BackgroundImage.Builder"/>.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.SetBackgroundPosition(iText.Layout.Properties.BackgroundPosition)">
+            <summary>Sets background-position.</summary>
+            <param name="position">
+            
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            to be set.
+            </param>
+            <returns>
+            this
+            <see cref="T:iText.Layout.Properties.BackgroundImage.Builder"/>.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.SetBackgroundBlendMode(iText.Layout.Properties.BlendMode)">
+            <summary>Set the image's blend mode.</summary>
+            <param name="blendMode">
+            
+            <see cref="T:iText.Layout.Properties.BlendMode"/>
+            to be set.
+            </param>
+            <returns>
+            this
+            <see cref="T:iText.Layout.Properties.BackgroundImage.Builder"/>.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.SetBackgroundSize(iText.Layout.Properties.BackgroundSize)">
+            <summary>Set the image's backgroundSize.</summary>
+            <param name="backgroundSize">
+            
+            <see cref="T:iText.Layout.Properties.BackgroundSize"/>
+            to be set.
+            </param>
+            <returns>
+            this
+            <see cref="T:iText.Layout.Properties.BackgroundImage.Builder"/>.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.SetBackgroundClip(iText.Layout.Properties.BackgroundBox)">
+            <summary>Sets background-clip.</summary>
+            <param name="clip">
+            
+            <see cref="T:iText.Layout.Properties.BackgroundBox"/>
+            to be set.
+            </param>
+            <returns>
+            this
+            <see cref="T:iText.Layout.Properties.BackgroundImage.Builder"/>.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.SetBackgroundOrigin(iText.Layout.Properties.BackgroundBox)">
+            <summary>Sets background-origin.</summary>
+            <param name="origin">
+            
+            <see cref="T:iText.Layout.Properties.BackgroundBox"/>
+            to be set.
+            </param>
+            <returns>
+            this
+            <see cref="T:iText.Layout.Properties.BackgroundImage.Builder"/>.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundImage.Builder.Build">
+            <summary>
+            Builds new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            using set fields.
+            </summary>
+            <returns>
+            new
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>.
+            </returns>
+        </member>
+        <member name="T:iText.Layout.Properties.BackgroundPosition">
+            <summary>Class to hold background-position property.</summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.#ctor">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            instance.
+            </summary>
+            <remarks>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            instance. Fills it with default values.
+            </remarks>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.CalculatePositionValues(System.Single,System.Single,iText.Layout.Properties.UnitValue,iText.Layout.Properties.UnitValue)">
+            <summary>Converts all percentage and enum values to point equivalent.</summary>
+            <param name="fullWidth">container width to calculate percentage.</param>
+            <param name="fullHeight">container height to calculate percentage.</param>
+            <param name="outXValue">
+            
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            to store processed xPosition.
+            </param>
+            <param name="outYValue">
+            
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            to store processed yPosition.
+            </param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.GetPositionX">
+            <summary>Gets horizontal position.</summary>
+            <returns>position in x-dimension</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.SetPositionX(iText.Layout.Properties.BackgroundPosition.PositionX)">
+            <summary>Sets horizontal position.</summary>
+            <param name="xPosition">position in x-dimension</param>
+            <returns>
+            
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.GetPositionY">
+            <summary>Gets vertical position.</summary>
+            <returns>position in y-dimension</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.SetPositionY(iText.Layout.Properties.BackgroundPosition.PositionY)">
+            <summary>Sets vertical position.</summary>
+            <param name="yPosition">position in y-dimension</param>
+            <returns>
+            
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.GetXShift">
+            <summary>Gets horizontal shift.</summary>
+            <returns>shift in x-dimension from left</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.SetXShift(iText.Layout.Properties.UnitValue)">
+            <summary>Sets horizontal shift.</summary>
+            <param name="xShift">shift in x-dimension from left</param>
+            <returns>
+            
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.GetYShift">
+            <summary>Gets vertical shift.</summary>
+            <returns>shift in y-dimension from top</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.SetYShift(iText.Layout.Properties.UnitValue)">
+            <summary>Sets vertical shift.</summary>
+            <param name="yShift">shift in y-dimension</param>
+            <returns>
+            
+            <see cref="T:iText.Layout.Properties.BackgroundPosition"/>
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.Equals(System.Object)">
+            <summary><inheritDoc/></summary>
+            <returns>true if every field equals. False otherwise.</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.GetHashCode">
+            <summary><inheritDoc/></summary>
+            <returns>object's hashCode.</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.ParsePositionXToUnitValueAndReturnMultiplier(iText.Layout.Properties.UnitValue)">
+            <summary>
+            Parses positionX to
+            <see cref="T:iText.Layout.Properties.UnitValue"/>.
+            </summary>
+            <param name="outValue">
+            
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            in which positionX will be parsed
+            </param>
+            <returns>multiplier by which the xShift will be multiplied</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundPosition.ParsePositionYToUnitValueAndReturnMultiplier(iText.Layout.Properties.UnitValue)">
+            <summary>
+            Parses positionY to
+            <see cref="T:iText.Layout.Properties.UnitValue"/>.
+            </summary>
+            <param name="outValue">
+            
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            in which positionY will be parsed
+            </param>
+            <returns>multiplier by which the yShift will be multiplied</returns>
+        </member>
+        <member name="T:iText.Layout.Properties.BackgroundRepeat">
+            <summary>Class to hold background-repeat property.</summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundRepeat.#ctor">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </summary>
+            <remarks>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            The axis will have the value
+            <see cref="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.REPEAT"/>.
+            </remarks>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundRepeat.#ctor(iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance based on one
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </summary>
+            <param name="repeat">the repeat value that will be set for for both axes</param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundRepeat.#ctor(iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue,iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue)">
+            <summary>
+            Creates a new
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance based on two
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat"/>
+            instance.
+            </summary>
+            <param name="xAxisRepeat">the repeat value that will be set for for X axis</param>
+            <param name="yAxisRepeat">the repeat value that will be set for for Y axis</param>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundRepeat.GetXAxisRepeat">
+            <summary>
+            Gets the
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue"/>
+            value for X axis.
+            </summary>
+            <returns>the repeat value for X axis.</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundRepeat.GetYAxisRepeat">
+            <summary>
+            Gets the
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue"/>
+            value for Y axis.
+            </summary>
+            <returns>the repeat value for Y axis.</returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundRepeat.IsNoRepeatOnXAxis">
+            <summary>
+            Checks whether the
+            <see cref="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.NO_REPEAT"/>
+            value is set on X axis or not.
+            </summary>
+            <returns>
+            is the X axis have
+            <see cref="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.NO_REPEAT"/>
+            value
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundRepeat.IsNoRepeatOnYAxis">
+            <summary>
+            Checks whether the
+            <see cref="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.NO_REPEAT"/>
+            value is set on Y axis or not.
+            </summary>
+            <returns>
+            is the Y axis have
+            <see cref="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.NO_REPEAT"/>
+            value
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundRepeat.PrepareRectangleToDrawingAndGetWhitespace(iText.Kernel.Geom.Rectangle,iText.Kernel.Geom.Rectangle,iText.Layout.Properties.BackgroundSize)">
+            <summary>Prepares the image rectangle for drawing.</summary>
+            <remarks>
+            Prepares the image rectangle for drawing. This means that the size and position of the image
+            rectangle will be changed to match the
+            <see cref="T:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue"/>
+            values for the axes.
+            </remarks>
+            <param name="imageRectangle">the image rectangle which will be changed</param>
+            <param name="backgroundArea">the background available area</param>
+            <returns>the necessary whitespace between backgrounds</returns>
+        </member>
+        <member name="T:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue">
+            <summary>Defines all possible background repeat values for one axis.</summary>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.NO_REPEAT">
+            <summary>
+            The no repeat value which mean that the background will not be repeated, but displayed once with its
+            original size.
+            </summary>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.REPEAT">
+            <summary>
+            The repeat value which means that the background with its original size will be repeated over the entire
+            available space.
+            </summary>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.ROUND">
+            <summary>The round value which mean that the background will stretch or compress.</summary>
+            <remarks>
+            The round value which mean that the background will stretch or compress. Initially, the available space is
+            divided by module by the size of the background, if the result is less than half the size of the background,
+            then the background is stretched in such a way that when it is repeated it will take up all the space,
+            otherwise the background is compressed to fit one more background in the available space.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundRepeat.BackgroundRepeatValue.SPACE">
+            <summary>
+            The space value which means that the background will be repeated as much as possible with its original size
+            and without cropping.
+            </summary>
+            <remarks>
+            The space value which means that the background will be repeated as much as possible with its original size
+            and without cropping. the first and last backgrounds are attached to opposite edges of the available space,
+            and the whitespaces are evenly distributed between the backgrounds.
+            </remarks>
+        </member>
+        <member name="T:iText.Layout.Properties.BackgroundSize">
+            <summary>Class to hold background-size property.</summary>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundSize.backgroundWidthSize">
+            <summary>Width size for this image.</summary>
+            <remarks>
+            Width size for this image. If
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            is in percent, then width depends on the area of the element.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundSize.backgroundHeightSize">
+            <summary>Height size for this image.</summary>
+            <remarks>
+            Height size for this image. If
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            is in percent, then height depends on the area of the element.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundSize.cover">
+            <summary>Image covers the entire area and its size may be more than the area.</summary>
+        </member>
+        <member name="F:iText.Layout.Properties.BackgroundSize.contain">
+            <summary>Image hsd a maximum size but not larger than the area.</summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundSize.SetBackgroundSizeToValues(iText.Layout.Properties.UnitValue,iText.Layout.Properties.UnitValue)">
+            <summary>Clear all current properties and sets new width and height values.</summary>
+            <remarks>
+            Clear all current properties and sets new width and height values.
+            One of the parameters can be null. Note that in this case CalculationUtil will scale null property
+            so that it becomes proportionally equals with the not null value.
+            If both parameters are set to null, that the default image size will be used.
+            </remarks>
+            <param name="width">
+            a
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            object
+            </param>
+            <param name="height">
+            a
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            object
+            </param>
+            <seealso cref="!:com.itextpdf.layout.renderer.BackgroundSizeCalculationUtil#calculateBackgroundImageSize"/>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundSize.SetBackgroundSizeToContain">
+            <summary>
+            Clears all size values and sets the "contain" property
+            <see langword="true"/>.
+            </summary>
+            <seealso cref="F:iText.Layout.Properties.BackgroundSize.contain"/>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundSize.SetBackgroundSizeToCover">
+            <summary>
+            Clears all size values and sets the "cover" property
+            <see langword="true"/>.
+            </summary>
+            <seealso cref="F:iText.Layout.Properties.BackgroundSize.cover"/>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundSize.GetBackgroundWidthSize">
+            <summary>Gets the background width property of the image.</summary>
+            <returns>
+            the
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            width for this image.
+            </returns>
+            <seealso cref="F:iText.Layout.Properties.BackgroundSize.backgroundWidthSize"/>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundSize.GetBackgroundHeightSize">
+            <summary>Gets the background height property of the image.</summary>
+            <returns>
+            the
+            <see cref="T:iText.Layout.Properties.UnitValue"/>
+            height for this image.
+            </returns>
+            <seealso cref="F:iText.Layout.Properties.BackgroundSize.backgroundHeightSize"/>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundSize.IsSpecificSize">
+            <summary>Returns is size has specific property.</summary>
+            <returns>
+            
+            <see langword="true"/>
+            if size set to "contain" or "cover", otherwise false.
+            </returns>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundSize.IsContain">
+            <summary>Returns value of the "contain" property.</summary>
+            <returns>
+            
+            <see langword="true"/>
+            if property "contain" is set to the size, otherwise false.
+            </returns>
+            <seealso cref="F:iText.Layout.Properties.BackgroundSize.contain"/>
+        </member>
+        <member name="M:iText.Layout.Properties.BackgroundSize.IsCover">
+            <summary>Returns value of the "cover" property.</summary>
+            <returns>
+            
+            <see langword="true"/>
+            if property "cover" is set to the size, otherwise false.
+            </returns>
+            <seealso cref="F:iText.Layout.Properties.BackgroundSize.cover"/>
+        </member>
         <member name="T:iText.Layout.Properties.BaseDirection">
             <summary>
             A specialized enum holding the possible values
@@ -7064,6 +7879,17 @@
             key in an
             <see cref="T:iText.Layout.IPropertyContainer"/>.
             </remarks>
+        </member>
+        <member name="T:iText.Layout.Properties.BlendMode">
+            <summary>Defines all possible blend modes and their mapping to pdf names.</summary>
+        </member>
+        <member name="M:iText.Layout.Properties.BlendMode.GetPdfRepresentation">
+            <summary>Get the pdf representation of the current blend mode.</summary>
+            <returns>
+            the
+            <see cref="T:iText.Kernel.Pdf.PdfName"/>
+            representation of the current blend mode.
+            </returns>
         </member>
         <member name="T:iText.Layout.Properties.BorderCollapsePropertyValue">
             <summary>
@@ -7402,6 +8228,60 @@
             10. Item 10
             </remarks>
         </member>
+        <member name="T:iText.Layout.Properties.ObjectFit">
+            <summary>
+            A specialized enum holding the possible values for an object-fit property
+            which define the way of fitting the image into the content box with different size.
+            </summary>
+        </member>
+        <member name="F:iText.Layout.Properties.ObjectFit.FILL">
+            <summary>If object-fit set to FILL, image will be sized to fill the element's content box.</summary>
+            <remarks>
+            If object-fit set to FILL, image will be sized to fill the element's content box. This can
+            change the aspect-ratio of the image.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Properties.ObjectFit.CONTAIN">
+            <summary>
+            If object-fit set to CONTAIN, image will be scaled keeping its aspect ratio to fit in
+            the content box.
+            </summary>
+            <remarks>
+            If object-fit set to CONTAIN, image will be scaled keeping its aspect ratio to fit in
+            the content box. The whole picture will be rendered in the document but some are of the
+            image container might be blank.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Properties.ObjectFit.COVER">
+            <summary>
+            If object-fit set to COVER, image will be scaled keeping its aspect ratio to cover
+            the content box.
+            </summary>
+            <remarks>
+            If object-fit set to COVER, image will be scaled keeping its aspect ratio to cover
+            the content box. The image will be clipped to fit the container's bounds.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Properties.ObjectFit.SCALE_DOWN">
+            <summary>
+            If object-fit set to SCALE_DOWN, image will be scaled keeping its aspect ratio to fit in
+            the content box but scaling coefficient cannot be greater than 1.
+            </summary>
+            <remarks>
+            If object-fit set to SCALE_DOWN, image will be scaled keeping its aspect ratio to fit in
+            the content box but scaling coefficient cannot be greater than 1. If content box is greater
+            than the image, picture will be rendered in its original size leaving the rest area of
+            the container blank.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Properties.ObjectFit.NONE">
+            <summary>If object-fit set to NONE, image will not be scaled.</summary>
+            <remarks>
+            If object-fit set to NONE, image will not be scaled. It will keep its original size. If
+            the content box is greater than image it will contain blank areas, otherwise picture will
+            be clipped to fit the container's bounds.
+            </remarks>
+        </member>
         <member name="T:iText.Layout.Properties.OverflowPropertyValue">
             <summary>
             The possible values for the type of overflow of
@@ -7706,6 +8586,10 @@
                 </param>
             <param name="height">the height of available area, the point value of which is equivalent to 100% for percentage resolving
                 </param>
+            <returns>
+            resulting affine transformation instance, accumulated from
+            <see cref="T:iText.Layout.Properties.Transform"/>
+            </returns>
         </member>
         <member name="T:iText.Layout.Properties.Transform.SingleTransform">
             <summary>
@@ -7865,7 +8749,7 @@
         </member>
         <member name="M:iText.Layout.Properties.UnitValue.#ctor(iText.Layout.Properties.UnitValue)">
             <summary>Creates a copy of UnitValue object.</summary>
-            <param name="unitValue"/>
+            <param name="unitValue">the value to be stored</param>
         </member>
         <member name="M:iText.Layout.Properties.UnitValue.CreatePointValue(System.Single)">
             <summary>Creates a UnitValue POINT object with a specified value.</summary>
@@ -8156,6 +9040,22 @@
             itself.
             </summary>
             <param name="drawContext">the context (canvas, document, etc) of this drawing operation.</param>
+        </member>
+        <member name="M:iText.Layout.Renderer.AbstractRenderer.CreateXObject(iText.Kernel.Colors.Gradients.AbstractLinearGradientBuilder,iText.Kernel.Geom.Rectangle,iText.Kernel.Pdf.PdfDocument)">
+            <summary>
+            Create a
+            <see cref="T:iText.Kernel.Pdf.Xobject.PdfFormXObject"/>
+            with the given area and containing a linear gradient inside.
+            </summary>
+            <param name="linearGradientBuilder">the linear gradient builder</param>
+            <param name="xObjectArea">the result object area</param>
+            <param name="document">the pdf document</param>
+            <returns>the xObject with a specified area and a linear gradient</returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.AbstractRenderer.GetBackgroundArea(iText.Kernel.Geom.Rectangle)">
+            <summary>Evaluate the actual background</summary>
+            <param name="occupiedAreaWithMargins">the current occupied area with applied margins</param>
+            <returns>the actual background area</returns>
         </member>
         <member name="M:iText.Layout.Renderer.AbstractRenderer.DrawChildren(iText.Layout.Renderer.DrawContext)">
             <summary>
@@ -8747,6 +9647,21 @@
             that will be rendered by this object
             </param>
         </member>
+        <member name="T:iText.Layout.Renderer.BackgroundSizeCalculationUtil">
+            <summary>Utility class for calculate background image width and height.</summary>
+        </member>
+        <member name="M:iText.Layout.Renderer.BackgroundSizeCalculationUtil.CalculateBackgroundImageSize(iText.Layout.Properties.BackgroundImage,System.Single,System.Single)">
+            <summary>Calculates width and height values for image with a given area params.</summary>
+            <param name="image">
+            the
+            <see cref="T:iText.Layout.Properties.BackgroundImage"/>
+            width and height of which you want to calculate
+            </param>
+            <param name="areaWidth">width of the area of this images</param>
+            <param name="areaHeight">height of the area of this images</param>
+            <returns>array of two Float values. NOTE that first value defines width, second defines height.</returns>
+            <seealso cref="T:iText.Layout.Properties.BackgroundSize"/>
+        </member>
         <member name="T:iText.Layout.Renderer.BlockFormattingContextUtil">
             <summary>
             This class helps to identify whether we are dealing with a renderer that creates
@@ -8865,6 +9780,18 @@
         </member>
         <member name="M:iText.Layout.Renderer.CellRenderer.GetNextRenderer">
             <summary><inheritDoc/></summary>
+        </member>
+        <member name="F:iText.Layout.Renderer.CollapsedTableBorders.topBorderCollapseWith">
+            <summary>
+            The list of the cells' borders which should be collapsed
+            with the first border of this TableRenderer instance, to be drawn on the area.
+            </summary>
+        </member>
+        <member name="F:iText.Layout.Renderer.CollapsedTableBorders.bottomBorderCollapseWith">
+            <summary>
+            The list of the cells' borders which should be collapsed
+            with the last border of this TableRenderer instance, to be drawn on the area.
+            </summary>
         </member>
         <member name="M:iText.Layout.Renderer.CollapsedTableBorders.GetCollapsedBorder(iText.Layout.Borders.Border,iText.Layout.Borders.Border)">
             <summary>Returns the collapsed border.</summary>
@@ -9099,9 +10026,11 @@
             Gets the total lengths of characters in this line. Other elements (images, tables) are not taken
             into account.
             </remarks>
+            <returns>the total lengths of characters in this line.</returns>
         </member>
         <member name="M:iText.Layout.Renderer.LineRenderer.BaseCharactersCount">
             <summary>Returns the number of base characters, i.e. non-mark characters</summary>
+            <returns>the number of base non-mark characters</returns>
         </member>
         <member name="M:iText.Layout.Renderer.LineRenderer.CalculateTab(iText.Layout.Renderer.IRenderer,System.Single,System.Single)">
             <summary>Calculates and sets encountered tab size.</summary>
@@ -9126,6 +10055,74 @@
         <member name="M:iText.Layout.Renderer.LineRenderer.ApplyOtf">
             <summary>Apply OTF features and return the last(!) base direction of child renderer</summary>
             <returns>the last(!) base direction of child renderer.</returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.LineRenderer.SpecialScriptPreLayoutProcessing(System.Int32)">
+            <summary>
+            Preprocess a continuous sequence of TextRenderer containing special scripts
+            prior to layouting the first TextRenderer in the sequence.
+            </summary>
+            <remarks>
+            Preprocess a continuous sequence of TextRenderer containing special scripts
+            prior to layouting the first TextRenderer in the sequence.
+            In this method we preprocess a sequence containing special scripts only,
+            skipping floating renderers as they're not part of a regular layout flow,
+            and breaking the prelayout processing once a non-special script containing renderer occurs.
+            Prelayout processing includes the following steps:
+            -
+            <see cref="M:iText.Layout.Renderer.LineRenderer.GetSpecialScriptsContainingTextRendererSequenceInfo(System.Int32)"/>
+            : determine boundaries of the sequence
+            and concatenate its TextRenderer#text fields converted to a String representation;
+            - get the String analyzed with WordWrapper#getPossibleBreaks and
+            receive a zero-based array of points where the String is allowed to got broken in lines;
+            -
+            <see cref="!:DistributePossibleBreakPointsOverSequentialTextRenderers(int, int, System.Collections.Generic.IList&lt;E&gt;, System.Collections.Generic.IList&lt;E&gt;)"/>
+            :
+            distribute the list over the TextRenderer#specialScriptsWordBreakPoints, preliminarily having the points shifted,
+            so that each TextRenderer#specialScriptsWordBreakPoints is based on the first element of TextRenderer#text.
+            </remarks>
+            <param name="childPos">
+            index of the childRenderer in LineRenderer#childRenderers
+            from which the a continuous sequence of TextRenderer containing special scripts starts
+            </param>
+        </member>
+        <member name="M:iText.Layout.Renderer.LineRenderer.GetSpecialScriptsContainingSequenceStatus(System.Int32)">
+            <summary>
+            This method defines how to proceed with a
+            <see cref="T:iText.Layout.Renderer.TextRenderer"/>
+            within which possible breaks haven't been found.
+            </summary>
+            <remarks>
+            This method defines how to proceed with a
+            <see cref="T:iText.Layout.Renderer.TextRenderer"/>
+            within which possible breaks haven't been found.
+            Possible scenarios are:
+            - Preceding renderer is also an instance of
+            <see cref="T:iText.Layout.Renderer.TextRenderer"/>
+            and does contain special scripts:
+            <see cref="!:GetIndexAndLayoutResultOfTheLastRendererToRemainOnTheLine(int, System.Collections.Generic.IDictionary&lt;K, V&gt;, bool, System.Collections.Generic.IList&lt;E&gt;)"/>
+            will
+            proceed to analyze the preceding
+            <see cref="T:iText.Layout.Renderer.TextRenderer"/>
+            on the subject of possible breaks;
+            - Preceding renderer is either an instance of
+            <see cref="T:iText.Layout.Renderer.TextRenderer"/>
+            which does not contain special scripts,
+            or an instance of
+            <see cref="T:iText.Layout.Renderer.ImageRenderer"/>
+            or is an inlineBlock child: in this case the entire subsequence of
+            <see cref="T:iText.Layout.Renderer.TextRenderer"/>
+            -s containing special scripts is to be moved to the next line;
+            - Otherwise a forced split is to happen.
+            </remarks>
+            <param name="analyzedTextRendererIndex">
+            index of the latter child
+            that has been analyzed on the subject of possible breaks
+            </param>
+            <returns>
+            
+            <see cref="T:iText.Layout.Renderer.LineRenderer.SpecialScriptsContainingSequenceStatus"/>
+            instance standing for the strategy to proceed with.
+            </returns>
         </member>
         <member name="M:iText.Layout.Renderer.LineRenderer.ResolveChildrenFonts">
             <summary>While resolving TextRenderer may split into several ones with different fonts.</summary>
@@ -9231,6 +10228,97 @@
             <returns>
             corrected
             <see cref="T:iText.Layout.Layout.LayoutResult">layout result</see>
+            </returns>
+        </member>
+        <member name="T:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult">
+            <summary>
+            The class represents results of calculating of rendered image size
+            after applying of the
+            <see cref="T:iText.Layout.Properties.ObjectFit"/>
+            property.
+            </summary>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult.#ctor">
+            <summary>Creates a new instance of the class with default values.</summary>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult.#ctor(System.Double,System.Double,System.Boolean)">
+            <summary>Creates a new instance of the class.</summary>
+            <param name="renderedImageWidth">is a width of the image to render</param>
+            <param name="renderedImageHeight">is a height of the image to render</param>
+            <param name="imageCuttingRequired">
+            is a flag showing if rendered image should be clipped
+            as its size is greater than size of the image container
+            </param>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult.GetRenderedImageWidth">
+            <summary>Getter for width of rendered image.</summary>
+            <returns>width of rendered image</returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult.SetRenderedImageWidth(System.Double)">
+            <summary>Setter for width of rendered image.</summary>
+            <param name="renderedImageWidth">is a new width of rendered image</param>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult.GetRenderedImageHeight">
+            <summary>Getter for height of rendered image.</summary>
+            <returns>height of rendered image</returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult.SetRenderedImageHeight(System.Double)">
+            <summary>Setter for height of rendered image.</summary>
+            <param name="renderedImageHeight">is a new height of rendered image</param>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult.IsImageCuttingRequired">
+            <summary>
+            Getter for a boolean value showing if at least one dimension of rendered image
+            is greater than expected image size.
+            </summary>
+            <remarks>
+            Getter for a boolean value showing if at least one dimension of rendered image
+            is greater than expected image size. If true then image will be shown partially
+            </remarks>
+            <returns>true if the image need to be cutting during rendering and false otherwise</returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult.SetImageCuttingRequired(System.Boolean)">
+            <summary>
+            Setter for a boolean value showing if at least one dimension of rendered image
+            is greater than expected image size.
+            </summary>
+            <remarks>
+            Setter for a boolean value showing if at least one dimension of rendered image
+            is greater than expected image size. If true then image will be shown partially
+            </remarks>
+            <param name="imageCuttingRequired">is a new value of the cutting-required flag</param>
+        </member>
+        <member name="T:iText.Layout.Renderer.Objectfit.ObjectFitCalculator">
+            <summary>
+            Utility class which supports the
+            <see cref="T:iText.Layout.Properties.ObjectFit"/>
+            property.
+            </summary>
+        </member>
+        <member name="M:iText.Layout.Renderer.Objectfit.ObjectFitCalculator.CalculateRenderedImageSize(iText.Layout.Properties.ObjectFit,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Calculates size of image to be render when certain
+            <see cref="T:iText.Layout.Properties.ObjectFit"/>
+            mode is
+            applied.
+            </summary>
+            <remarks>
+            Calculates size of image to be render when certain
+            <see cref="T:iText.Layout.Properties.ObjectFit"/>
+            mode is
+            applied. The width or the height of the image might be greater than the same
+            property of the image in a document. In this case parts of the image will not
+            be shown.
+            </remarks>
+            <param name="objectFit">is an object-fit mode</param>
+            <param name="absoluteImageWidth">is a width of the original image</param>
+            <param name="absoluteImageHeight">is a height of the original image</param>
+            <param name="imageContainerWidth">is a width of the image to draw</param>
+            <param name="imageContainerHeight">is a width of the image to draw</param>
+            <returns>
+            results of object-fit mode applying as an
+            <see cref="T:iText.Layout.Renderer.Objectfit.ObjectFitApplyingResult"/>
+            object
             </returns>
         </member>
         <member name="T:iText.Layout.Renderer.ParagraphRenderer">
@@ -9343,6 +10431,69 @@
             <see cref="M:iText.Layout.Renderer.AbstractRenderer.RetrieveWidth(System.Single)"/>
             in case it can not be calculated, or renderer isn't rotated.
             </returns>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.horizontalBorders">
+            <summary>Horizontal borders of the table.</summary>
+            <remarks>
+            Horizontal borders of the table.
+            It consists of a list, each item of which represents
+            a horizontal border of a row, each of them is a list of borders of the cells.
+            The amount of the lists is the number of rows + 1, the size of each of these lists
+            corresponds to the number of columns.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.verticalBorders">
+            <summary>Vertical borders of the table.</summary>
+            <remarks>
+            Vertical borders of the table.
+            It consists of a list, each item of which represents
+            a vertical border of a row, each of them is a list of borders of the cells.
+            The amount of the lists is the number of columns + 1, the size of each of these lists
+            corresponds to the number of rows.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.numberOfColumns">
+            <summary>The number of the table's columns.</summary>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.tableBoundingBorders">
+            <summary>The outer borders of the table (as body).</summary>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.rows">
+            <summary>All the cells of the table.</summary>
+            <remarks>
+            All the cells of the table.
+            Each item of the list represents a row and consists of its cells.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.startRow">
+            <summary>The first row, which should be processed on this area.</summary>
+            <remarks>
+            The first row, which should be processed on this area.
+            The value of this field varies from area to area.
+            It's zero-based and inclusive.
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.finishRow">
+            <summary>The last row, which should be processed on this area.</summary>
+            <remarks>
+            The last row, which should be processed on this area.
+            The value of this field varies from area to area.
+            It's zero-based and inclusive. The last border will have index (finishRow+1) because
+            the number of borders is greater by one than the number of rows
+            </remarks>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.leftBorderMaxWidth">
+            <summary>The width of the widest left border.</summary>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.rightBorderMaxWidth">
+            <summary>The width of the widest right border.</summary>
+        </member>
+        <member name="F:iText.Layout.Renderer.TableBorders.largeTableIndexOffset">
+            <summary>The number of rows flushed to the table.</summary>
+            <remarks>
+            The number of rows flushed to the table.
+            Its value is zero for regular tables. The field makes sense only for large tables.
+            </remarks>
         </member>
         <member name="T:iText.Layout.Renderer.TableRenderer">
             <summary>
@@ -9478,6 +10629,16 @@
             which this object should manage
             </param>
         </member>
+        <member name="M:iText.Layout.Renderer.TextPreprocessingUtil.ReplaceSpecialWhitespaceGlyphs(iText.IO.Font.Otf.GlyphLine,iText.Kernel.Font.PdfFont)">
+            <summary>Replaces special whitespace glyphs to new whitespace '\u0020' glyph that has custom width.</summary>
+            <remarks>
+            Replaces special whitespace glyphs to new whitespace '\u0020' glyph that has custom width.
+            Special whitespace glyphs are symbols such as '\u2002', '\u2003', '\u2009' and '\t'.
+            </remarks>
+            <param name="line">the string for preprocessing</param>
+            <param name="font">the font that will be used when displaying the string</param>
+            <returns>old line with new special whitespace glyphs</returns>
+        </member>
         <member name="T:iText.Layout.Renderer.TextRenderer">
             <summary>
             This class represents the
@@ -9561,16 +10722,21 @@
             <param name="text">the replacement text</param>
         </member>
         <member name="M:iText.Layout.Renderer.TextRenderer.SetText(iText.IO.Font.Otf.GlyphLine,System.Int32,System.Int32)">
-            <summary>
-            Manually sets a GlyphLine to be rendered with a specific start and end
-            point.
-            </summary>
+            <summary>Manually sets a GlyphLine to be rendered with a specific start and end point.</summary>
             <param name="text">
             a
             <see cref="T:iText.IO.Font.Otf.GlyphLine"/>
             </param>
             <param name="leftPos">the leftmost end of the GlyphLine</param>
             <param name="rightPos">the rightmost end of the GlyphLine</param>
+        </member>
+        <member name="M:iText.Layout.Renderer.TextRenderer.SetText(iText.IO.Font.Otf.GlyphLine,iText.Kernel.Font.PdfFont)">
+            <summary>Manually set a GlyphLine and PdfFont for rendering.</summary>
+            <param name="text">
+            the
+            <see cref="T:iText.IO.Font.Otf.GlyphLine"/>
+            </param>
+            <param name="font">the font</param>
         </member>
         <member name="M:iText.Layout.Renderer.TextRenderer.Length">
             <summary>The length of the whole text assigned to this renderer.</summary>
@@ -9580,6 +10746,67 @@
             <summary>Gets char code at given position for the text belonging to this renderer.</summary>
             <param name="pos">the position in range [0; length())</param>
             <returns>Unicode char code</returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.TextRenderer.CalculateAscenderDescender(iText.Kernel.Font.PdfFont)">
+            <summary>Get ascender and descender from font metrics.</summary>
+            <remarks>
+            Get ascender and descender from font metrics.
+            If these values are obtained from typo metrics they are normalized with a scale coefficient.
+            </remarks>
+            <param name="font">from which metrics will be extracted</param>
+            <returns>array in which the first element is an ascender and the second is a descender</returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.TextRenderer.CalculateAscenderDescender(iText.Kernel.Font.PdfFont,System.Nullable{iText.Layout.Properties.RenderingMode})">
+            <summary>Get ascender and descender from font metrics.</summary>
+            <remarks>
+            Get ascender and descender from font metrics.
+            In RenderingMode.DEFAULT_LAYOUT_MODE if these values are obtained from typo metrics they are normalized with a scale coefficient.
+            </remarks>
+            <param name="font">from which metrics will be extracted</param>
+            <param name="mode">mode in which metrics will be obtained. Impact on the use of scale coefficient</param>
+            <returns>array in which the first element is an ascender and the second is a descender</returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.TextRenderer.TextContainsSpecialScriptGlyphs(System.Boolean)">
+            <summary>
+            Analyzes/checks whether
+            <see cref="F:iText.Layout.Renderer.TextRenderer.text"/>
+            , bounded by start and end,
+            contains glyphs belonging to special script.
+            </summary>
+            <remarks>
+            Analyzes/checks whether
+            <see cref="F:iText.Layout.Renderer.TextRenderer.text"/>
+            , bounded by start and end,
+            contains glyphs belonging to special script.
+            Mind that the behavior of this method depends on the analyzeSpecialScriptsWordBreakPointsOnly parameter:
+            - pass
+            <see langword="false"/>
+            if you need to analyze the
+            <see cref="F:iText.Layout.Renderer.TextRenderer.text"/>
+            by checking each of its glyphs
+            AND to fill
+            <see cref="F:iText.Layout.Renderer.TextRenderer.specialScriptsWordBreakPoints"/>
+            list afterwards,
+            i.e. when analyzing a sequence of TextRenderers prior to layouting;
+            - pass
+            <see langword="true"/>
+            if you want to check if text contains glyphs belonging to special scripts,
+            according to the already filled
+            <see cref="F:iText.Layout.Renderer.TextRenderer.specialScriptsWordBreakPoints"/>
+            list.
+            </remarks>
+            <param name="analyzeSpecialScriptsWordBreakPointsOnly">
+            false if analysis of each glyph is required,
+            true if analysis has already been performed earlier
+            and the results are stored in
+            <see cref="F:iText.Layout.Renderer.TextRenderer.specialScriptsWordBreakPoints"/>
+            </param>
+            <returns>
+            true if
+            <see cref="F:iText.Layout.Renderer.TextRenderer.text"/>
+            , bounded by start and end, contains glyphs belonging to special script, otherwise false
+            </returns>
+            <seealso cref="F:iText.Layout.Renderer.TextRenderer.specialScriptsWordBreakPoints"/>
         </member>
         <member name="M:iText.Layout.Renderer.TextRenderer.LineLength">
             <summary>
@@ -9601,6 +10828,18 @@
             <see cref="T:iText.Layout.Renderer.TextRenderer"/>
             has been created.
             </returns>
+        </member>
+        <member name="M:iText.Layout.Renderer.TextRenderer.SetGlyphLineAndFont(iText.IO.Font.Otf.GlyphLine,iText.Kernel.Font.PdfFont)">
+            <param name="gl">
+            
+            <see cref="T:iText.IO.Font.Otf.GlyphLine"/>
+            glyph to be set
+            </param>
+            <param name="font">
+            
+            <see cref="T:iText.Kernel.Font.PdfFont"/>
+            font to be set
+            </param>
         </member>
         <member name="M:iText.Layout.Renderer.TypographyUtils.IsPdfCalligraphAvailable">
             <summary>Checks if layout module can access pdfCalligraph</summary>
@@ -9752,11 +10991,7 @@
             <summary>Interface for customizing the split character.</summary>
         </member>
         <member name="M:iText.Layout.Splitting.ISplitCharacters.IsSplitCharacter(iText.IO.Font.Otf.GlyphLine,System.Int32)">
-            <summary>Returns <c>true</c> if the character can split a line.</summary>
-            <remarks>
-            Returns <c>true</c> if the character can split a line. The splitting implementation
-            is free to look ahead or look behind characters to make a decision.
-            </remarks>
+            <summary>The splitting implementation is free to look ahead or look behind characters to make a decision.</summary>
             <param name="glyphPos">
             the position of
             <see cref="T:iText.IO.Font.Otf.Glyph"/>
@@ -9764,6 +10999,7 @@
             <see cref="T:iText.IO.Font.Otf.GlyphLine"/>
             </param>
             <param name="text">an array of unicode char codes which represent current text</param>
+            <returns>true if the character can split a line.</returns>
         </member>
         <member name="T:iText.Layout.Style">
             <summary>Container object for style properties of an element.</summary>
@@ -9771,7 +11007,10 @@
             Container object for style properties of an element. A style can be used as
             an effective way to define multiple equal properties to several elements.
             Used in
-            <see cref="T:iText.Layout.Element.AbstractElement`1"/>
+            <see cref="T:iText.Layout.Element.AbstractElement`1"/>.
+            The properties set via Style have a lower priority than directly set properties.
+            For example, if the same property is set directly and added via Style, then,
+            no matter in which order they are set, the one set directly will be chosen.
             </remarks>
         </member>
         <member name="M:iText.Layout.Style.GetMarginLeft">

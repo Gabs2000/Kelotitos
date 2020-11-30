@@ -63,36 +63,6 @@ namespace Kelotitos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _37942 {
-            get {
-                object obj = ResourceManager.GetObject("37942", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap activo_1 {
-            get {
-                object obj = ResourceManager.GetObject("activo-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap activo_2 {
-            get {
-                object obj = ResourceManager.GetObject("activo-2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap elotekelot {
             get {
                 object obj = ResourceManager.GetObject("elotekelot", resourceCulture);
@@ -105,7 +75,7 @@ namespace Kelotitos.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap elotes_verdes {
             get {
-                object obj = ResourceManager.GetObject("elotes verdes", resourceCulture);
+                object obj = ResourceManager.GetObject("elotes_verdes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -125,57 +95,7 @@ namespace Kelotitos.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap flecha_pequeña {
             get {
-                object obj = ResourceManager.GetObject("flecha pequeña", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Fondo {
-            get {
-                object obj = ResourceManager.GetObject("Fondo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Fondo_2 {
-            get {
-                object obj = ResourceManager.GetObject("Fondo 2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Fondo1 {
-            get {
-                object obj = ResourceManager.GetObject("Fondo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Imagen_3 {
-            get {
-                object obj = ResourceManager.GetObject("Imagen 3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Imagen_31 {
-            get {
-                object obj = ResourceManager.GetObject("Imagen 31", resourceCulture);
+                object obj = ResourceManager.GetObject("flecha_pequeña", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,26 +126,6 @@ namespace Kelotitos.Properties {
         internal static System.Drawing.Bitmap kelotitos6 {
             get {
                 object obj = ResourceManager.GetObject("kelotitos6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menu {
-            get {
-                object obj = ResourceManager.GetObject("menu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Mesa_de_trabajo {
-            get {
-                object obj = ResourceManager.GetObject("Mesa de trabajo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
