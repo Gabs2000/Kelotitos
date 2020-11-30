@@ -46,9 +46,9 @@ namespace Kelotitos
 
                     string querySelect = "SELECT * FROM usuarios WHERE usuario = @usuario AND contrasena = @contrasena";
                     string queryInsert = "INSERT INTO usuarios " +
-                                        "(nombre, usuario, contrasena, administrador, estatus, fecha_creacion) " +
+                                        "(nombre, usuario, contrasena, salarioXdia, diasSemanas, administrador, estatus, fecha_creacion) " +
                                         "VALUES " +
-                                        "(@nombre, @usuario, @contrasena, @administrador, 1, NOW())";
+                                        "(@nombre, @usuario, @contrasena, @salarioXdia, @diasSemanas, @administrador, 1, NOW())";
 
                     using (MySqlCommand usuario = new MySqlCommand(querySelect, conexion))
                     {
@@ -80,6 +80,8 @@ namespace Kelotitos
                                     con.Parameters.AddWithValue("@nombre", txtNombre.Text);
                                     con.Parameters.AddWithValue("@usuario", txtUsuario.Text);
                                     con.Parameters.AddWithValue("@contrasena", txtContrasena.Text);
+                                    con.Parameters.AddWithValue("@salarioXdia", txtSalario.Text);
+                                    con.Parameters.AddWithValue("@diasSemanas", txtDias.Text);
                                     con.Parameters.AddWithValue("@administrador", siAdmin);
                                     con.ExecuteNonQuery();
                                 }
@@ -91,6 +93,8 @@ namespace Kelotitos
                                 txtUsuario.Text = "";
                                 txtContrasena.Text = "";
                                 txtConfContra.Text = "";
+                                txtSalario.Text = "";
+                                txtDias.Text = "";
                                 chbAdmin.Checked = false;
 
                             }
@@ -113,21 +117,6 @@ namespace Kelotitos
         private void HoraFecha_Tick(object sender, EventArgs e)
         {
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

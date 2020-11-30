@@ -33,21 +33,22 @@
             // 
             // reporteView
             // 
-            this.reporteView.Location = new System.Drawing.Point(12, 12);
+            this.reporteView.Location = new System.Drawing.Point(25, 34);
             this.reporteView.Name = "reporteView";
             this.reporteView.ServerReport.BearerToken = null;
-            this.reporteView.Size = new System.Drawing.Size(794, 451);
+            this.reporteView.Size = new System.Drawing.Size(711, 451);
             this.reporteView.TabIndex = 0;
             // 
-            // repInv
+            // reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 493);
+            this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
+            this.ClientSize = new System.Drawing.Size(761, 517);
             this.Controls.Add(this.reporteView);
-            this.Name = "repInv";
+            this.Name = "reporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "repInv";
+            this.Text = "Vista Reportes";
             this.Load += new System.EventHandler(this.repInv_Load);
             this.ResumeLayout(false);
 

@@ -43,20 +43,23 @@
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
             this.chbAdmin = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.txtDias = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(302, 198);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(343, 31);
             this.txtNombre.TabIndex = 1;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label3
             // 
@@ -73,7 +76,7 @@
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.Location = new System.Drawing.Point(302, 238);
             this.txtUsuario.Multiline = true;
@@ -116,14 +119,13 @@
             this.label2.Size = new System.Drawing.Size(163, 31);
             this.label2.TabIndex = 21;
             this.label2.Text = "Contraseña:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // register_button
             // 
             this.register_button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_button.ForeColor = System.Drawing.Color.Black;
-            this.register_button.Location = new System.Drawing.Point(269, 443);
+            this.register_button.Location = new System.Drawing.Point(252, 535);
             this.register_button.Name = "register_button";
             this.register_button.Size = new System.Drawing.Size(164, 54);
             this.register_button.TabIndex = 4;
@@ -159,7 +161,7 @@
             // txtConfContra
             // 
             this.txtConfContra.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtConfContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfContra.ForeColor = System.Drawing.Color.Black;
             this.txtConfContra.Location = new System.Drawing.Point(302, 320);
             this.txtConfContra.Multiline = true;
@@ -192,7 +194,7 @@
             this.chbAdmin.BackColor = System.Drawing.Color.Transparent;
             this.chbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbAdmin.ForeColor = System.Drawing.Color.Black;
-            this.chbAdmin.Location = new System.Drawing.Point(215, 384);
+            this.chbAdmin.Location = new System.Drawing.Point(198, 476);
             this.chbAdmin.Name = "chbAdmin";
             this.chbAdmin.Size = new System.Drawing.Size(266, 35);
             this.chbAdmin.TabIndex = 5;
@@ -210,13 +212,55 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label5.Location = new System.Drawing.Point(101, 367);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(195, 31);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Salario por día:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label6.Location = new System.Drawing.Point(92, 407);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(204, 31);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Días de trabajo:";
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtSalario.Location = new System.Drawing.Point(302, 370);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(343, 30);
+            this.txtSalario.TabIndex = 45;
+            // 
+            // txtDias
+            // 
+            this.txtDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtDias.Location = new System.Drawing.Point(302, 410);
+            this.txtDias.Name = "txtDias";
+            this.txtDias.Size = new System.Drawing.Size(343, 30);
+            this.txtDias.TabIndex = 46;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(678, 522);
+            this.ClientSize = new System.Drawing.Size(678, 605);
+            this.Controls.Add(this.txtDias);
+            this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.chbAdmin);
             this.Controls.Add(this.lbhora);
@@ -256,5 +300,9 @@
         private System.Windows.Forms.Timer horaFecha;
         private System.Windows.Forms.CheckBox chbAdmin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.TextBox txtDias;
     }
 }
