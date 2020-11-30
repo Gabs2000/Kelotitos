@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kelotitos.Reportes;
 using Kelotitos.ModelsDB;
-using Kelotitos.ModelsDB.Reportes;
 
 namespace Kelotitos
 {
@@ -87,10 +86,10 @@ namespace Kelotitos
 
             rs.Name = "DataSetReporte";
             rs.Value = lista;
-            repInv repInv = new repInv();
-            repInv.reporte.LocalReport.DataSources.Clear();
-            repInv.reporte.LocalReport.DataSources.Add(rs);
-            repInv.reporte.LocalReport.ReportEmbeddedResource = "Kelotitos.Reportes.repInv.rdlc";
+            reporte repInv = new reporte();
+            repInv.reporteView.LocalReport.DataSources.Clear();
+            repInv.reporteView.LocalReport.DataSources.Add(rs);
+            repInv.reporteView.LocalReport.ReportEmbeddedResource = "Kelotitos.Reportes.repInv.rdlc";
             repInv.ShowDialog();
         }
     }

@@ -168,7 +168,6 @@
     <Compile Include="ModelsDB\RegisterNewProduct.cs" />
     <Compile Include="ModelsDB\RegisterNewProvider.cs" />
     <Compile Include="ModelsDB\registerNewUserAccount.cs" />
-    <Compile Include="ModelsDB\rInventario.cs" />
     <Compile Include="ModelsDB\userAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -243,11 +242,11 @@
     <Compile Include="ReporteProveedores.Designer.cs">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\repInv.cs">
+    <Compile Include="Reportes\reporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\repInv.Designer.cs">
-      <DependentUpon>repInv.cs</DependentUpon>
+    <Compile Include="Reportes\reporte.Designer.cs">
+      <DependentUpon>reporte.cs</DependentUpon>
     </Compile>
     <Compile Include="ReporteVentas.cs">
       <SubType>Form</SubType>
@@ -316,10 +315,12 @@
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\repInv.rdlc" />
-    <EmbeddedResource Include="Reportes\repInv.resx">
-      <DependentUpon>repInv.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\reporte.resx">
+      <DependentUpon>reporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReporteInventario.rdlc" />
+    <EmbeddedResource Include="Reportes\repProd.rdlc" />
+    <EmbeddedResource Include="Reportes\repProv.rdlc" />
+    <EmbeddedResource Include="Reportes\repVent.rdlc" />
     <EmbeddedResource Include="ReporteVentas.resx">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +329,9 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\RepInventarioObject.datasource" />
+    <None Include="Properties\DataSources\RepProductoObject.datasource" />
+    <None Include="Properties\DataSources\RepProveedorObject.datasource" />
+    <None Include="Properties\DataSources\RepVentasObject.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

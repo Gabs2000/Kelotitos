@@ -1,4 +1,6 @@
 ﻿using Kelotitos.MySql;
+using Kelotitos.Reportes;
+using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -38,11 +40,7 @@ namespace Kelotitos
             MySqlCommand cm = new MySqlCommand("SELECT " +
                                                     "proveedor AS Proveedor, " +
                                                     "encargado AS Encargado, " +
-                                                    "calle AS Calle, " +
-                                                    "colonia AS Colonia, " +
                                                     "municipio AS Municipio, " +
-                                                    "estado AS Estado, " +
-                                                    "codigo_postal AS 'Código Postal', " +
                                                     "telefono AS Teléfono, " +
                                                     "correo AS Correo " +
                                                 "FROM proveedores " +
@@ -57,5 +55,47 @@ namespace Kelotitos
             dgwProveedores.AutoResizeColumns();
             dgwProveedores.ClearSelection();
         }
+
+        ReportDataSource rs = new ReportDataSource();
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            List<RepProveedorObject> lista = new List<RepProveedorObject>();
+            lista.Clear();
+
+            for (int i = 0; i < dgwProveedores.Rows.Count - 1; i++)
+            {
+
+                RepProveedorObject rep = new RepProveedorObject
+                {
+                    proveedor = dgwProveedores.Rows[i].Cells[0].Value.ToString(),
+                    encargado = dgwProveedores.Rows[i].Cells[1].Value.ToString(),
+                    municipio = dgwProveedores.Rows[i].Cells[2].Value.ToString(),
+                    telefono = dgwProveedores.Rows[i].Cells[3].Value.ToString(),
+                    correo = dgwProveedores.Rows[i].Cells[4].Value.ToString(),
+                };
+
+                lista.Add(rep);
+
+            }
+
+            rs.Name = "DataSetReporte";
+            rs.Value = lista;
+            reporte repInv = new reporte();
+            repInv.reporteView.LocalReport.DataSources.Clear();
+            repInv.reporteView.LocalReport.DataSources.Add(rs);
+            repInv.reporteView.LocalReport.ReportEmbeddedResource = "Kelotitos.Reportes.repProv.rdlc";
+            repInv.ShowDialog();
+        }
+    }
+
+    //Objeto para el reporte
+    public class RepProveedorObject
+    {
+        public string proveedor { get; set; }
+        public string encargado { get; set; }
+        public string municipio { get; set; }
+        public string telefono { get; set; }
+        public string correo { get; set; }
     }
 }

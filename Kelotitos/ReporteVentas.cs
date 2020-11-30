@@ -1,4 +1,6 @@
 ﻿using Kelotitos.MySql;
+using Kelotitos.Reportes;
+using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -49,11 +51,6 @@ namespace Kelotitos
             cbVendedor.ValueMember = "nombre";
             cbVendedor.DisplayMember = "nombre";
             cbVendedor.DataSource = dt;
-        }
-
-        private void btnPDF_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -107,5 +104,47 @@ namespace Kelotitos
             dgvRepVentas.AutoResizeColumns();
             dgvRepVentas.ClearSelection();
         }
+
+        ReportDataSource rs = new ReportDataSource();
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+            List<RepVentasObject> lista = new List<RepVentasObject>();
+            lista.Clear();
+
+            for (int i = 0; i < dgvRepVentas.Rows.Count - 1; i++)
+            {
+
+                RepVentasObject rep = new RepVentasObject
+                {
+                    folio = dgvRepVentas.Rows[i].Cells[0].Value.ToString(),
+                    vendedor = dgvRepVentas.Rows[i].Cells[1].Value.ToString(),
+                    fecha_venta = DateTime.Parse(dgvRepVentas.Rows[i].Cells[2].Value.ToString()),
+                    total = int.Parse(dgvRepVentas.Rows[i].Cells[3].Value.ToString())
+                };
+
+                lista.Add(rep);
+
+            }
+
+            rs.Name = "DataSetReporte";
+            rs.Value = lista;
+            reporte repInv = new reporte();
+            repInv.reporteView.LocalReport.DataSources.Clear();
+            repInv.reporteView.LocalReport.DataSources.Add(rs);
+            repInv.reporteView.LocalReport.ReportEmbeddedResource = "Kelotitos.Reportes.repVent.rdlc";
+            repInv.ShowDialog();
+
+        }
+    }
+
+    //Objeto para el reporte
+    public class RepVentasObject
+    {
+        public string folio { get; set; }
+        public string vendedor { get; set; }
+        public DateTime fecha_venta { get; set; }
+        public int total { get; set; }
     }
 }
