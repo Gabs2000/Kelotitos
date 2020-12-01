@@ -49,6 +49,86 @@ namespace Kelotitos
             cbEmpleados.ValueMember = "nombre";
             cbEmpleados.DisplayMember = "nombre";
             cbEmpleados.DataSource = dt;
+
+            cbEmpleados.SelectedIndex = -1;
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFecha.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void btnResetFecha_Click(object sender, EventArgs e)
+        {
+            dtpFecha.CustomFormat = " ";
+            cbEmpleados.SelectedIndex = -1;
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            string fecha = dtpFecha.Value.ToString("yyyy-MM-dd");
+
+            conexion = Connection.GetConnection();
+
+            MySqlCommand cm = new MySqlCommand();
+
+            if ((cbEmpleados.SelectedIndex == -1) && (dtpFecha.CustomFormat == " "))
+            {
+
+                cm = new MySqlCommand("SELECT " +
+                                            "nombre, " +
+                                            "salarioXdia, " +
+                                            "diasSemanas " +
+                                        "FROM usuarios " +
+                                        "WHERE estatus = 1;", conexion);
+
+            } else if ((cbEmpleados.SelectedIndex != -1) && (dtpFecha.CustomFormat == " "))
+            {
+
+                cm = new MySqlCommand("SELECT " +
+                                            "nombre, " +
+                                            "salarioXdia, " +
+                                            "diasSemanas " +
+                                        "FROM usuarios " +
+                                        "WHERE estatus = 1 " +
+                                        "AND nombre = IFNULL(@usuario, nombre);", conexion);
+
+                cm.Parameters.AddWithValue("@usuario", cbEmpleados.SelectedValue);
+
+            } else if ((cbEmpleados.SelectedIndex == -1) && (dtpFecha.CustomFormat != " "))
+            {
+
+                cm = new MySqlCommand("SELECT " +
+                                            "nombre, " +
+                                            "salarioXdia, " +
+                                            "diasSemanas " +
+                                        "FROM usuarios " +
+                                        "WHERE estatus = 1;", conexion);
+
+            }
+            else if ((cbEmpleados.SelectedIndex != -1) && (dtpFecha.CustomFormat != " "))
+            {
+
+                cm = new MySqlCommand("SELECT " +
+                                            "nombre, " +
+                                            "salarioXdia, " +
+                                            "diasSemanas " +
+                                        "FROM usuarios " +
+                                        "WHERE estatus = 1 " +
+                                        "AND nombre = IFNULL(@usuario, nombre);", conexion);
+
+                cm.Parameters.AddWithValue("@usuario", cbEmpleados.SelectedValue);
+
+            }
+
+            MySqlDataAdapter adaptador = new MySqlDataAdapter();
+            adaptador.SelectCommand = cm;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            dgvEmpleados.DataSource = tabla;
+
+            dgvEmpleados.AutoResizeColumns();
+            dgvEmpleados.ClearSelection();
         }
     }
 }

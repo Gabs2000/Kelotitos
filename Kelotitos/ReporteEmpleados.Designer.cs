@@ -36,8 +36,9 @@ namespace Kelotitos
             this.btnMostrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbEmpleados = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnResetFecha = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
@@ -96,6 +97,7 @@ namespace Kelotitos
             this.btnMostrar.TabIndex = 4;
             this.btnMostrar.Text = "Mostrar";
             this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // label2
             // 
@@ -116,12 +118,15 @@ namespace Kelotitos
             this.cbEmpleados.Size = new System.Drawing.Size(200, 21);
             this.cbEmpleados.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 274);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtpFecha.CustomFormat = " ";
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(12, 274);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(107, 20);
+            this.dtpFecha.TabIndex = 8;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // label3
             // 
@@ -134,6 +139,18 @@ namespace Kelotitos
             this.label3.TabIndex = 9;
             this.label3.Text = "Elige una fecha de inicio:";
             // 
+            // btnResetFecha
+            // 
+            this.btnResetFecha.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnResetFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetFecha.Location = new System.Drawing.Point(35, 373);
+            this.btnResetFecha.Name = "btnResetFecha";
+            this.btnResetFecha.Size = new System.Drawing.Size(143, 30);
+            this.btnResetFecha.TabIndex = 10;
+            this.btnResetFecha.Text = "Resetear Campos";
+            this.btnResetFecha.UseVisualStyleBackColor = false;
+            this.btnResetFecha.Click += new System.EventHandler(this.btnResetFecha_Click);
+            // 
             // ReporteEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,8 +158,9 @@ namespace Kelotitos
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(660, 450);
+            this.Controls.Add(this.btnResetFecha);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.cbEmpleados);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnMostrar);
@@ -172,7 +190,8 @@ namespace Kelotitos
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbEmpleados;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnResetFecha;
     }
 }
