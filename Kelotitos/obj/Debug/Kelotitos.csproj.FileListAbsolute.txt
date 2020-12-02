@@ -1,3 +1,7 @@
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Kelotitos.exe.config
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Kelotitos.exe
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Kelotitos.pdb
@@ -13,277 +17,23 @@ C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\De
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.sign.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.styledxmlparser.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.svg.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Google.Protobuf.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Zstandard.Net.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Renci.SshNet.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Buffers.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Memory.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\BouncyCastle.Crypto.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.pdb
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.pdb
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.barcodes.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.forms.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.io.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.kernel.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.layout.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.pdfa.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.sign.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.styledxmlparser.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.svg.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\MySql.Data.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyComplete
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Kelotitos.exe.config
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Kelotitos.exe
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Kelotitos.pdb
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.barcodes.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.forms.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.io.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.kernel.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.layout.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.pdfa.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.sign.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.styledxmlparser.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.svg.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Google.Protobuf.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Zstandard.Net.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Renci.SshNet.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Buffers.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Memory.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\BouncyCastle.Crypto.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.pdb
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.pdb
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.barcodes.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.forms.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.io.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.kernel.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.layout.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.pdfa.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.sign.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.styledxmlparser.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.svg.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\bin\Debug\MySql.Data.xml
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.MenuReportes.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyComplete
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteCompras.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteEmpleados.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProductos.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProveedores.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\Proyecto Integrador I B\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteVentas.resources
-<<<<<<< HEAD
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Common.Logging.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.barcodes.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.forms.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.io.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.kernel.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.layout.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.pdfa.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.sign.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.styledxmlparser.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.svg.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.Common.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.Design.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.WebForms.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.SqlServer.Types.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\EnvDTE.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Google.Protobuf.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Zstandard.Net.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Renci.SshNet.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\stdole.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\System.Buffers.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Microsoft.MSXML.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\System.Memory.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\BouncyCastle.Crypto.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Common.Logging.pdb
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Common.Logging.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.pdb
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.barcodes.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.forms.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.io.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.kernel.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.layout.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.pdfa.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.sign.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.styledxmlparser.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\itext.svg.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\MySql.Data.xml
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.MenuReportes.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteCompras.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteEmpleados.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProductos.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProveedores.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteVentas.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyComplete
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
-C:\Users\vjvit\Desktop\Séptimo Semestre\Proyecto Integrador I B\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
-=======
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.Design.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\EnvDTE.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Google.Protobuf.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Zstandard.Net.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Renci.SshNet.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\stdole.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
@@ -304,12 +54,32 @@ C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\De
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\VSLangProj80.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Buffers.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.MSXML.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.Build.Utilities.Core.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\VSLangProj2.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Memory.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.pdb
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.pdb
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Common.Logging.Core.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.barcodes.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.forms.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.io.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.kernel.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.layout.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.pdfa.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.sign.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.styledxmlparser.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\itext.svg.xml
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\MySql.Data.xml
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
@@ -373,70 +143,31 @@ C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\De
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\es\Microsoft.VisualStudio.Data.Services.resources.dll
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\bin\Debug\es\Microsoft.VisualStudio.Data.Core.resources.dll
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.MenuReportes.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteCompras.resources
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteEmpleados.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProductos.resources
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProveedores.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Reportes.reporte.resources
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteVentas.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\RdlCompile.cache
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\RdlCompile.compiled
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
-C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Reportes.reporte.resources
->>>>>>> 0040c8f68e9a3cd6ec2fe873b01ee93f3136d6cd
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.MenuReportes.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteCompras.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteEmpleados.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProductos.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProveedores.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Reportes.reporte.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteVentas.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\RdlCompile.cache
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\RdlCompile.compiled
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
-C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.MenuReportes.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteCompras.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteEmpleados.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProductos.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProveedores.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Reportes.reporte.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteVentas.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\RdlCompile.cache
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\RdlCompile.compiled
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
-C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CopyComplete
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
+C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
