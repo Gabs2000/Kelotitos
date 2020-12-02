@@ -171,7 +171,7 @@ namespace Kelotitos
             dtpFechaVenta.CustomFormat = "dd/MM/yyyy";
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void btnRestore_Click(object sender, EventArgs e)
         {
             dtpFechaVenta.CustomFormat = " ";
             cbVendedor.SelectedIndex = -1;
