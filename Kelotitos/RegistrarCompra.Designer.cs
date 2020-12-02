@@ -37,12 +37,6 @@
             this.numCantidad = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.dgwCompras = new System.Windows.Forms.DataGridView();
-            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotalProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +48,13 @@
             this.lblError = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotalProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCompras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -142,7 +143,8 @@
             this.proveedor,
             this.precioUnitario,
             this.Cantidad,
-            this.subtotalProducto});
+            this.subtotalProducto,
+            this.IdProveedor});
             this.dgwCompras.Location = new System.Drawing.Point(12, 338);
             this.dgwCompras.Name = "dgwCompras";
             this.dgwCompras.ReadOnly = true;
@@ -150,51 +152,6 @@
             this.dgwCompras.Size = new System.Drawing.Size(866, 302);
             this.dgwCompras.TabIndex = 40;
             this.dgwCompras.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCompras_RowHeaderMouseClick);
-            // 
-            // IdProducto
-            // 
-            this.IdProducto.HeaderText = "Id";
-            this.IdProducto.MinimumWidth = 6;
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.ReadOnly = true;
-            this.IdProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.IdProducto.Width = 50;
-            // 
-            // producto
-            // 
-            this.producto.HeaderText = "Producto";
-            this.producto.MinimumWidth = 240;
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            this.producto.Width = 240;
-            // 
-            // proveedor
-            // 
-            this.proveedor.HeaderText = "Proveedor";
-            this.proveedor.MinimumWidth = 240;
-            this.proveedor.Name = "proveedor";
-            this.proveedor.ReadOnly = true;
-            this.proveedor.Width = 240;
-            // 
-            // precioUnitario
-            // 
-            this.precioUnitario.HeaderText = "Precio";
-            this.precioUnitario.MinimumWidth = 6;
-            this.precioUnitario.Name = "precioUnitario";
-            this.precioUnitario.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // subtotalProducto
-            // 
-            this.subtotalProducto.HeaderText = "Subtotal";
-            this.subtotalProducto.MinimumWidth = 6;
-            this.subtotalProducto.Name = "subtotalProducto";
-            this.subtotalProducto.ReadOnly = true;
             // 
             // btnRegresar
             // 
@@ -331,6 +288,58 @@
             this.label3.TabIndex = 68;
             this.label3.Text = "Registrar Compra";
             // 
+            // IdProducto
+            // 
+            this.IdProducto.HeaderText = "Id";
+            this.IdProducto.MinimumWidth = 6;
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
+            this.IdProducto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IdProducto.Width = 50;
+            // 
+            // producto
+            // 
+            this.producto.HeaderText = "Producto";
+            this.producto.MinimumWidth = 240;
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            this.producto.Width = 240;
+            // 
+            // proveedor
+            // 
+            this.proveedor.HeaderText = "Proveedor";
+            this.proveedor.MinimumWidth = 240;
+            this.proveedor.Name = "proveedor";
+            this.proveedor.ReadOnly = true;
+            this.proveedor.Width = 240;
+            // 
+            // precioUnitario
+            // 
+            this.precioUnitario.HeaderText = "Precio";
+            this.precioUnitario.MinimumWidth = 6;
+            this.precioUnitario.Name = "precioUnitario";
+            this.precioUnitario.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // subtotalProducto
+            // 
+            this.subtotalProducto.HeaderText = "Subtotal";
+            this.subtotalProducto.MinimumWidth = 6;
+            this.subtotalProducto.Name = "subtotalProducto";
+            this.subtotalProducto.ReadOnly = true;
+            // 
+            // IdProveedor
+            // 
+            this.IdProveedor.HeaderText = "IdProveedor";
+            this.IdProveedor.Name = "IdProveedor";
+            this.IdProveedor.ReadOnly = true;
+            this.IdProveedor.Visible = false;
+            // 
             // RegistrarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,5 +404,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotalProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
     }
 }

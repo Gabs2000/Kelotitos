@@ -24,7 +24,7 @@ namespace Kelotitos
             MySqlConnection conexion = Connection.GetConnection();
 
             MySqlCommand login = new MySqlCommand();
-            login.CommandText = "SELECT * FROM usuarios WHERE usuario = @user AND contrasena = @password";
+            login.CommandText = "SELECT * FROM usuarios WHERE usuario = @user AND contrasena = @password AND estatus = 1";
             login.Parameters.AddWithValue("@user", user);
             login.Parameters.AddWithValue("@password", password);
             login.Connection = conexion;

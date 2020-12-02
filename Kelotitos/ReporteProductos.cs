@@ -1,4 +1,5 @@
 ﻿using Kelotitos.MySql;
+using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Kelotitos.Reportes;
 
 namespace Kelotitos
 {
@@ -56,5 +58,45 @@ namespace Kelotitos
             dgwRepProd.AutoResizeColumns();
             dgwRepProd.ClearSelection();
         }
+
+        ReportDataSource rs = new ReportDataSource();
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            List<RepProductoObject> lista = new List<RepProductoObject>();
+            lista.Clear();
+
+            for (int i = 0; i < dgwRepProd.Rows.Count - 1; i++)
+            {
+
+                RepProductoObject rep = new RepProductoObject
+                {
+                    producto = dgwRepProd.Rows[i].Cells[0].Value.ToString(),
+                    tipo_producto = dgwRepProd.Rows[i].Cells[1].Value.ToString(),
+                    tamanio = dgwRepProd.Rows[i].Cells[2].Value.ToString(),
+                    precio = int.Parse(dgwRepProd.Rows[i].Cells[3].Value.ToString())
+                };
+
+                lista.Add(rep);
+
+            }
+
+            rs.Name = "DataSetReporte";
+            rs.Value = lista;
+            reporte repInv = new reporte();
+            repInv.reporteView.LocalReport.DataSources.Clear();
+            repInv.reporteView.LocalReport.DataSources.Add(rs);
+            repInv.reporteView.LocalReport.ReportEmbeddedResource = "Kelotitos.Reportes.repProd.rdlc";
+            repInv.ShowDialog();
+        }
+    }
+
+    //Objeto para el reporte
+    public class RepProductoObject
+    {
+        public string producto { get; set; }
+        public string tipo_producto { get; set; }
+        public string tamanio { get; set; }
+        public int precio { get; set; }
     }
 }

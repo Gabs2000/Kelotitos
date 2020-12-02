@@ -39,20 +39,15 @@ namespace Kelotitos
         private void btnMenu_Click(object sender, EventArgs e)
         {
             Elegir elegir = new Elegir();
+            Comida comida = new Comida();
             this.Hide();
+            comida.Hide();
             elegir.Show();
         }
 
         private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
-            Comida comida = new Comida();
             this.Hide();
-            comida.Show();
-        }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Lbhora_Click(object sender, EventArgs e)

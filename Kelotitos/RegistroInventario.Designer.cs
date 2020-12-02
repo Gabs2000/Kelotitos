@@ -124,8 +124,9 @@
             // btnRegresar
             // 
             this.btnRegresar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegresar.BackgroundImage = global::Kelotitos.Properties.Resources.flecha_pequeña;
+            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegresar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegresar.Image = global::Kelotitos.Properties.Resources.flecha_pequeña;
             this.btnRegresar.Location = new System.Drawing.Point(24, 12);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";

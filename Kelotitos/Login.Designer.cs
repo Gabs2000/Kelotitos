@@ -89,11 +89,11 @@
             // login_button
             // 
             this.login_button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_button.ForeColor = System.Drawing.Color.Black;
-            this.login_button.Location = new System.Drawing.Point(56, 324);
+            this.login_button.Location = new System.Drawing.Point(61, 324);
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(214, 54);
+            this.login_button.Size = new System.Drawing.Size(178, 54);
             this.login_button.TabIndex = 3;
             this.login_button.Text = "Iniciar Sesión";
             this.login_button.UseVisualStyleBackColor = false;
@@ -102,13 +102,13 @@
             // register_button
             // 
             this.register_button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_button.ForeColor = System.Drawing.Color.Black;
             this.register_button.Location = new System.Drawing.Point(289, 324);
             this.register_button.Name = "register_button";
-            this.register_button.Size = new System.Drawing.Size(246, 54);
+            this.register_button.Size = new System.Drawing.Size(210, 54);
             this.register_button.TabIndex = 4;
-            this.register_button.Text = "Registrar Usuario";
+            this.register_button.Text = "Registrar Empleado";
             this.register_button.UseVisualStyleBackColor = false;
             this.register_button.Click += new System.EventHandler(this.register_button_Click);
             // 

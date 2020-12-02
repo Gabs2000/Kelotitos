@@ -92,6 +92,7 @@ namespace Kelotitos
             this.btnPDF.TabIndex = 4;
             this.btnPDF.Text = "Crear PDF";
             this.btnPDF.UseVisualStyleBackColor = false;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // ReporteProveedores
             // 
