@@ -314,6 +314,7 @@
     <EmbeddedResource Include="ReporteProveedores.resx">
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\repComp.rdlc" />
     <EmbeddedResource Include="Reportes\repInv.rdlc" />
     <EmbeddedResource Include="Reportes\reporte.resx">
       <DependentUpon>reporte.cs</DependentUpon>
@@ -328,6 +329,7 @@
       <DependentUpon>TicketFinal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\RepComprasObject.datasource" />
     <None Include="Properties\DataSources\RepInventarioObject.datasource" />
     <None Include="Properties\DataSources\RepProductoObject.datasource" />
     <None Include="Properties\DataSources\RepProveedorObject.datasource" />

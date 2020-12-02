@@ -51,6 +51,8 @@ namespace Kelotitos
             cbVendedor.ValueMember = "nombre";
             cbVendedor.DisplayMember = "nombre";
             cbVendedor.DataSource = dt;
+
+            cbVendedor.SelectedIndex = -1;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -58,42 +60,68 @@ namespace Kelotitos
             string fecha = dtpFechaVenta.Value.ToString("yyyy-MM-dd");
 
             conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT " +
-                                                    "V.folio AS Folio, " +
-                                                    "U.nombre AS Vendedor, " +
-                                                    "DATE_FORMAT(V.fecha_venta,'%d/%m/%Y') AS 'Fecha Venta', " +
-                                                    "V.total AS Total " +
-                                                "FROM ventas V " +
-                                                "INNER JOIN usuarios U " +
-                                                    "ON V.id_usuario = U.id_usuario " +
-                                                "WHERE V.estatus = 1 " +
-                                                "AND U.nombre = IFNULL(@usuario,U.nombre) " +
-                                                "AND DATE(V.fecha_venta) = IFNULL(@fecha,V.fecha_venta);", conexion);
-            cm.Parameters.AddWithValue("@usuario", cbVendedor.SelectedValue);
-            cm.Parameters.AddWithValue("@fecha", fecha);
 
-            MySqlDataAdapter adaptador = new MySqlDataAdapter();
-            adaptador.SelectCommand = cm;
-            DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
-            dgvRepVentas.DataSource = tabla;
+            MySqlCommand cm = new MySqlCommand();
 
-            dgvRepVentas.AutoResizeColumns();
-            dgvRepVentas.ClearSelection();
-        }
-
-        private void btnTodos_Click(object sender, EventArgs e)
-        {
-            conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT " +
-                                                    "V.folio AS Folio, " +
-                                                    "U.nombre AS Vendedor, " +
-                                                    "DATE_FORMAT(V.fecha_venta,'%d/%m/%Y') AS 'Fecha Venta', " +
-                                                    "V.total AS Total " +
-                                                "FROM ventas V " +
-                                                "INNER JOIN usuarios U " +
-                                                    "ON V.id_usuario = U.id_usuario " +
-                                                "WHERE V.estatus = 1;", conexion);
+            if ((dtpFechaVenta.CustomFormat == " ") && (cbVendedor.SelectedItem == null))
+            {
+                cm = new MySqlCommand("SELECT " +
+                                            "V.folio AS Folio, " +
+                                            "U.nombre AS Vendedor, " +
+                                            "DATE_FORMAT(V.fecha_venta,'%d/%m/%Y') AS 'Fecha Venta', " +
+                                            "V.total AS Total " +
+                                        "FROM ventas V " +
+                                        "INNER JOIN usuarios U " +
+                                            "ON V.id_usuario = U.id_usuario " +
+                                        "WHERE V.estatus = 1;", conexion);
+            }
+            
+            if((dtpFechaVenta.CustomFormat == " ") && (cbVendedor.SelectedItem != null))
+            {
+                cm = new MySqlCommand("SELECT " +
+                                            "V.folio AS Folio, " +
+                                            "U.nombre AS Vendedor, " +
+                                            "DATE_FORMAT(V.fecha_venta,'%d/%m/%Y') AS 'Fecha Venta', " +
+                                            "V.total AS Total " +
+                                        "FROM ventas V " +
+                                        "INNER JOIN usuarios U " +
+                                            "ON V.id_usuario = U.id_usuario " +
+                                        "WHERE V.estatus = 1 " +
+                                        "AND U.nombre = IFNULL(@usuario,U.nombre);", conexion);
+                cm.Parameters.AddWithValue("@usuario", cbVendedor.SelectedValue);
+            }
+            
+            if((dtpFechaVenta.CustomFormat != " ") && (cbVendedor.SelectedItem == null))
+            {
+                cm = new MySqlCommand("SELECT " +
+                                            "V.folio AS Folio, " +
+                                            "U.nombre AS Vendedor, " +
+                                            "DATE_FORMAT(V.fecha_venta,'%d/%m/%Y') AS 'Fecha Venta', " +
+                                            "V.total AS Total " +
+                                        "FROM ventas V " +
+                                        "INNER JOIN usuarios U " +
+                                            "ON V.id_usuario = U.id_usuario " +
+                                        "WHERE V.estatus = 1 " +
+                                        "AND DATE(V.fecha_venta) = IFNULL(@fecha,V.fecha_venta);", conexion);
+                cm.Parameters.AddWithValue("@fecha", fecha);
+            }
+            
+            if((dtpFechaVenta.CustomFormat != " ") && (cbVendedor.SelectedItem != null))
+            {
+                cm = new MySqlCommand("SELECT " +
+                                            "V.folio AS Folio, " +
+                                            "U.nombre AS Vendedor, " +
+                                            "DATE_FORMAT(V.fecha_venta,'%d/%m/%Y') AS 'Fecha Venta', " +
+                                            "V.total AS Total " +
+                                        "FROM ventas V " +
+                                        "INNER JOIN usuarios U " +
+                                            "ON V.id_usuario = U.id_usuario " +
+                                        "WHERE V.estatus = 1 " +
+                                        "AND U.nombre = IFNULL(@usuario,U.nombre) " +
+                                        "AND DATE(V.fecha_venta) = IFNULL(@fecha,V.fecha_venta);", conexion);
+                cm.Parameters.AddWithValue("@usuario", cbVendedor.SelectedValue);
+                cm.Parameters.AddWithValue("@fecha", fecha);
+            }
 
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = cm;
@@ -136,6 +164,17 @@ namespace Kelotitos
             repInv.reporteView.LocalReport.ReportEmbeddedResource = "Kelotitos.Reportes.repVent.rdlc";
             repInv.ShowDialog();
 
+        }
+
+        private void dtpFechaVenta_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFechaVenta.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            dtpFechaVenta.CustomFormat = " ";
+            cbVendedor.SelectedIndex = -1;
         }
     }
 

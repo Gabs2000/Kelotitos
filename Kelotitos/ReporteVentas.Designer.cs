@@ -39,7 +39,7 @@ namespace Kelotitos
             this.cbVendedor = new System.Windows.Forms.ComboBox();
             this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.btnTodos = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepVentas)).BeginInit();
@@ -105,7 +105,7 @@ namespace Kelotitos
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 236);
+            this.label2.Location = new System.Drawing.Point(68, 216);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 5;
@@ -116,7 +116,7 @@ namespace Kelotitos
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 303);
+            this.label3.Location = new System.Drawing.Point(57, 283);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 25);
             this.label3.TabIndex = 6;
@@ -125,23 +125,26 @@ namespace Kelotitos
             // cbVendedor
             // 
             this.cbVendedor.FormattingEnabled = true;
-            this.cbVendedor.Location = new System.Drawing.Point(23, 264);
+            this.cbVendedor.Location = new System.Drawing.Point(23, 244);
             this.cbVendedor.Name = "cbVendedor";
             this.cbVendedor.Size = new System.Drawing.Size(206, 21);
             this.cbVendedor.TabIndex = 7;
             // 
             // dtpFechaVenta
             // 
-            this.dtpFechaVenta.Location = new System.Drawing.Point(23, 331);
+            this.dtpFechaVenta.CustomFormat = " ";
+            this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaVenta.Location = new System.Drawing.Point(52, 311);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
-            this.dtpFechaVenta.Size = new System.Drawing.Size(206, 20);
+            this.dtpFechaVenta.Size = new System.Drawing.Size(144, 20);
             this.dtpFechaVenta.TabIndex = 8;
+            this.dtpFechaVenta.ValueChanged += new System.EventHandler(this.dtpFechaVenta_ValueChanged);
             // 
             // btnGenerar
             // 
             this.btnGenerar.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar.Location = new System.Drawing.Point(73, 368);
+            this.btnGenerar.Location = new System.Drawing.Point(73, 349);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(94, 27);
             this.btnGenerar.TabIndex = 9;
@@ -149,17 +152,17 @@ namespace Kelotitos
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // btnTodos
+            // btnReset
             // 
-            this.btnTodos.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTodos.Location = new System.Drawing.Point(42, 163);
-            this.btnTodos.Name = "btnTodos";
-            this.btnTodos.Size = new System.Drawing.Size(154, 32);
-            this.btnTodos.TabIndex = 10;
-            this.btnTodos.Text = "Todas las Ventas";
-            this.btnTodos.UseVisualStyleBackColor = false;
-            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
+            this.btnReset.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(32, 394);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(181, 27);
+            this.btnReset.TabIndex = 11;
+            this.btnReset.Text = "Reestablecer Campos";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // ReporteVentas
             // 
@@ -168,7 +171,7 @@ namespace Kelotitos
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(608, 450);
-            this.Controls.Add(this.btnTodos);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.dtpFechaVenta);
             this.Controls.Add(this.cbVendedor);
@@ -204,6 +207,6 @@ namespace Kelotitos
         private System.Windows.Forms.ComboBox cbVendedor;
         private System.Windows.Forms.DateTimePicker dtpFechaVenta;
         private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.Button btnTodos;
+        private System.Windows.Forms.Button btnReset;
     }
 }

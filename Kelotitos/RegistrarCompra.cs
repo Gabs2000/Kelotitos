@@ -33,6 +33,7 @@ namespace Kelotitos
         private void RegistrarCompra_Load(object sender, EventArgs e)
         {
             this.cargarInventario();
+            //this.dgwCompras.Columns[5].Visible = false;
         }
 
         public void cargarInventario()
@@ -132,6 +133,7 @@ namespace Kelotitos
 
                             subtotal = Convert.ToDouble(resultado.GetInt32(3) * numCantidad.Value);
                             dgwCompras.Rows[n].Cells[5].Value = subtotal;
+                            dgwCompras.Rows[n].Cells[6].Value = cbProveedor.SelectedValue;
 
                             //Una vez que se agrega el producto, se resetean los campos
                             cbInventario.SelectedIndex = 0;
@@ -251,9 +253,9 @@ namespace Kelotitos
                 {
 
                     string queryCompra = "INSERT INTO compras_proveedor " +
-                                        "(id_inventario, cantidad, estatus, fecha_creacion) " +
+                                        "(id_inventario, id_proveedor, cantidad, estatus, fecha_creacion) " +
                                         "VALUES " +
-                                        "(@idInventario, @cantidad, 1, NOW())";
+                                        "(@idInventario, @idProveedor, @cantidad, 1, NOW())";
 
                     conexion = Connection.GetConnection();
 
@@ -266,6 +268,7 @@ namespace Kelotitos
                             {
                                 compra.Parameters.AddWithValue("@idInventario", row.Cells[0].Value);
                                 compra.Parameters.AddWithValue("@cantidad", row.Cells[4].Value);
+                                compra.Parameters.AddWithValue("@idProveedor", row.Cells[6].Value);
                                 compra.ExecuteNonQuery();
                             }
                         }

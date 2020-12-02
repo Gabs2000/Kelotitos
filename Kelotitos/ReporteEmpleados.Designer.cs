@@ -122,7 +122,7 @@ namespace Kelotitos
             // 
             this.dtpFecha.CustomFormat = " ";
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(12, 274);
+            this.dtpFecha.Location = new System.Drawing.Point(15, 274);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(107, 20);
             this.dtpFecha.TabIndex = 8;
@@ -143,11 +143,11 @@ namespace Kelotitos
             // 
             this.btnResetFecha.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnResetFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetFecha.Location = new System.Drawing.Point(35, 373);
+            this.btnResetFecha.Location = new System.Drawing.Point(15, 373);
             this.btnResetFecha.Name = "btnResetFecha";
-            this.btnResetFecha.Size = new System.Drawing.Size(143, 30);
+            this.btnResetFecha.Size = new System.Drawing.Size(172, 30);
             this.btnResetFecha.TabIndex = 10;
-            this.btnResetFecha.Text = "Resetear Campos";
+            this.btnResetFecha.Text = "Reestablecer Campos";
             this.btnResetFecha.UseVisualStyleBackColor = false;
             this.btnResetFecha.Click += new System.EventHandler(this.btnResetFecha_Click);
             // 
