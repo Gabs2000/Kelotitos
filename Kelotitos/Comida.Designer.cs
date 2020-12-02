@@ -68,9 +68,10 @@
             this.btnConfirmar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirmar.Location = new System.Drawing.Point(715, 627);
+            this.btnConfirmar.Location = new System.Drawing.Point(953, 772);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(126, 31);
+            this.btnConfirmar.Size = new System.Drawing.Size(168, 38);
             this.btnConfirmar.TabIndex = 12;
             this.btnConfirmar.Text = "Confirmar ";
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -83,9 +84,10 @@
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
             this.lbhora.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbhora.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbhora.Location = new System.Drawing.Point(316, 18);
+            this.lbhora.Location = new System.Drawing.Point(421, 22);
+            this.lbhora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbhora.Name = "lbhora";
-            this.lbhora.Size = new System.Drawing.Size(73, 24);
+            this.lbhora.Size = new System.Drawing.Size(96, 32);
             this.lbhora.TabIndex = 30;
             this.lbhora.Text = "HORA";
             this.lbhora.Click += new System.EventHandler(this.Lbhora_Click);
@@ -106,12 +108,13 @@
             this.precioProducto,
             this.cantidad,
             this.subtotal});
-            this.dgwCarrito.Location = new System.Drawing.Point(15, 319);
+            this.dgwCarrito.Location = new System.Drawing.Point(20, 393);
+            this.dgwCarrito.Margin = new System.Windows.Forms.Padding(4);
             this.dgwCarrito.MultiSelect = false;
             this.dgwCarrito.Name = "dgwCarrito";
             this.dgwCarrito.RowHeadersWidth = 51;
             this.dgwCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCarrito.Size = new System.Drawing.Size(823, 302);
+            this.dgwCarrito.Size = new System.Drawing.Size(1097, 372);
             this.dgwCarrito.TabIndex = 33;
             this.dgwCarrito.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarrito_RowHeaderMouseClick);
             // 
@@ -149,6 +152,7 @@
             this.Tamanio.MinimumWidth = 100;
             this.Tamanio.Name = "Tamanio";
             this.Tamanio.ReadOnly = true;
+            this.Tamanio.Width = 125;
             // 
             // precioProducto
             // 
@@ -157,6 +161,7 @@
             this.precioProducto.MinimumWidth = 100;
             this.precioProducto.Name = "precioProducto";
             this.precioProducto.ReadOnly = true;
+            this.precioProducto.Width = 125;
             // 
             // cantidad
             // 
@@ -174,6 +179,7 @@
             this.subtotal.MinimumWidth = 100;
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
+            this.subtotal.Width = 125;
             // 
             // lblTotal
             // 
@@ -181,9 +187,10 @@
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblTotal.Location = new System.Drawing.Point(600, 627);
+            this.lblTotal.Location = new System.Drawing.Point(800, 772);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(82, 31);
+            this.lblTotal.Size = new System.Drawing.Size(102, 39);
             this.lblTotal.TabIndex = 51;
             this.lblTotal.Text = "$0.00";
             // 
@@ -193,62 +200,69 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(484, 627);
+            this.label6.Location = new System.Drawing.Point(645, 772);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 31);
+            this.label6.Size = new System.Drawing.Size(136, 39);
             this.label6.TabIndex = 50;
             this.label6.Text = "TOTAL:";
             // 
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(11, 216);
+            this.lblProducto.Location = new System.Drawing.Point(15, 266);
+            this.lblProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(50, 13);
+            this.lblProducto.Size = new System.Drawing.Size(65, 17);
             this.lblProducto.TabIndex = 53;
             this.lblProducto.Text = "Producto";
             // 
             // cbProducto
             // 
             this.cbProducto.FormattingEnabled = true;
-            this.cbProducto.Location = new System.Drawing.Point(14, 233);
+            this.cbProducto.Location = new System.Drawing.Point(19, 287);
+            this.cbProducto.Margin = new System.Windows.Forms.Padding(4);
             this.cbProducto.Name = "cbProducto";
-            this.cbProducto.Size = new System.Drawing.Size(205, 21);
+            this.cbProducto.Size = new System.Drawing.Size(272, 24);
             this.cbProducto.TabIndex = 54;
             this.cbProducto.SelectedIndexChanged += new System.EventHandler(this.cbProducto_SelectedIndexChanged);
             // 
             // cbTipo
             // 
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(225, 233);
+            this.cbTipo.Location = new System.Drawing.Point(300, 287);
+            this.cbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(221, 21);
+            this.cbTipo.Size = new System.Drawing.Size(293, 24);
             this.cbTipo.TabIndex = 55;
             this.cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
             // 
             // cbTamanio
             // 
             this.cbTamanio.FormattingEnabled = true;
-            this.cbTamanio.Location = new System.Drawing.Point(452, 233);
+            this.cbTamanio.Location = new System.Drawing.Point(603, 287);
+            this.cbTamanio.Margin = new System.Windows.Forms.Padding(4);
             this.cbTamanio.Name = "cbTamanio";
-            this.cbTamanio.Size = new System.Drawing.Size(196, 21);
+            this.cbTamanio.Size = new System.Drawing.Size(260, 24);
             this.cbTamanio.TabIndex = 56;
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(225, 215);
+            this.lblTipo.Location = new System.Drawing.Point(300, 265);
+            this.lblTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(28, 13);
+            this.lblTipo.Size = new System.Drawing.Size(36, 17);
             this.lblTipo.TabIndex = 57;
             this.lblTipo.Text = "Tipo";
             // 
             // lblTamanio
             // 
             this.lblTamanio.AutoSize = true;
-            this.lblTamanio.Location = new System.Drawing.Point(452, 215);
+            this.lblTamanio.Location = new System.Drawing.Point(603, 265);
+            this.lblTamanio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTamanio.Name = "lblTamanio";
-            this.lblTamanio.Size = new System.Drawing.Size(46, 13);
+            this.lblTamanio.Size = new System.Drawing.Size(60, 17);
             this.lblTamanio.TabIndex = 58;
             this.lblTamanio.Text = "Tamaño";
             // 
@@ -256,9 +270,10 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(754, 231);
+            this.btnAgregar.Location = new System.Drawing.Point(1005, 284);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 59;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -266,17 +281,19 @@
             // 
             // numCantidad
             // 
-            this.numCantidad.Location = new System.Drawing.Point(655, 233);
+            this.numCantidad.Location = new System.Drawing.Point(873, 287);
+            this.numCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.numCantidad.Name = "numCantidad";
-            this.numCantidad.Size = new System.Drawing.Size(80, 20);
+            this.numCantidad.Size = new System.Drawing.Size(107, 22);
             this.numCantidad.TabIndex = 60;
             // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(655, 215);
+            this.lblCantidad.Location = new System.Drawing.Point(873, 265);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(49, 13);
+            this.lblCantidad.Size = new System.Drawing.Size(64, 17);
             this.lblCantidad.TabIndex = 61;
             this.lblCantidad.Text = "Cantidad";
             // 
@@ -286,9 +303,10 @@
             this.lblError.BackColor = System.Drawing.Color.Transparent;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(523, 176);
+            this.lblError.Location = new System.Drawing.Point(697, 217);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(40, 17);
+            this.lblError.Size = new System.Drawing.Size(47, 20);
             this.lblError.TabIndex = 62;
             this.lblError.Text = "Error";
             this.lblError.Visible = false;
@@ -297,9 +315,10 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(679, 271);
+            this.btnEliminar.Location = new System.Drawing.Point(905, 334);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(126, 31);
+            this.btnEliminar.Size = new System.Drawing.Size(168, 38);
             this.btnEliminar.TabIndex = 63;
             this.btnEliminar.Text = "Eliminar Producto";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -309,9 +328,10 @@
             // 
             this.btnSumarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSumarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnSumarCant.Location = new System.Drawing.Point(415, 271);
+            this.btnSumarCant.Location = new System.Drawing.Point(553, 334);
+            this.btnSumarCant.Margin = new System.Windows.Forms.Padding(4);
             this.btnSumarCant.Name = "btnSumarCant";
-            this.btnSumarCant.Size = new System.Drawing.Size(126, 31);
+            this.btnSumarCant.Size = new System.Drawing.Size(168, 38);
             this.btnSumarCant.TabIndex = 64;
             this.btnSumarCant.Text = "Sumar Cantidad";
             this.btnSumarCant.UseVisualStyleBackColor = false;
@@ -321,9 +341,10 @@
             // 
             this.btnRestarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRestarCant.ForeColor = System.Drawing.Color.Black;
-            this.btnRestarCant.Location = new System.Drawing.Point(547, 271);
+            this.btnRestarCant.Location = new System.Drawing.Point(729, 334);
+            this.btnRestarCant.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestarCant.Name = "btnRestarCant";
-            this.btnRestarCant.Size = new System.Drawing.Size(126, 31);
+            this.btnRestarCant.Size = new System.Drawing.Size(168, 38);
             this.btnRestarCant.TabIndex = 65;
             this.btnRestarCant.Text = "Restar Cantidad";
             this.btnRestarCant.UseVisualStyleBackColor = false;
@@ -335,9 +356,10 @@
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnRegresar.ForeColor = System.Drawing.Color.Black;
             this.btnRegresar.Image = global::Kelotitos.Properties.Resources.flecha_pequeña;
-            this.btnRegresar.Location = new System.Drawing.Point(24, 12);
+            this.btnRegresar.Location = new System.Drawing.Point(32, 15);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(40, 41);
+            this.btnRegresar.Size = new System.Drawing.Size(53, 50);
             this.btnRegresar.TabIndex = 31;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -348,9 +370,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(335, 151);
+            this.label1.Location = new System.Drawing.Point(447, 186);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 47);
+            this.label1.Size = new System.Drawing.Size(202, 59);
             this.label1.TabIndex = 67;
             this.label1.Text = "Ventas";
             // 
@@ -359,19 +382,20 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(267, 68);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(473, 93);
+            this.pictureBox1.Size = new System.Drawing.Size(631, 114);
             this.pictureBox1.TabIndex = 68;
             this.pictureBox1.TabStop = false;
             // 
             // Comida
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(858, 676);
+            this.ClientSize = new System.Drawing.Size(1144, 832);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRestarCant);
@@ -394,6 +418,7 @@
             this.Controls.Add(this.lbhora);
             this.Controls.Add(this.btnConfirmar);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Comida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comida";

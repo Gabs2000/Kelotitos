@@ -422,6 +422,7 @@
     <None Include="Resources\elotekelot.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\elotito.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -384,3 +384,59 @@ C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\De
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
 C:\Users\Daniela\Desktop\FIME\7 Semestre\PIB\Proyecto\Kelotitos\Kelotitos\obj\Debug\Kelotitos.Reportes.reporte.resources
 >>>>>>> 0040c8f68e9a3cd6ec2fe873b01ee93f3136d6cd
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.MenuReportes.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteCompras.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteEmpleados.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProductos.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProveedores.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Reportes.reporte.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteVentas.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\RdlCompile.cache
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\RdlCompile.compiled
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
+C:\Users\vjvit\Desktop\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csprojAssemblyReference.cache
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe.config
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Comida.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Confirmacion_de_pedido.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Elegir.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Login.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.MenuReportes.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Properties.Resources.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCatalogos.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarCompra.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistrarProductos.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Prueba.RegistrarProveedor.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Registro.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.RegistroInventario.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteCompras.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteEmpleados.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteInventario.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProductos.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteProveedores.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.Reportes.reporte.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.ReporteVentas.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.TicketFinal.resources
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.GenerateResource.cache
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\RdlCompile.cache
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\RdlCompile.compiled
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.csproj.CoreCompileInputs.cache
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.exe
+C:\Users\vjvit\Desktop\Tareas Pendientes\Sistema Kelotitos\Kelotitos\obj\Debug\Kelotitos.pdb

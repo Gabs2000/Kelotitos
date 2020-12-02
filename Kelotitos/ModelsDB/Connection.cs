@@ -19,7 +19,7 @@ namespace Kelotitos.MySql
             {
                 conn = new MySqlConnection(StrConnection);
                 conn.Open();
-                Console.WriteLine("Conectado con exito");
+                Console.WriteLine("Conectado con Éxito");
             } catch(Exception e)
             {
                 conn = null;
