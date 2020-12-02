@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
+using Kelotitos.Reportes;
 
 namespace Kelotitos
 {
@@ -198,6 +200,9 @@ namespace Kelotitos
             }
         }
 
+        ReportDataSource rs = new ReportDataSource();
+        ReportDataSource rs_vendedor = new ReportDataSource();
+
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             try
@@ -309,13 +314,65 @@ namespace Kelotitos
 
                     Confirmacion_de_pedido ToMenu = new Confirmacion_de_pedido();
                     this.Hide();
-                    ToMenu.Show();
+                    ToMenu.ShowDialog();
 
                 }
                 else
                 {
                     MessageBox.Show("Agregue algunos articulos al carrito antes de confirmar", "Carrito vacio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+
+                //Generar ticket
+                //if(chTicket.Checked == true)
+                //{
+                //    string folio_final;
+                //    MySqlCommand cm = new MySqlCommand("SELECT MAX(folio) AS folio FROM ventas;", conexion);
+                //    MySqlDataReader reader;
+
+                //    reader = cm.ExecuteReader();
+                //    DataTable dt = new DataTable();
+                //    dt.Columns.Add("folio", typeof(string));
+                //    dt.Load(reader);
+
+                //    folio_final = "folio";
+                //    List<TicketObject> lista = new List<TicketObject>();
+                //    List<TicketObject> lista_vendedor = new List<TicketObject>();
+                //    lista.Clear();
+
+                //    for (int i = 0; i < dgwCarrito.Rows.Count - 1; i++)
+                //    {
+
+                //        TicketObject rep = new TicketObject
+                //        {
+                //            id_producto = int.Parse(dgwCarrito.Rows[i].Cells[0].Value.ToString()),
+                //            nombre = dgwCarrito.Rows[i].Cells[1].Value.ToString(),
+                //            tipo_producto = dgwCarrito.Rows[i].Cells[2].Value.ToString(),
+                //            tamanio = dgwCarrito.Rows[i].Cells[3].Value.ToString(),
+                //            precio = int.Parse(dgwCarrito.Rows[i].Cells[4].Value.ToString())
+                //        };
+
+                //        lista.Add(rep);
+
+                //    }
+
+                //    TicketVendedorObject ven = new TicketVendedorObject
+                //    {
+                //        _folio = folio_final,
+                //        vendedor = Login.nombreUsuario
+                //    };
+
+
+                //    rs.Name = "DataSetReporte";
+                //    rs_vendedor.Name = "DataSetReporteVendedor";
+                //    rs.Value = lista;
+                //    rs_vendedor.Value = lista_vendedor;
+                //    reporte repInv = new reporte();
+                //    repInv.reporteView.LocalReport.DataSources.Clear();
+                //    repInv.reporteView.LocalReport.DataSources.Add(rs);
+                //    repInv.reporteView.LocalReport.DataSources.Add(rs_vendedor);
+                //    repInv.reporteView.LocalReport.ReportEmbeddedResource = "Kelotitos.Reportes.repTicket.rdlc";
+                //    repInv.ShowDialog();
+                //}
             }
             catch (Exception err)
             {
@@ -452,5 +509,22 @@ namespace Kelotitos
             lblTotal.Text = "$0.00";
         }
 
+    }
+
+    //Objeto para el reporte
+    public class TicketObject
+    {
+        public int id_producto { get; set; }
+        public string nombre { get; set; }
+        public string tipo_producto { get; set; }
+        public string tamanio { get; set; }
+        public int precio { get; set; }
+    }
+
+    //Objeto para el reporte
+    public class TicketVendedorObject
+    {
+        public string _folio { get; set; }
+        public string vendedor { get; set; }
     }
 }

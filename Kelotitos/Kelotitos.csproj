@@ -315,12 +315,14 @@
       <DependentUpon>ReporteProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\repComp.rdlc" />
+    <EmbeddedResource Include="Reportes\repEmp.rdlc" />
     <EmbeddedResource Include="Reportes\repInv.rdlc" />
     <EmbeddedResource Include="Reportes\reporte.resx">
       <DependentUpon>reporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\repProd.rdlc" />
     <EmbeddedResource Include="Reportes\repProv.rdlc" />
+    <EmbeddedResource Include="Reportes\repTicket.rdlc" />
     <EmbeddedResource Include="Reportes\repVent.rdlc" />
     <EmbeddedResource Include="ReporteVentas.resx">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
@@ -330,10 +332,13 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\RepComprasObject.datasource" />
+    <None Include="Properties\DataSources\RepEmpleadosObject.datasource" />
     <None Include="Properties\DataSources\RepInventarioObject.datasource" />
     <None Include="Properties\DataSources\RepProductoObject.datasource" />
     <None Include="Properties\DataSources\RepProveedorObject.datasource" />
     <None Include="Properties\DataSources\RepVentasObject.datasource" />
+    <None Include="Properties\DataSources\TicketObject.datasource" />
+    <None Include="Properties\DataSources\TicketVendedorObject.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

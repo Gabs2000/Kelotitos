@@ -1,4 +1,6 @@
 ﻿using Kelotitos.MySql;
+using Kelotitos.Reportes;
+using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -53,11 +55,6 @@ namespace Kelotitos
             cbEmpleados.SelectedIndex = -1;
         }
 
-        private void dtpFecha_ValueChanged(object sender, EventArgs e)
-        {
-            dtpFecha.CustomFormat = "dd/MM/yyyy";
-        }
-
         private void btnResetFecha_Click(object sender, EventArgs e)
         {
             dtpFecha.CustomFormat = " ";
@@ -76,9 +73,10 @@ namespace Kelotitos
             {
 
                 cm = new MySqlCommand("SELECT " +
-                                            "nombre, " +
-                                            "salarioXdia, " +
-                                            "diasSemanas " +
+                                            "nombre AS Nombre, " +
+                                            "salarioXdia AS 'Salario Diario', " +
+                                            "diasSemanas AS 'Días Trabajo'," +
+                                            "DATE_FORMAT(fecha_creacion,'%d/%m/%Y') AS 'Fecha Inicio' " +
                                         "FROM usuarios " +
                                         "WHERE estatus = 1;", conexion);
 
@@ -88,9 +86,10 @@ namespace Kelotitos
             {
 
                 cm = new MySqlCommand("SELECT " +
-                                            "nombre, " +
-                                            "salarioXdia, " +
-                                            "diasSemanas " +
+                                            "nombre AS Nombre, " +
+                                            "salarioXdia AS 'Salario Diario', " +
+                                            "diasSemanas AS 'Días Trabajo'," +
+                                            "DATE_FORMAT(fecha_creacion,'%d/%m/%Y') AS 'Fecha Inicio' " +
                                         "FROM usuarios " +
                                         "WHERE estatus = 1 " +
                                         "AND nombre = IFNULL(@usuario, nombre);", conexion);
@@ -103,11 +102,15 @@ namespace Kelotitos
             {
 
                 cm = new MySqlCommand("SELECT " +
-                                            "nombre, " +
-                                            "salarioXdia, " +
-                                            "diasSemanas " +
+                                            "nombre AS Nombre, " +
+                                            "salarioXdia AS 'Salario Diario', " +
+                                            "diasSemanas AS 'Días Trabajo'," +
+                                            "DATE_FORMAT(fecha_creacion,'%d/%m/%Y') AS 'Fecha Inicio' " +
                                         "FROM usuarios " +
-                                        "WHERE estatus = 1;", conexion);
+                                        "WHERE estatus = 1 " +
+                                        "AND DATE(fecha_creacion) = IFNULL(@fecha,DATE(fecha_creacion));", conexion);
+
+                cm.Parameters.AddWithValue("@fecha", fecha);
 
             }
             
@@ -115,14 +118,17 @@ namespace Kelotitos
             {
 
                 cm = new MySqlCommand("SELECT " +
-                                            "nombre, " +
-                                            "salarioXdia, " +
-                                            "diasSemanas " +
+                                            "nombre AS Nombre, " +
+                                            "salarioXdia AS 'Salario Diario', " +
+                                            "diasSemanas AS 'Días Trabajo'," +
+                                            "DATE_FORMAT(fecha_creacion,'%d/%m/%Y') AS 'Fecha Inicio' " +
                                         "FROM usuarios " +
                                         "WHERE estatus = 1 " +
-                                        "AND nombre = IFNULL(@usuario, nombre);", conexion);
+                                        "AND nombre = IFNULL(@usuario, nombre) " +
+                                        "AND DATE(fecha_creacion) = IFNULL(@fecha,DATE(fecha_creacion));", conexion);
 
                 cm.Parameters.AddWithValue("@usuario", cbEmpleados.SelectedValue);
+                cm.Parameters.AddWithValue("@fecha", fecha);
 
             }
 
@@ -135,5 +141,50 @@ namespace Kelotitos
             dgvEmpleados.AutoResizeColumns();
             dgvEmpleados.ClearSelection();
         }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFecha.CustomFormat = "dd/MM/yyyy";
+        }
+
+        ReportDataSource rs = new ReportDataSource();
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            List<RepEmpleadosObject> lista = new List<RepEmpleadosObject>();
+            lista.Clear();
+
+            for (int i = 0; i < dgvEmpleados.Rows.Count - 1; i++)
+            {
+
+                RepEmpleadosObject rep = new RepEmpleadosObject
+                {
+                    nombre = dgvEmpleados.Rows[i].Cells[0].Value.ToString(),
+                    salarioDiario = int.Parse(dgvEmpleados.Rows[i].Cells[1].Value.ToString()),
+                    diasTrabajo = int.Parse(dgvEmpleados.Rows[i].Cells[2].Value.ToString()),
+                    fecha_inicio = DateTime.Parse(dgvEmpleados.Rows[i].Cells[3].Value.ToString())
+                };
+
+                lista.Add(rep);
+
+            }
+
+            rs.Name = "DataSetReporte";
+            rs.Value = lista;
+            reporte repInv = new reporte();
+            repInv.reporteView.LocalReport.DataSources.Clear();
+            repInv.reporteView.LocalReport.DataSources.Add(rs);
+            repInv.reporteView.LocalReport.ReportEmbeddedResource = "Kelotitos.Reportes.repEmp.rdlc";
+            repInv.ShowDialog();
+        }
+    }
+
+    //Objeto para el reporte
+    public class RepEmpleadosObject
+    {
+        public string nombre { get; set; }
+        public int salarioDiario { get; set; }
+        public int diasTrabajo { get; set; }
+        public DateTime fecha_inicio { get; set; }
     }
 }
