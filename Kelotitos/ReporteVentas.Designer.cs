@@ -50,9 +50,10 @@ namespace Kelotitos
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(176, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(335, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(447, 101);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -61,9 +62,10 @@ namespace Kelotitos
             this.pcRegresar.BackgroundImage = global::Kelotitos.Properties.Resources.flecha_pequeña;
             this.pcRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcRegresar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pcRegresar.Location = new System.Drawing.Point(13, 13);
+            this.pcRegresar.Location = new System.Drawing.Point(17, 16);
+            this.pcRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcRegresar.Name = "pcRegresar";
-            this.pcRegresar.Size = new System.Drawing.Size(50, 44);
+            this.pcRegresar.Size = new System.Drawing.Size(65, 53);
             this.pcRegresar.TabIndex = 1;
             this.pcRegresar.TabStop = false;
             this.pcRegresar.Click += new System.EventHandler(this.pcRegresar_Click);
@@ -72,29 +74,33 @@ namespace Kelotitos
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 30F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 31F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(129, 98);
+            this.label1.Location = new System.Drawing.Point(180, 121);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(338, 47);
+            this.label1.Size = new System.Drawing.Size(443, 61);
             this.label1.TabIndex = 2;
             this.label1.Text = "Reporte Ventas";
             // 
             // dgvRepVentas
             // 
             this.dgvRepVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRepVentas.Location = new System.Drawing.Point(244, 163);
+            this.dgvRepVentas.Location = new System.Drawing.Point(325, 201);
+            this.dgvRepVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvRepVentas.Name = "dgvRepVentas";
-            this.dgvRepVentas.Size = new System.Drawing.Size(352, 230);
+            this.dgvRepVentas.RowHeadersWidth = 51;
+            this.dgvRepVentas.Size = new System.Drawing.Size(469, 283);
             this.dgvRepVentas.TabIndex = 3;
             // 
             // btnPDF
             // 
             this.btnPDF.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnPDF.Location = new System.Drawing.Point(352, 411);
+            this.btnPDF.Location = new System.Drawing.Point(469, 506);
+            this.btnPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(159, 26);
+            this.btnPDF.Size = new System.Drawing.Size(212, 32);
             this.btnPDF.TabIndex = 4;
             this.btnPDF.Text = "Crear PDF";
             this.btnPDF.UseVisualStyleBackColor = false;
@@ -105,9 +111,10 @@ namespace Kelotitos
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 236);
+            this.label2.Location = new System.Drawing.Point(49, 290);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 25);
+            this.label2.Size = new System.Drawing.Size(129, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Vendedor:";
             // 
@@ -116,34 +123,38 @@ namespace Kelotitos
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 303);
+            this.label3.Location = new System.Drawing.Point(49, 373);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 25);
+            this.label3.Size = new System.Drawing.Size(163, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Fecha Venta:";
             // 
             // cbVendedor
             // 
             this.cbVendedor.FormattingEnabled = true;
-            this.cbVendedor.Location = new System.Drawing.Point(23, 264);
+            this.cbVendedor.Location = new System.Drawing.Point(31, 325);
+            this.cbVendedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbVendedor.Name = "cbVendedor";
-            this.cbVendedor.Size = new System.Drawing.Size(206, 21);
+            this.cbVendedor.Size = new System.Drawing.Size(273, 24);
             this.cbVendedor.TabIndex = 7;
             // 
             // dtpFechaVenta
             // 
-            this.dtpFechaVenta.Location = new System.Drawing.Point(23, 331);
+            this.dtpFechaVenta.Location = new System.Drawing.Point(31, 407);
+            this.dtpFechaVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
-            this.dtpFechaVenta.Size = new System.Drawing.Size(206, 20);
+            this.dtpFechaVenta.Size = new System.Drawing.Size(273, 22);
             this.dtpFechaVenta.TabIndex = 8;
             // 
             // btnGenerar
             // 
             this.btnGenerar.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar.Location = new System.Drawing.Point(73, 368);
+            this.btnGenerar.Location = new System.Drawing.Point(97, 453);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(94, 27);
+            this.btnGenerar.Size = new System.Drawing.Size(125, 33);
             this.btnGenerar.TabIndex = 9;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -153,9 +164,10 @@ namespace Kelotitos
             // 
             this.btnTodos.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTodos.Location = new System.Drawing.Point(42, 163);
+            this.btnTodos.Location = new System.Drawing.Point(56, 201);
+            this.btnTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTodos.Name = "btnTodos";
-            this.btnTodos.Size = new System.Drawing.Size(154, 32);
+            this.btnTodos.Size = new System.Drawing.Size(205, 39);
             this.btnTodos.TabIndex = 10;
             this.btnTodos.Text = "Todas las Ventas";
             this.btnTodos.UseVisualStyleBackColor = false;
@@ -163,11 +175,11 @@ namespace Kelotitos
             // 
             // ReporteVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(608, 450);
+            this.ClientSize = new System.Drawing.Size(811, 554);
             this.Controls.Add(this.btnTodos);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.dtpFechaVenta);
@@ -180,6 +192,7 @@ namespace Kelotitos
             this.Controls.Add(this.pcRegresar);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReporteVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Ventas";
