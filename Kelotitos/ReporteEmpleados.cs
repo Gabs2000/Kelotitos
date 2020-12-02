@@ -82,7 +82,9 @@ namespace Kelotitos
                                         "FROM usuarios " +
                                         "WHERE estatus = 1;", conexion);
 
-            } else if ((cbEmpleados.SelectedIndex != -1) && (dtpFecha.CustomFormat == " "))
+            }
+            
+            if ((cbEmpleados.SelectedIndex != -1) && (dtpFecha.CustomFormat == " "))
             {
 
                 cm = new MySqlCommand("SELECT " +
@@ -95,7 +97,9 @@ namespace Kelotitos
 
                 cm.Parameters.AddWithValue("@usuario", cbEmpleados.SelectedValue);
 
-            } else if ((cbEmpleados.SelectedIndex == -1) && (dtpFecha.CustomFormat != " "))
+            }
+            
+            if ((cbEmpleados.SelectedIndex == -1) && (dtpFecha.CustomFormat != " "))
             {
 
                 cm = new MySqlCommand("SELECT " +
@@ -106,7 +110,8 @@ namespace Kelotitos
                                         "WHERE estatus = 1;", conexion);
 
             }
-            else if ((cbEmpleados.SelectedIndex != -1) && (dtpFecha.CustomFormat != " "))
+            
+            if ((cbEmpleados.SelectedIndex != -1) && (dtpFecha.CustomFormat != " "))
             {
 
                 cm = new MySqlCommand("SELECT " +

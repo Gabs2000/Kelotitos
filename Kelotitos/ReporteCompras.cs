@@ -109,7 +109,7 @@ namespace Kelotitos
                                         "p.proveedor AS Proveedor, " +
                                         "cp.cantidad AS Cantidad, " +
                                         "(i.precio_compra * cp.cantidad) AS Total, " +
-                                        "cp.fecha_creacion AS 'Fecha Compra' " +
+                                        "DATE_FORMAT(cp.fecha_creacion,'%d/%m/%Y') AS 'Fecha Compra' " +
                                     "FROM compras_proveedor cp " +
                                     "INNER JOIN inventario i " +
                                         "ON cp.id_inventario = i.id_inventario " +
@@ -125,7 +125,7 @@ namespace Kelotitos
                                         "p.proveedor AS Proveedor, " +
                                         "cp.cantidad AS Cantidad, " +
                                         "(i.precio_compra * cp.cantidad) AS Total, " +
-                                        "cp.fecha_creacion AS 'Fecha Compra' " +
+                                        "DATE_FORMAT(cp.fecha_creacion,'%d/%m/%Y') AS 'Fecha Compra' " +
                                     "FROM compras_proveedor cp " +
                                     "INNER JOIN inventario i " +
                                         "ON cp.id_inventario = i.id_inventario " +
@@ -143,7 +143,7 @@ namespace Kelotitos
                                         "p.proveedor AS Proveedor, " +
                                         "cp.cantidad AS Cantidad, " +
                                         "(i.precio_compra * cp.cantidad) AS Total, " +
-                                        "cp.fecha_creacion AS 'Fecha Compra' " +
+                                        "DATE_FORMAT(cp.fecha_creacion,'%d/%m/%Y') AS 'Fecha Compra' " +
                                     "FROM compras_proveedor cp " +
                                     "INNER JOIN inventario i " +
                                         "ON cp.id_inventario = i.id_inventario " +
@@ -163,7 +163,7 @@ namespace Kelotitos
                                         "p.proveedor AS Proveedor, " +
                                         "cp.cantidad AS Cantidad, " +
                                         "(i.precio_compra * cp.cantidad) AS Total, " +
-                                        "cp.fecha_creacion AS 'Fecha Compra' " +
+                                        "DATE_FORMAT(cp.fecha_creacion,'%d/%m/%Y') AS 'Fecha Compra' " +
                                     "FROM compras_proveedor cp " +
                                     "INNER JOIN inventario i " +
                                         "ON cp.id_inventario = i.id_inventario " +
@@ -171,7 +171,7 @@ namespace Kelotitos
                                         "ON cp.id_proveedor = p.id_proveedor " +
                                     "WHERE cp.estatus = 1 " +
                                     "AND p.id_proveedor = IFNULL(@idProveedor,p.id_proveedor) " +
-                                    "AND cp.fecha_creacion LIKE @fecha;", conexion);
+                                    "AND DATE(cp.fecha_creacion) = IFNULL(@fecha,DATE(cp.fecha_creacion));", conexion);
                 cm.Parameters.AddWithValue("@idProveedor", cbProveedor.SelectedValue);
                 cm.Parameters.AddWithValue("@fecha", fecha);
             }
@@ -183,7 +183,7 @@ namespace Kelotitos
                                         "p.proveedor AS Proveedor, " +
                                         "cp.cantidad AS Cantidad, " +
                                         "(i.precio_compra * cp.cantidad) AS Total, " +
-                                        "cp.fecha_creacion AS 'Fecha Compra' " +
+                                        "DATE_FORMAT(cp.fecha_creacion,'%d/%m/%Y') AS 'Fecha Compra' " +
                                     "FROM compras_proveedor cp " +
                                     "INNER JOIN inventario i " +
                                         "ON cp.id_inventario = i.id_inventario " +
@@ -201,7 +201,7 @@ namespace Kelotitos
                                         "p.proveedor AS Proveedor, " +
                                         "cp.cantidad AS Cantidad, " +
                                         "(i.precio_compra * cp.cantidad) AS Total, " +
-                                        "cp.fecha_creacion AS 'Fecha Compra' " +
+                                        "DATE_FORMAT(cp.fecha_creacion,'%d/%m/%Y') AS 'Fecha Compra' " +
                                     "FROM compras_proveedor cp " +
                                     "INNER JOIN inventario i " +
                                         "ON cp.id_inventario = i.id_inventario " +
@@ -209,7 +209,7 @@ namespace Kelotitos
                                         "ON cp.id_proveedor = p.id_proveedor " +
                                     "WHERE cp.estatus = 1 " +
                                     "AND i.id_inventario = IFNULL(@idInventario,i.id_inventario) " +
-                                    "AND cp.fecha_creacion LIKE @fecha;", conexion);
+                                    "AND DATE(cp.fecha_creacion) = IFNULL(@fecha,DATE(cp.fecha_creacion));", conexion);
                 cm.Parameters.AddWithValue("@idInventario", cbInventario.SelectedValue);
                 cm.Parameters.AddWithValue("@fecha", fecha);
             }
@@ -221,14 +221,14 @@ namespace Kelotitos
                                         "p.proveedor AS Proveedor, " +
                                         "cp.cantidad AS Cantidad, " +
                                         "(i.precio_compra * cp.cantidad) AS Total, " +
-                                        "cp.fecha_creacion AS 'Fecha Compra' " +
+                                        "DATE_FORMAT(cp.fecha_creacion,'%d/%m/%Y') AS 'Fecha Compra' " +
                                     "FROM compras_proveedor cp " +
                                     "INNER JOIN inventario i " +
                                         "ON cp.id_inventario = i.id_inventario " +
                                     "INNER JOIN proveedores p " +
                                         "ON cp.id_proveedor = p.id_proveedor " +
                                     "WHERE cp.estatus = 1 " +
-                                    "AND cp.fecha_creacion LIKE @fecha;", conexion);
+                                    "AND DATE(cp.fecha_creacion) = IFNULL(@fecha,DATE(cp.fecha_creacion));", conexion);
                 cm.Parameters.AddWithValue("@fecha", fecha);
             }
 
@@ -239,7 +239,7 @@ namespace Kelotitos
                                         "p.proveedor AS Proveedor, " +
                                         "cp.cantidad AS Cantidad, " +
                                         "(i.precio_compra * cp.cantidad) AS Total, " +
-                                        "cp.fecha_creacion AS 'Fecha Compra' " +
+                                        "DATE_FORMAT(cp.fecha_creacion,'%d/%m/%Y') AS 'Fecha Compra' " +
                                     "FROM compras_proveedor cp " +
                                     "INNER JOIN inventario i " +
                                         "ON cp.id_inventario = i.id_inventario " +
@@ -248,7 +248,7 @@ namespace Kelotitos
                                     "WHERE cp.estatus = 1 " +
                                     "AND p.id_proveedor = IFNULL(@idProveedor,p.id_proveedor) " +
                                     "AND i.id_inventario = IFNULL(@idInventario,i.id_inventario) " +
-                                    "AND cp.fecha_creacion LIKE @fecha;", conexion);
+                                    "AND DATE(cp.fecha_creacion) = IFNULL(@fecha,DATE(cp.fecha_creacion));", conexion);
                 cm.Parameters.AddWithValue("@idProveedor", cbProveedor.SelectedValue);
                 cm.Parameters.AddWithValue("@idInventario", cbInventario.SelectedValue);
                 cm.Parameters.AddWithValue("@fecha", fecha);
