@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarCatalogos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNomTam = new System.Windows.Forms.TextBox();
             this.btnAgrTamanio = new System.Windows.Forms.Button();
@@ -183,6 +184,7 @@
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrarCatalogos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarCatalogos";

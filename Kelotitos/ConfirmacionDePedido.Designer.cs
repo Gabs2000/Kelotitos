@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Confirmacion_de_pedido));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbhora = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -153,6 +154,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbhora);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Confirmacion_de_pedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirmacion_de_pedido";
