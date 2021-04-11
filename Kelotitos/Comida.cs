@@ -54,30 +54,34 @@ namespace Kelotitos
 
         private void cargarTiposProductos()
         {
-            conexion = Connection.GetConnection();
+            try
+            {
+                conexion = Connection.GetConnection();
 
-            //Retorna todos los tipos de productos que tiene asignado el producto elegido
-            MySqlCommand cm = new MySqlCommand("SELECT " +
-                                                    "TP.id_tipo_producto, " +
-                                                    "TP.tipo_producto " +
-                                                "FROM cat_productos P " +
-                                                "INNER JOIN snack_db.cat_tipos_productos TP " +
-                                                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                "WHERE P.nombre = @nombre " +
-                                                "AND P.estatus = 1 " +
-                                                "GROUP BY TP.id_tipo_producto, TP.tipo_producto", conexion);
-            cm.Parameters.AddWithValue("@nombre", cbProducto.Text);
-            MySqlDataReader reader;
+                //Retorna todos los tipos de productos que tiene asignado el producto elegido
+                MySqlCommand cm = new MySqlCommand("SELECT TP.id_tipo_producto, " +
+                    "TP.tipo_producto FROM bayjfbagagjr10j6uxy6.cat_productos P " +
+                    "INNER JOIN bayjfbagagjr10j6uxy6.cat_tipos_productos TP " +
+                    "ON P.id_tipo_producto = TP.id_tipo_producto " +
+                    "WHERE P.nombre = @nombre AND P.estatus = 1 " +
+                    "GROUP BY TP.id_tipo_producto, TP.tipo_producto", conexion);
+                cm.Parameters.AddWithValue("@nombre", cbProducto.Text);
+                MySqlDataReader reader;
 
-            reader = cm.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("id_tipo_producto", typeof(int));
-            dt.Columns.Add("tipo_producto", typeof(string));
-            dt.Load(reader);
+                reader = cm.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("id_tipo_producto", typeof(int));
+                dt.Columns.Add("tipo_producto", typeof(string));
+                dt.Load(reader);
 
-            cbTipo.ValueMember = "id_tipo_producto";
-            cbTipo.DisplayMember = "tipo_producto";
-            cbTipo.DataSource = dt;
+                cbTipo.ValueMember = "id_tipo_producto";
+                cbTipo.DisplayMember = "tipo_producto";
+                cbTipo.DataSource = dt;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void cbTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,10 +97,10 @@ namespace Kelotitos
             MySqlCommand cm = new MySqlCommand("SELECT " +
                                                     "P.id_tamanio, " +
                                                     "T.tamanio " +
-                                                "FROM cat_productos P " +
-                                                "LEFT OUTER JOIN cat_tamanios T " +
+                                                "FROM bayjfbagagjr10j6uxy6.cat_productos P " +
+                                                "LEFT OUTER JOIN bayjfbagagjr10j6uxy6.cat_tamanios T " +
                                                     "ON P.id_tamanio = T.id_tamanio " +
-                                                "LEFT OUTER JOIN cat_tipos_productos TP " +
+                                                "LEFT OUTER JOIN bayjfbagagjr10j6uxy6.cat_tipos_productos TP " +
                                                     "ON P.id_tipo_producto = TP.id_tipo_producto " +
                                                 "WHERE P.nombre = @nombre " +
                                                 "AND P.id_tipo_producto = @idTipoProducto " +
@@ -132,21 +136,7 @@ namespace Kelotitos
                         conexion = Connection.GetConnection();
 
                         //Obtenemos el id del producto
-                        MySqlCommand cmId = new MySqlCommand("SELECT " +
-                                                                "P.id_producto, " +
-                                                                "P.nombre, " +
-                                                                "TP.tipo_producto, " +
-                                                                "T.tamanio, " +
-                                                                "P.precio " +
-                                                            "FROM cat_productos P " +
-                                                            "LEFT OUTER JOIN cat_tamanios T " +
-                                                               "ON P.id_tamanio = T.id_tamanio " +
-                                                            "LEFT OUTER JOIN cat_tipos_productos TP " +
-                                                                "ON P.id_tipo_producto = TP.id_tipo_producto " +
-                                                            "WHERE P.nombre = @nombre " +
-                                                            "AND P.id_tipo_producto = @idTipoProducto " +
-                                                            "AND IF(TP.si_tamanio = 1, P.id_tamanio = @idTamanio, P.id_tamanio IS NULL) " +
-                                                            "AND P.estatus = 1 ", conexion);
+                        MySqlCommand cmId = new MySqlCommand("SELECT P.id_producto, P.nombre, TP.tipo_producto, T.tamanio, P.precio FROM bayjfbagagjr10j6uxy6.cat_productos P LEFT OUTER JOIN bayjfbagagjr10j6uxy6.cat_tamanios T ON P.id_tamanio = T.id_tamanio LEFT OUTER JOIN bayjfbagagjr10j6uxy6.cat_tipos_productos TP ON P.id_tipo_producto = TP.id_tipo_producto WHERE P.nombre = @nombre AND P.id_tipo_producto = @idTipoProducto AND IF(TP.si_tamanio = 1, P.id_tamanio = @idTamanio, P.id_tamanio IS NULL) AND P.estatus = 1", conexion);
                         cmId.Parameters.AddWithValue("@nombre", cbProducto.Text);
                         cmId.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
                         cmId.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
@@ -194,7 +184,7 @@ namespace Kelotitos
                 }
                 catch (Exception err)
                 {
-                    Console.WriteLine(err);
+                    MessageBox.Show(err.Message);
                 }
 
             }

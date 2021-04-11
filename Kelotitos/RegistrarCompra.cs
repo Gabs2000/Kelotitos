@@ -38,23 +38,30 @@ namespace Kelotitos
 
         public void cargarInventario()
         {
-            conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT " +
-                                                    "id_inventario, " +
-                                                    "nombre " +
-                                                "FROM inventario " +
-                                                "WHERE estatus = 1", conexion);
-            MySqlDataReader reader;
+            try
+            {
+                conexion = Connection.GetConnection();
+                MySqlCommand cm = new MySqlCommand("SELECT " +
+                                                        "id_inventario, " +
+                                                        "nombre " +
+                                                    "FROM inventario " +
+                                                    "WHERE estatus = 1", conexion);
+                MySqlDataReader reader;
 
-            reader = cm.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("id_inventario", typeof(int));
-            dt.Columns.Add("nombre", typeof(string));
-            dt.Load(reader);
+                reader = cm.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("id_inventario", typeof(int));
+                dt.Columns.Add("nombre", typeof(string));
+                dt.Load(reader);
 
-            cbInventario.ValueMember = "id_inventario";
-            cbInventario.DisplayMember = "nombre";
-            cbInventario.DataSource = dt;
+                cbInventario.ValueMember = "id_inventario";
+                cbInventario.DisplayMember = "nombre";
+                cbInventario.DataSource = dt;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void cbInventario_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,14 +72,8 @@ namespace Kelotitos
         public void cargarProveedor()
         {
             conexion = Connection.GetConnection();
-            MySqlCommand cm = new MySqlCommand("SELECT " +
-                                                    "P.id_proveedor, " +
-                                                    "P.proveedor " +
-                                                "FROM proveedores P " +
-                                                "INNER JOIN inventario I " +
-                                                    "ON P.id_proveedor = I.id_proveedor " +
-                                                "WHERE P.estatus = 1 " +
-                                                "AND I.nombre = @nombreInv", conexion);
+            MySqlCommand cm = new MySqlCommand("SELECT P.id_proveedor, P.proveedor FROM bayjfbagagjr10j6uxy6.proveedores P INNER JOIN bayjfbagagjr10j6uxy6.inventario I ON P.id_proveedor = I.id_proveedor WHERE P.estatus = 1 AND I.nombre = @nombreInv", conexion);
+            // SELECT P.id_proveedor, P.proveedor FROM proveedores P INNER JOIN inventario I ON P.id_proveedor = I.id_proveedor WHERE P.estatus = 1 AND I.nombre = @nombreInv
             cm.Parameters.AddWithValue("@nombreInv", cbInventario.Text);
             MySqlDataReader reader;
 
@@ -103,17 +104,7 @@ namespace Kelotitos
                         conexion = Connection.GetConnection();
 
                         //Obtenemos el id del producto
-                        MySqlCommand cmId = new MySqlCommand("SELECT " +
-                                                                "I.id_inventario, " +
-                                                                "I.nombre, " +
-                                                                "P.proveedor, " +
-                                                                "I.precio_compra " +
-                                                            "FROM inventario I " +
-                                                            "INNER JOIN proveedores P " +
-                                                                "ON I.id_proveedor = P.id_proveedor " +
-                                                            "WHERE P.estatus = 1 " +
-                                                            "AND I.id_inventario = @idInventario " +
-                                                            "AND P.id_proveedor = @idProveedor", conexion);
+                        MySqlCommand cmId = new MySqlCommand("SELECT I.id_inventario, I.nombre, P.proveedor, I.precio_compra FROM bayjfbagagjr10j6uxy6.inventario I INNER JOIN bayjfbagagjr10j6uxy6.proveedores P ON I.id_proveedor = P.id_proveedor WHERE P.estatus = 1 AND I.id_inventario = @idInventario AND P.id_proveedor = @idProveedor", conexion);
                         cmId.Parameters.AddWithValue("@idInventario", cbInventario.SelectedValue);
                         cmId.Parameters.AddWithValue("@idProveedor", cbProveedor.SelectedValue);
 
@@ -213,7 +204,7 @@ namespace Kelotitos
                 dgwCompras.Rows[indice].Cells[5].Value = Convert.ToInt32(dgwCompras.Rows[indice].Cells[3].Value) * Convert.ToInt32(dgwCompras.Rows[indice].Cells[4].Value);
 
             }
-            catch (System.InvalidOperationException err)
+            catch (System.InvalidOperationException)
             {
                 MessageBox.Show("Debe seleccionar primero el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -252,10 +243,7 @@ namespace Kelotitos
                 if (dgwCompras.Rows.Count > 1)
                 {
 
-                    string queryCompra = "INSERT INTO compras_proveedor " +
-                                        "(id_inventario, id_proveedor, cantidad, estatus, fecha_creacion) " +
-                                        "VALUES " +
-                                        "(@idInventario, @idProveedor, @cantidad, 1, NOW())";
+                    string queryCompra = "INSERT INTO bayjfbagagjr10j6uxy6.compras_proveedor (id_inventario, id_proveedor, cantidad, estatus, fecha_creacion) VALUES (@idInventario, @idProveedor, @cantidad, 1, NOW())";
 
                     conexion = Connection.GetConnection();
 
@@ -287,8 +275,9 @@ namespace Kelotitos
             }
             catch (Exception err)
             {
-                MessageBox.Show("Hubo un error en la transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine(err);
+                MessageBox.Show(err.Message);
+                //MessageBox.Show("Hubo un error en la transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Console.WriteLine(err);
             }
         }
 
@@ -298,9 +287,7 @@ namespace Kelotitos
             {
                 if (row.IsNewRow == false)
                 {
-                    string querySumarInv = "UPDATE inventario " +
-                                            "SET cantidad = cantidad + @cantidad " +
-                                            "WHERE id_inventario = @idInventario";
+                    string querySumarInv = "UPDATE bayjfbagagjr10j6uxy6.inventario SET cantidad = cantidad + @cantidad WHERE id_inventario = @idInventario";
                     using (MySqlCommand detalle = new MySqlCommand(querySumarInv, conexion))
                     {
                         detalle.Parameters.AddWithValue("@cantidad", row.Cells[4].Value);

@@ -21,11 +21,6 @@ namespace Kelotitos
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
 
-        private void Elegir_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblRegProducto_Click(object sender, EventArgs e)
         {
             RegistrarProductos ToRegistrarProductos = new RegistrarProductos();
@@ -80,6 +75,13 @@ namespace Kelotitos
             MenuReportes menuReportes = new MenuReportes();
             this.Hide();
             menuReportes.Show();
+        }
+
+        private void lblPedidos_Click(object sender, EventArgs e)
+        {
+            PedidosEnLinea pedidos = new PedidosEnLinea();
+            this.Hide();
+            pedidos.Show();
         }
     }
 }
