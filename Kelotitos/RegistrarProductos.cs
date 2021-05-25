@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using iText.Layout.Element;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kelotitos.ModelsDB;
@@ -15,15 +17,100 @@ namespace Kelotitos
 {
     public partial class RegistrarProductos : Form
     {
-        List<providerAccount> listaProveedores;
+        MySqlConnection conexion;
         public RegistrarProductos()
         {
             InitializeComponent();
         }
 
-        private void Label3_Click(object sender, EventArgs e)
+        private void RegistrarProductos_Load(object sender, EventArgs e)
         {
+            this.cargarTiposProductos();
+            this.cargarTamanios();
+        }
 
+        private void cargarTiposProductos()
+        {
+            conexion = Connection.GetConnection();
+
+            //Retorna todos los tipos de productos que están registrados en la tabla cat_tipos_productos
+            MySqlCommand cm = new MySqlCommand("SELECT " +
+                                                    "tipo_producto, " +
+                                                    "id_tipo_producto " +
+                                                "FROM cat_tipos_productos " +
+                                                "WHERE estatus = 1", conexion);
+            MySqlDataReader reader;
+            reader = cm.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_tipo_producto", typeof(int));
+            dt.Columns.Add("tipo_producto", typeof(string));
+            dt.Load(reader);
+
+            cbTipo.ValueMember = "id_tipo_producto";
+            cbTipo.DisplayMember = "tipo_producto";
+            cbTipo.DataSource = dt;
+
+        }
+
+        private void cargarTamanios()
+        {
+            conexion = Connection.GetConnection();
+            //Se retorna los diferentes tamaños que están registrados en la tabla cat_tamanios
+            MySqlCommand cm = new MySqlCommand("SELECT " +
+                                                    "tamanio, " +
+                                                    "id_tamanio " +
+                                                "FROM cat_tamanios " +
+                                                "WHERE estatus = 1", conexion);
+            MySqlDataReader reader;
+
+            reader = cm.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id_tamanio", typeof(int));
+            dt.Columns.Add("tamanio", typeof(string));
+            dt.Load(reader);
+
+            cbTamanio.ValueMember = "id_tamanio";
+            cbTamanio.DisplayMember = "tamanio";
+            cbTamanio.DataSource = dt;
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Elegir ToMenu = new Elegir();
+            this.Hide();
+            ToMenu.Show();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexion = Connection.GetConnection();
+                MySqlCommand con = new MySqlCommand("INSERT INTO cat_productos " +
+                                                    "(nombre, id_tipo_producto, id_tamanio, precio, " +
+                                                    "estatus, fecha_creacion) " +
+                                                    "VALUES " +
+                                                    "(@nombre, @idTipoProducto, @idTamanio, @precio, 1, NOW())", conexion);
+                con.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                con.Parameters.AddWithValue("@idTipoProducto", cbTipo.SelectedValue);
+                con.Parameters.AddWithValue("@idTamanio", cbTamanio.SelectedValue);
+                con.Parameters.AddWithValue("@precio", Convert.ToInt32(txtPrecio.Text));
+                con.ExecuteNonQuery();
+
+                MessageBox.Show("Registrado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtNombre.Text = "";
+                cbTipo.SelectedValue = 0;
+                cbTamanio.SelectedValue = 0;
+                txtPrecio.Text = "";
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Hubo un error al momento de registrar el producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Console.WriteLine(err);
+            }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -36,161 +123,7 @@ namespace Kelotitos
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
 
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            Elegir ToMenu = new Elegir();
-            this.Hide();
-            ToMenu.Show();
-        }
-
-        private void RegistrarProductos_Load(object sender, EventArgs e)
-        {
-            MySqlConnection conexion = Connection.GetConnection();
-
-            MySqlCommand cm = new MySqlCommand("SELECT id_prov, name_prov FROM provider", conexion);
-            MySqlDataReader consultar = cm.ExecuteReader();
-
-            listaProveedores = new List<providerAccount>();
-            
-            while (consultar.Read())
-            {
-                providerAccount proveedor = new providerAccount();
-                proveedor.id_prov = consultar.GetInt32(0);
-                proveedor.name_prov = consultar.GetString(1);
-                listaProveedores.Add(proveedor);
-                ComboBoxItem item = new ComboBoxItem();
-                item.Text = $"{proveedor.id_prov} - {proveedor.name_prov}";
-                item.Value = proveedor.id_prov;
-
-                comboBox1.Items.Add(item);
-                comboBox1.SelectedIndex = 0;
-            }
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ProductAccount newProductAccount = new ProductAccount();
-            newProductAccount.name_prod = name_textbox.Text.Trim();
-            newProductAccount.des_prod = textBox2.Text.Trim();
-
-
-
-            //if (Single.TryParse(textBox1.Text, out float result))
-            //{
-            //    MessageBox.Show("El campo solo acepta números flotantes", "Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //else
-            //{
-
-            //}
-            newProductAccount.price_prod = Convert.ToSingle(textBox1.Text.Trim());
-
-            //if (Single.TryParse(textBox3.Text, out float result2))
-            //{
-            //    MessageBox.Show("El campo solo acepta números flotantes", "Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //else
-            //{
-
-            //}
-            newProductAccount.purchasePrice_prod = Convert.ToSingle(textBox3.Text.Trim());
-
-            //float val = 0;
-            //if (Single.TryParse(textBox1.Text, out val))
-            //{
-
-            //}
-            //else
-            //{
-            //    textBox1.Text = val.ToString();
-            //}
-
-            newProductAccount.stock_prod = 0;
-
-            int providerSelected = listaProveedores[comboBox1.SelectedIndex].id_prov;
-
-            if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox3.Text))
-            {
-                MessageBox.Show("Los campos no pueden quedar vacios", "Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                try
-                {
-                    MySqlConnection conexion = Connection.GetConnection();
-                    MySqlCommand comm = conexion.CreateCommand();
-                    comm.CommandText = "INSERT INTO `product` (name_prod, des_prod, price_prod, purchasePrice_prod, stock_prod, provider_id_prov) VALUES(@name, @description, @price, @pricePurchase, @stock, @provider)";
-                    comm.Parameters.AddWithValue("@name", name_textbox.Text);
-                    comm.Parameters.AddWithValue("@description", textBox2.Text);
-                    comm.Parameters.AddWithValue("@price", double.Parse(textBox1.Text));
-                    comm.Parameters.AddWithValue("@pricePurchase", double.Parse(textBox3.Text));
-                    comm.Parameters.AddWithValue("@stock", 0);
-                    comm.Parameters.AddWithValue("@provider", providerSelected);
-                    comm.ExecuteNonQuery();
-                    conexion.Close();
-                }
-                catch (Exception err)
-                {
-                    Console.WriteLine(err);
-                }
-                name_textbox.Text = "";
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                comboBox1.SelectedIndex = 0;
-            }
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Char chr = e.KeyChar;
-            if (!Char.IsDigit(chr) && chr != 8)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Char chr = e.KeyChar;
-            if (!Char.IsDigit(chr) && chr != 8)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void name_textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

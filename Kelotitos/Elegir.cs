@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Prueba;
+using System;
 using System.Windows.Forms;
 
 namespace Kelotitos
@@ -27,56 +21,67 @@ namespace Kelotitos
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
         }
 
-        private void Elegir_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label3_Click(object sender, EventArgs e)
+        private void lblRegProducto_Click(object sender, EventArgs e)
         {
             RegistrarProductos ToRegistrarProductos = new RegistrarProductos();
             this.Hide();
             ToRegistrarProductos.Show();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            Registrar_Cliente ToRegistrar_Cliente = new Registrar_Cliente();
-            this.Hide();
-            ToRegistrar_Cliente.Show();
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-            Comida ToRegistro = new Comida();
-            this.Hide();
-            ToRegistro.Show();
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Login ToLogin = new Login();
             this.Hide();
             ToLogin.Show();
         }
 
-        private void Label4_Click(object sender, EventArgs e)
+        private void lblRegCompra_Click(object sender, EventArgs e)
         {
             RegistrarCompra ToLogin = new RegistrarCompra();
             this.Hide();
             ToLogin.Show();
         }
 
-        private void Labelx_Click(object sender, EventArgs e)
+        private void lblRegProveedor_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Label5_Click(object sender, EventArgs e)
-        {
-            RegistrarProovedor ToLogin = new RegistrarProovedor();
+            RegistrarProveedor ToLogin = new RegistrarProveedor();
             this.Hide();
             ToLogin.Show();
+        }
+
+        private void lblRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            Comida ToRegistro = new Comida();
+            this.Hide();
+            ToRegistro.Show();
+        }
+
+        private void lblRegInventario_Click(object sender, EventArgs e)
+        {
+            RegistroInventario inv = new RegistroInventario();
+            this.Hide();
+            inv.Show();
+        }
+
+        private void lblRegCatalogos_Click(object sender, EventArgs e)
+        {
+            RegistrarCatalogos catalogo = new RegistrarCatalogos();
+            this.Hide();
+            catalogo.Show();
+        }
+
+        private void lblReportes_Click(object sender, EventArgs e)
+        {
+            MenuReportes menuReportes = new MenuReportes();
+            this.Hide();
+            menuReportes.Show();
+        }
+
+        private void lblPedidos_Click(object sender, EventArgs e)
+        {
+            PedidosEnLinea pedidos = new PedidosEnLinea();
+            this.Hide();
+            pedidos.Show();
         }
     }
 }

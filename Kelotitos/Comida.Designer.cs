@@ -29,115 +29,64 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.labelx = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comida));
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.lbhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dgwCarrito = new System.Windows.Forms.DataGridView();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tamanio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblProducto = new System.Windows.Forms.Label();
+            this.cbProducto = new System.Windows.Forms.ComboBox();
+            this.cbTipo = new System.Windows.Forms.ComboBox();
+            this.cbTamanio = new System.Windows.Forms.ComboBox();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblTamanio = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.numCantidad = new System.Windows.Forms.NumericUpDown();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnSumarCant = new System.Windows.Forms.Button();
+            this.btnRestarCant = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarrito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // btnConfirmar
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox1.Font = new System.Drawing.Font("BigNoodleTitling", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(52, 210);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(457, 78);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox2.Font = new System.Drawing.Font("BigNoodleTitling", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(550, 210);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(734, 78);
-            this.comboBox2.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("BigNoodleTitling", 77.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label2.Location = new System.Drawing.Point(33, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 113);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CLIENTE: ";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("BigNoodleTitling", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button1.Location = new System.Drawing.Point(1193, 723);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(346, 113);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "CONFIRMAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.Font = new System.Drawing.Font("BigNoodleTitling", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button2.Location = new System.Drawing.Point(1308, 210);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 78);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Registrar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // labelx
-            // 
-            this.labelx.AutoSize = true;
-            this.labelx.BackColor = System.Drawing.Color.Transparent;
-            this.labelx.Font = new System.Drawing.Font("BigNoodleTitling", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
-            this.labelx.Location = new System.Drawing.Point(1, 9);
-            this.labelx.Name = "labelx";
-            this.labelx.Size = new System.Drawing.Size(267, 70);
-            this.labelx.TabIndex = 29;
-            this.labelx.Text = "SNACK OASIS";
+            this.btnConfirmar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirmar.Location = new System.Drawing.Point(715, 627);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(126, 31);
+            this.btnConfirmar.TabIndex = 12;
+            this.btnConfirmar.Text = "Confirmar ";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // lbhora
             // 
             this.lbhora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbhora.AutoSize = true;
             this.lbhora.BackColor = System.Drawing.Color.Transparent;
-            this.lbhora.Font = new System.Drawing.Font("BigNoodleTitling", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(194)))), ((int)(((byte)(149)))));
-            this.lbhora.Location = new System.Drawing.Point(940, 9);
+            this.lbhora.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbhora.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbhora.Location = new System.Drawing.Point(316, 18);
             this.lbhora.Name = "lbhora";
-            this.lbhora.Size = new System.Drawing.Size(130, 70);
+            this.lbhora.Size = new System.Drawing.Size(73, 24);
             this.lbhora.TabIndex = 30;
             this.lbhora.Text = "HORA";
             this.lbhora.Click += new System.EventHandler(this.Lbhora_Click);
@@ -147,190 +96,350 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // button3
+            // dgwCarrito
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.Yellow;
-            this.button3.Font = new System.Drawing.Font("BigNoodleTitling", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button3.Location = new System.Drawing.Point(811, 723);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(309, 113);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "REGRESAR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("BigNoodleTitling", 77.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label1.Location = new System.Drawing.Point(288, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 113);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "-";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgwCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProducto,
             this.producto,
             this.descripcionProducto,
+            this.Tamanio,
             this.precioProducto,
             this.cantidad,
             this.subtotal});
-            this.dataGridView1.Location = new System.Drawing.Point(63, 366);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1221, 319);
-            this.dataGridView1.TabIndex = 33;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("BigNoodleTitling", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label5.Location = new System.Drawing.Point(215, 736);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 70);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "$0.00";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("BigNoodleTitling", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.label6.Location = new System.Drawing.Point(63, 736);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 70);
-            this.label6.TabIndex = 50;
-            this.label6.Text = "TOTAL:";
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.Color.Yellow;
-            this.button4.Font = new System.Drawing.Font("BigNoodleTitling", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(109)))));
-            this.button4.Location = new System.Drawing.Point(1290, 366);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 48);
-            this.button4.TabIndex = 52;
-            this.button4.Text = "ELIMINAR ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.dgwCarrito.Location = new System.Drawing.Point(15, 319);
+            this.dgwCarrito.MultiSelect = false;
+            this.dgwCarrito.Name = "dgwCarrito";
+            this.dgwCarrito.RowHeadersWidth = 51;
+            this.dgwCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgwCarrito.Size = new System.Drawing.Size(823, 302);
+            this.dgwCarrito.TabIndex = 33;
+            this.dgwCarrito.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarrito_RowHeaderMouseClick);
             // 
             // idProducto
             // 
             this.idProducto.Frozen = true;
             this.idProducto.HeaderText = "ID";
+            this.idProducto.MinimumWidth = 6;
             this.idProducto.Name = "idProducto";
             this.idProducto.ReadOnly = true;
-            this.idProducto.Width = 150;
+            this.idProducto.Width = 50;
             // 
             // producto
             // 
             this.producto.Frozen = true;
             this.producto.HeaderText = "Producto";
+            this.producto.MinimumWidth = 200;
             this.producto.Name = "producto";
             this.producto.ReadOnly = true;
-            this.producto.Width = 250;
+            this.producto.Width = 200;
             // 
             // descripcionProducto
             // 
             this.descripcionProducto.Frozen = true;
-            this.descripcionProducto.HeaderText = "Descripcion";
+            this.descripcionProducto.HeaderText = "Tipo";
+            this.descripcionProducto.MinimumWidth = 150;
             this.descripcionProducto.Name = "descripcionProducto";
             this.descripcionProducto.ReadOnly = true;
-            this.descripcionProducto.Width = 250;
+            this.descripcionProducto.Width = 150;
+            // 
+            // Tamanio
+            // 
+            this.Tamanio.Frozen = true;
+            this.Tamanio.HeaderText = "Tamaño";
+            this.Tamanio.MinimumWidth = 100;
+            this.Tamanio.Name = "Tamanio";
+            this.Tamanio.ReadOnly = true;
+            this.Tamanio.Width = 125;
             // 
             // precioProducto
             // 
             this.precioProducto.Frozen = true;
             this.precioProducto.HeaderText = "Precio";
+            this.precioProducto.MinimumWidth = 100;
             this.precioProducto.Name = "precioProducto";
             this.precioProducto.ReadOnly = true;
-            this.precioProducto.Width = 225;
+            this.precioProducto.Width = 125;
             // 
             // cantidad
             // 
             this.cantidad.Frozen = true;
             this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 70;
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 150;
+            this.cantidad.Width = 70;
             // 
             // subtotal
             // 
             this.subtotal.Frozen = true;
             this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.MinimumWidth = 100;
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
-            this.subtotal.Width = 150;
+            this.subtotal.Width = 125;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.Location = new System.Drawing.Point(600, 627);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(82, 31);
+            this.lblTotal.TabIndex = 51;
+            this.lblTotal.Text = "$0.00";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(484, 627);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 31);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "TOTAL:";
+            // 
+            // lblProducto
+            // 
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Location = new System.Drawing.Point(11, 216);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(50, 13);
+            this.lblProducto.TabIndex = 53;
+            this.lblProducto.Text = "Producto";
+            // 
+            // cbProducto
+            // 
+            this.cbProducto.FormattingEnabled = true;
+            this.cbProducto.Location = new System.Drawing.Point(14, 233);
+            this.cbProducto.Name = "cbProducto";
+            this.cbProducto.Size = new System.Drawing.Size(205, 21);
+            this.cbProducto.TabIndex = 54;
+            this.cbProducto.SelectedIndexChanged += new System.EventHandler(this.cbProducto_SelectedIndexChanged);
+            // 
+            // cbTipo
+            // 
+            this.cbTipo.FormattingEnabled = true;
+            this.cbTipo.Location = new System.Drawing.Point(225, 233);
+            this.cbTipo.Name = "cbTipo";
+            this.cbTipo.Size = new System.Drawing.Size(221, 21);
+            this.cbTipo.TabIndex = 55;
+            this.cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
+            // 
+            // cbTamanio
+            // 
+            this.cbTamanio.FormattingEnabled = true;
+            this.cbTamanio.Location = new System.Drawing.Point(452, 233);
+            this.cbTamanio.Name = "cbTamanio";
+            this.cbTamanio.Size = new System.Drawing.Size(196, 21);
+            this.cbTamanio.TabIndex = 56;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(225, 215);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(28, 13);
+            this.lblTipo.TabIndex = 57;
+            this.lblTipo.Text = "Tipo";
+            // 
+            // lblTamanio
+            // 
+            this.lblTamanio.AutoSize = true;
+            this.lblTamanio.Location = new System.Drawing.Point(452, 215);
+            this.lblTamanio.Name = "lblTamanio";
+            this.lblTamanio.Size = new System.Drawing.Size(46, 13);
+            this.lblTamanio.TabIndex = 58;
+            this.lblTamanio.Text = "Tamaño";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.Location = new System.Drawing.Point(754, 231);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 59;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // numCantidad
+            // 
+            this.numCantidad.Location = new System.Drawing.Point(655, 233);
+            this.numCantidad.Name = "numCantidad";
+            this.numCantidad.Size = new System.Drawing.Size(80, 20);
+            this.numCantidad.TabIndex = 60;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(655, 215);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(49, 13);
+            this.lblCantidad.TabIndex = 61;
+            this.lblCantidad.Text = "Cantidad";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.BackColor = System.Drawing.Color.Transparent;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(523, 176);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(40, 17);
+            this.lblError.TabIndex = 62;
+            this.lblError.Text = "Error";
+            this.lblError.Visible = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.Location = new System.Drawing.Point(679, 271);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(126, 31);
+            this.btnEliminar.TabIndex = 63;
+            this.btnEliminar.Text = "Eliminar Producto";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnSumarCant
+            // 
+            this.btnSumarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSumarCant.ForeColor = System.Drawing.Color.Black;
+            this.btnSumarCant.Location = new System.Drawing.Point(415, 271);
+            this.btnSumarCant.Name = "btnSumarCant";
+            this.btnSumarCant.Size = new System.Drawing.Size(126, 31);
+            this.btnSumarCant.TabIndex = 64;
+            this.btnSumarCant.Text = "Sumar Cantidad";
+            this.btnSumarCant.UseVisualStyleBackColor = false;
+            this.btnSumarCant.Click += new System.EventHandler(this.btnSumarCant_Click);
+            // 
+            // btnRestarCant
+            // 
+            this.btnRestarCant.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRestarCant.ForeColor = System.Drawing.Color.Black;
+            this.btnRestarCant.Location = new System.Drawing.Point(547, 271);
+            this.btnRestarCant.Name = "btnRestarCant";
+            this.btnRestarCant.Size = new System.Drawing.Size(126, 31);
+            this.btnRestarCant.TabIndex = 65;
+            this.btnRestarCant.Text = "Restar Cantidad";
+            this.btnRestarCant.UseVisualStyleBackColor = false;
+            this.btnRestarCant.Click += new System.EventHandler(this.btnRestarCant_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnRegresar.ForeColor = System.Drawing.Color.Black;
+            this.btnRegresar.Image = global::Kelotitos.Properties.Resources.flecha_pequeña;
+            this.btnRegresar.Location = new System.Drawing.Point(24, 12);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(40, 41);
+            this.btnRegresar.TabIndex = 31;
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(335, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 47);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Ventas";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Kelotitos.Properties.Resources.kelotitos6;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(200, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(473, 93);
+            this.pictureBox1.TabIndex = 68;
+            this.pictureBox1.TabStop = false;
             // 
             // Comida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Kelotitos.Properties.Resources.Fondo;
+            this.BackgroundImage = global::Kelotitos.Properties.Resources.elotes_verdes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1584, 861);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(858, 676);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnRestarCant);
+            this.Controls.Add(this.btnSumarCant);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.numCantidad);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.lblTamanio);
+            this.Controls.Add(this.lblTipo);
+            this.Controls.Add(this.cbTamanio);
+            this.Controls.Add(this.cbTipo);
+            this.Controls.Add(this.cbProducto);
+            this.Controls.Add(this.lblProducto);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dgwCarrito);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lbhora);
-            this.Controls.Add(this.labelx);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnConfirmar);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Comida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comida";
             this.Load += new System.EventHandler(this.Comida_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarrito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label labelx;
+        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label lbhora;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridView dgwCarrito;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.ComboBox cbProducto;
+        private System.Windows.Forms.ComboBox cbTipo;
+        private System.Windows.Forms.ComboBox cbTamanio;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label lblTamanio;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.NumericUpDown numCantidad;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnSumarCant;
+        private System.Windows.Forms.Button btnRestarCant;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tamanio;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

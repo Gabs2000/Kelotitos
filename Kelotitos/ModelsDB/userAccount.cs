@@ -8,20 +8,20 @@ namespace Kelotitos.MySql
 {
     class userAccount
     {
-        public int id_user { get; set; }
-        public string name_user { get; set; }
-        public string account_user { get; set; }
-        public string password_user { get; set; }
-        public int type_user { get; set; }
+        public int id_usuario { get; set; }
+        public string nombre { get; set; }
+        public string usuario { get; set; }
+        public string contrasena { get; set; }
+        public int administrador { get; set; }
 
         public userAccount() { }
-        public userAccount(int id, string name, string account, string password, int type)
+        public userAccount(int idUsuario, string nombre, string usuario, string contrasena, int admin)
         {
-            this.id_user = id;
-            this.name_user = name;
-            this.account_user = account;
-            this.password_user = password;
-            this.type_user = type;
+            this.id_usuario = idUsuario;
+            this.nombre = nombre;
+            this.usuario = usuario;
+            this.contrasena = contrasena;
+            this.administrador = admin;
         }
     }
 }

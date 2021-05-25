@@ -28,54 +28,81 @@ namespace Kelotitos
 
         private void register_button_Click(object sender, EventArgs e)
         {
-            userAccount newAccount = new userAccount();
-            newAccount.name_user = name_textbox.Text.Trim();
-            newAccount.account_user = registeruser_textbox.Text.Trim();
-            newAccount.password_user = registerpassword_textbox.Text.Trim();
-            newAccount.type_user = 1;
-            confirmpassword_textbox.Text.Trim();
 
-            if (string.IsNullOrEmpty(name_textbox.Text) || string.IsNullOrEmpty(registeruser_textbox.Text) || string.IsNullOrEmpty(registerpassword_textbox.Text) || string.IsNullOrEmpty(confirmpassword_textbox.Text))
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text) || string.IsNullOrEmpty(txtConfContra.Text))
             {
-                MessageBox.Show("Los campos no pueden quedar vacios", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los campos no pueden quedar vacíos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (registerpassword_textbox.Text != confirmpassword_textbox.Text)
+                if (txtContrasena.Text != txtConfContra.Text)
                 {
-                    MessageBox.Show("Las contraseñas no coinciden, porfavor coloque la misma contraseña en ambos campos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Las contraseñas no coinciden, por favor coloque la misma contraseña en ambos campos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
 
-                    //newAccount.name_user == name_textbox.Text || newAccount.account_user == registeruser_textbox.Text
                     MySqlConnection conexion = Connection.GetConnection();
 
-                    MySqlCommand compareUser = new MySqlCommand();
-                    compareUser.CommandText = "SELECT * FROM user WHERE account_user = @newAccount.account_user AND password_user = @newAccount.password_user";
-                    compareUser.Parameters.AddWithValue("@newAccount.account_user", newAccount.account_user);
-                    compareUser.Parameters.AddWithValue("@newAccount.password_user", newAccount.password_user);
-                    compareUser.Connection = conexion;
+                    string querySelect = "SELECT * FROM usuarios WHERE usuario = @usuario AND contrasena = @contrasena";
+                    string queryInsert = "INSERT INTO usuarios " +
+                                        "(nombre, usuario, contrasena, salarioXdia, diasSemanas, administrador, estatus, fecha_creacion) " +
+                                        "VALUES " +
+                                        "(@nombre, @usuario, @contrasena, @salarioXdia, @diasSemanas, @administrador, 1, NOW())";
 
-                    MySqlDataReader leer = compareUser.ExecuteReader();
-                    if (leer.Read())
+                    using (MySqlCommand usuario = new MySqlCommand(querySelect, conexion))
                     {
-                        MessageBox.Show("El usuario ya existe", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        conexion.Close();
-                    }
-                    else
-                    {
-                    int resultado = registerNewUserAccount.agregar(newAccount);
-                        if (resultado > 0)
+                        usuario.Parameters.AddWithValue("@usuario", txtNombre.Text);
+                        usuario.Parameters.AddWithValue("@contrasena", txtContrasena.Text);
+                        usuario.Connection = conexion;
+
+                        MySqlDataReader leer = usuario.ExecuteReader();
+
+                        if (leer.Read())
                         {
-                            MessageBox.Show("Usuario Registrado con Exito!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            //Menu ToMenu = new Menu();
-                            //this.Hide();
-                            //ToMenu.Show();
+                            MessageBox.Show("El usuario ya existe", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            conexion.Close();
                         }
                         else
                         {
-                            MessageBox.Show("No se pudo guardar el Usuario", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            leer.Close();
+                            try
+                            {
+                                using (MySqlCommand con = new MySqlCommand(queryInsert, conexion))
+                                {
+                                    int siAdmin = 0;
+
+                                    if(chbAdmin.Checked == true)
+                                    {
+                                        siAdmin = 1;
+                                    }
+
+                                    con.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                                    con.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+                                    con.Parameters.AddWithValue("@contrasena", txtContrasena.Text);
+                                    con.Parameters.AddWithValue("@salarioXdia", txtSalario.Text);
+                                    con.Parameters.AddWithValue("@diasSemanas", txtDias.Text);
+                                    con.Parameters.AddWithValue("@administrador", siAdmin);
+                                    con.ExecuteNonQuery();
+                                }
+                                    
+
+                                MessageBox.Show("Usuario Registrado con Exito!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                txtNombre.Text = "";
+                                txtUsuario.Text = "";
+                                txtContrasena.Text = "";
+                                txtConfContra.Text = "";
+                                txtSalario.Text = "";
+                                txtDias.Text = "";
+                                chbAdmin.Checked = false;
+
+                            }
+                            catch (Exception err)
+                            {
+                                MessageBox.Show("No se pudo guardar el Usuario", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Console.WriteLine(err);
+                            }
                         }
                     }
                 }
@@ -90,21 +117,6 @@ namespace Kelotitos
         private void HoraFecha_Tick(object sender, EventArgs e)
         {
             lbhora.Text = DateTime.Now.ToString("hh:mm:ss dddd MMMM yyy ");
-        }
-
-        private void Name_textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Registeruser_textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Registro_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
